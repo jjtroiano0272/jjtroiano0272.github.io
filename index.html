@@ -1,16 +1,25 @@
 
+<!DOCTYPE html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Portfolio: Jonathan Troiano</title>
-    <link rel="stylesheet" href="styles.css">
+    <!-- My sheet -->
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <!-- Source for social media icons -->
+    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
   </head>
 
   <body>
-    <!-- <div id="site-wrapper"> -->
-
-      <nav class="navbar">
+    <!-- N A V I G A T I O N  -->
+      <!-- <nav class="navbar">
           <a href="#front-page">
-            <img src="logo-2.svg"
+            <img src="../img/logo-2.svg"
                  alt="Personal Porfolio of Jonathan J. Troiano"
                  class="nav-logo">
           </a>
@@ -20,71 +29,91 @@
             <a href="#projects">Projects</a>
             <a href="#">About</a>
           </ul>
-      </nav>
-
-      <div class="site-wrapper">
-        <div class="site-wrapper-background"></div>
-        <div class="content">
-
-          <section class="welcome-section">
-            <h1>Welcome to My Page, or whatever</h1>
-            <p class="quip-text">I don't know, it's your life. Don't let me tell you how
-              to live it.</p>
-          </section>
-
-            <!-- TODO: These should actually be in footer at bottom of page, with logo
-            of each site -->
-            <!-- <footer> -->
-            <div class="footer">
-
-              <ul class="footer-list">
-                <!-- Git link/icon -->
-                <li class="footer-link">
-                  <a href="https://github.com/jjtroiano0272" title="My GitHub page">
-                    <img src="GitHub-Mark-120px-plus.png" alt="My Github page" class="footer-icon">
-                  </a>
-                </li>
-
-                <!-- YouTube link/icon -->
-                <li class="footer-link">
-                  <a href="https://www.youtube.com/channel/UCy-_Q3UO3KjKQWTYhaWgeww" title="My YouTube channel">
-                    <img src="youtube-logo.png" alt="My YouTube channel" class="footer-icon">
-                  </a>
-                </li>
-              </ul>
-
-            </div>
-            <!-- </footer> -->
+      </nav> -->
+      <!-- TODO: Customize your colors! -->
+      <nav class="navbar
+                  navbar-expand-md
+                  navbar-light
+                  bg-light
+                  sticky-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><img src="img/logo-2.svg" height="100" width="200 "alt="Mon Companie!"></a>
+          <button class="navbar-toggler"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#navbarResponsive">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <!-- ml-auto pushes navigation to the right when it's at full width -->
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Projects</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+              </li>
+            </ul>
           </div>
-        </div> <!-- #site-background div -->
-
-        <div class="projects-section-wrapper">
-
-          <section id="projects">
-            <h1>Projects</h1>
-            <!-- TODO: To be designed on a grid. -->
-            <a href="https://github.com/jjtroiano0272">
-              <div class="project-tile">
-                <div class="project-tile-background"></div>
-                  <div class="project-tile-content">
-                    <a href="https://github.com/jjtroiano0272"
-                    class="project-link">PROJECT 1</a>
-                  </div>
-                <!-- </div> -->
-              </div>
-
-              <div class="project-tile">
-                <div class="project-tile-background"></div>
-                  <div class="project-tile-content">
-                    <a href="#"
-                    class="project-link">WHUZZAT</a>
-                  </div>
-                <!-- </div> -->
-              </div>
-            </a>
-          </section>
 
         </div>
 
+      </nav>
+
+<!-- I M A G E   S L I D E R -->
+    <div id="slides" class="carousel slide" data-ride="carousel">
+      <ul class="carousel-indicators">
+        <li data-target="#slides" data-slide-to="0"></li>
+        <li data-target="#slides" data-slide-to="1"></li>
+        <li data-target="#slides" data-slide-to="2"></li>
+      </ul>
+
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="http://unsplash.it/1600/900" alt="There's supposed to be an image here, Marty!">
+        </div>
+
+        <div class="carousel-item">
+          <img src="http://unsplash.it/1600/900" alt="There's supposed to be an image here, Marty!">
+        </div>
+
+        <div class="carousel-item">
+          <img src="http://unsplash.it/1600/900" alt="There's supposed to be an image here, Marty!">
+        </div>
+
+      </div>
+    </div>
+
+
+<!-- J U M B O T R O N -->
+<!-- W E L C O M E   S E C T I O N -->
+<!--- Three Column Section -->
+
+
+<!--- Two Column Section -->
+
+
+<!--- Fixed background -->
+
+
+<!--- Emoji Section -->
+
+
+<!--- Meet the team -->
+
+
+<!--- Cards -->
+
+
+<!--- Two Column Section -->
+
+
+<!--- Connect -->
+
+
+<!--- Footer -->
   </body>
 </html>
