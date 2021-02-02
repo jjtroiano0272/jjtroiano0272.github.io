@@ -1,0 +1,135 @@
+/* IDEA: Import a Google Font? */
+/* TODO: BEST PRACTICES: You might want to go back through and define everything in
+         common units--e.g. everything defined in terms of rem.  */
+/* @@import url */
+
+html, body {
+  height: 100%;
+  width: 100%;
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+  Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: #222222;
+}
+
+.navbar {
+  padding: 0.8rem;
+}
+
+.navbar-nav li {
+  padding-right: 1.3rem;
+}
+
+.nav-link {
+  /* TODO: DON'T USE THE IMPORTANT TAG!!! */
+  font-size: 1.1rem !important;
+}
+
+.carousel-inner img {
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-caption {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.carousel-caption h1 {
+  font-size: 5rem;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 15px #000000
+}
+
+.carousel-caption h3 {
+  font-size: 2rem;
+  font-weight: 500;
+  text-shadow: 1px 1px 10px #000000;
+  padding-bottom: 1rem;
+}
+
+.btn-primary {
+  background-color: #6648B1;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #6648B1;
+}
+
+.btn-primary:hover {
+  background-color: #563D7C;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #563D7C;
+}
+
+.jumbotron {
+  padding: 1rem;
+  border-radius: 0;
+}
+
+.padding {
+  padding-bottom: 2rem;
+}
+
+.welcome {
+  width: 75%;
+  margin: 0 auto;
+  padding-top: 2rem;
+}
+
+.welcome hr {
+  border-top-width: 0.125rem;
+  border-top-style: solid;
+  border-top-color: #B4B4B4;
+  width: 95%;
+  margin-top: 0.3rem;
+  margin-bottom: 1rem;
+}
+
+.fa-code {
+  color: #E54D26;
+}
+
+.fa-bold {
+  color: #563D7C;
+}
+
+.fa-css3 {
+  color: #2163AF;
+}
+
+.fa-code,
+.fa-bold,
+.fa-css3 {
+  font-size: 4rem;
+  margin: 1rem;
+
+}
+
+.fun {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.gif {
+  max-width: 100%;
+}
+
+.social a {
+  font-size: 4.5rem;
+  padding: 3rem;
+}
+
+/* TODO: Give these boys a hover color! */
+.fa-github {
+  color: #4078C0;
+}
+
+.fa-youtube {
+  color: #C4302B;
+}
+
+.fa-linkedin-in {
+  color: #0E76A8;
+}
