@@ -1,4 +1,5 @@
 /* IDEA: Import a Google Font? */
+/* IDEA: Comb the document for potential bugs--is 1rem == 100%? */
 /* TODO: BEST PRACTICES: You might want to go back through and define everything in
          common units--e.g. everything defined in terms of rem.  */
 /* @@import url */
@@ -39,7 +40,7 @@ html, body {
 .carousel-caption h1 {
   font-size: 5rem;
   text-transform: uppercase;
-  text-shadow: 1px 1px 15px #000000
+  text-shadow: 1px 1px 15px #000000;
 }
 
 .carousel-caption h3 {
@@ -132,4 +133,110 @@ html, body {
 
 .fa-linkedin-in {
   color: #0E76A8;
+}
+
+.fa-github:hover,
+.fa-youtube:hover,
+.fa-linkedin-in:hover {
+  color: #D5D5D5;
+}
+
+footer {
+  background-color: #3F3F3F;
+  color: #D5D5D5;
+  padding-top: 2rem;
+}
+
+hr.light {
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: #D5D5D5;
+  width: 75%;
+  margin-top: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+hr.light-100 {
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: #D5D5D5;
+  width: 100%;
+  margin-top: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+footer a {
+  color: #D5D5D5;
+}
+
+/* Media Queries */
+@media (max-width: 992px) {
+  .social a {
+    font-size: 4rem;
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-caption {
+    top: 45%;
+  }
+
+  .carousel-caption h1 {
+    font-size: 350%;
+  }
+
+  .carousel-caption h3 {
+    font-size: 1.4rem;
+    font-weight: 400;
+    padding-bottom: 0.2rem;
+  }
+
+  .coursel-caption-btn {
+    font-size: 0.95rem;
+    padding: 8px 14px;
+  }
+
+  .display-4 {
+    font-size: 2rem;
+  }
+
+  .social a {
+    font-size: 2.5rem;
+    padding: 1.2rem;
+  }
+}
+
+@media (max-width:576px) {
+  .carousel-caption {
+    top: 40%;
+  }
+
+  .carousel-caption h1 {
+    font-size: 250%;
+  }
+
+  .carousel-caption h3 {
+    font-size: 1.1rem;
+    font-weight: 400;
+    padding-bottom: 0.2rem;
+  }
+
+  .coursel-caption-btn {
+    font-size: 0.90rem;
+    padding: 4px 8px;
+  }
+
+  .carousel-indicators {
+    display: none;
+  }
+
+  .display-4 {
+    font-size: 1.6rem;
+  }
+
+  .social a {
+    font-size: 2rem;
+    padding: 0.7rem;
+  }
 }
