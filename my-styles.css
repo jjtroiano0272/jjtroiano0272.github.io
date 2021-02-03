@@ -13,22 +13,46 @@ html, body {
   color: #222222;
 }
 
-.navbar {
-  padding: 0.8rem;
+footer {
+  background-color: #3F3F3F;
+  color: #D5D5D5;
+  padding-top: 2rem;
 }
 
-.navbar-nav li {
-  padding-right: 1.3rem;
+footer a {
+  color: #D5D5D5;
 }
 
-.nav-link {
-  /* TODO: DON'T USE THE IMPORTANT TAG!!! */
-  font-size: 1.1rem !important;
+hr.light {
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: #D5D5D5;
+  width: 75%;
+  margin-top: 0.8rem;
+  margin-bottom: 1rem;
 }
 
-.carousel-inner img {
+hr.light-100 {
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: #D5D5D5;
   width: 100%;
-  height: 100%;
+  margin-top: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.btn-primary {
+  background-color: #6648B1;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #6648B1;
+}
+
+.btn-primary:hover {
+  background-color: #563D7C;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #563D7C;
 }
 
 .carousel-caption {
@@ -50,42 +74,9 @@ html, body {
   padding-bottom: 1rem;
 }
 
-.btn-primary {
-  background-color: #6648B1;
-  border-width: 1px;
-  border-style: solid;
-  border-color: #6648B1;
-}
-
-.btn-primary:hover {
-  background-color: #563D7C;
-  border-width: 1px;
-  border-style: solid;
-  border-color: #563D7C;
-}
-
-.jumbotron {
-  padding: 1rem;
-  border-radius: 0;
-}
-
-.padding {
-  padding-bottom: 2rem;
-}
-
-.welcome {
-  width: 75%;
-  margin: 0 auto;
-  padding-top: 2rem;
-}
-
-.welcome hr {
-  border-top-width: 0.125rem;
-  border-top-style: solid;
-  border-top-color: #B4B4B4;
-  width: 95%;
-  margin-top: 0.3rem;
-  margin-bottom: 1rem;
+.carousel-inner img {
+  width: 100%;
+  height: 100%;
 }
 
 .fa-code {
@@ -108,20 +99,6 @@ html, body {
 
 }
 
-.fun {
-  width: 100%;
-  margin-bottom: 2rem;
-}
-
-.gif {
-  max-width: 100%;
-}
-
-.social a {
-  font-size: 4.5rem;
-  padding: 3rem;
-}
-
 /* TODO: Give these boys a hover color! */
 .fa-github {
   color: #4078C0;
@@ -141,32 +118,55 @@ html, body {
   color: #D5D5D5;
 }
 
-footer {
-  background-color: #3F3F3F;
-  color: #D5D5D5;
+.fun {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.gif {
+  max-width: 100%;
+}
+
+.jumbotron {
+  padding: 1rem;
+  border-radius: 0;
+}
+
+.navbar {
+  padding: 0.8rem;
+}
+
+.navbar-nav li {
+  padding-right: 1.3rem;
+}
+
+.nav-link {
+  /* TODO: DON'T USE THE IMPORTANT TAG!!! */
+  font-size: 1.1rem !important;
+}
+
+.padding {
+  padding-bottom: 2rem;
+}
+
+.social a {
+  font-size: 4.5rem;
+  padding: 3rem;
+}
+
+.welcome {
+  width: 75%;
+  margin: 0 auto;
   padding-top: 2rem;
 }
 
-hr.light {
-  border-top-width: 1px;
+.welcome hr {
+  border-top-width: 0.125rem;
   border-top-style: solid;
-  border-top-color: #D5D5D5;
-  width: 75%;
-  margin-top: 0.8rem;
+  border-top-color: #B4B4B4;
+  width: 95%;
+  margin-top: 0.3rem;
   margin-bottom: 1rem;
-}
-
-hr.light-100 {
-  border-top-width: 1px;
-  border-top-style: solid;
-  border-top-color: #D5D5D5;
-  width: 100%;
-  margin-top: 0.8rem;
-  margin-bottom: 1rem;
-}
-
-footer a {
-  color: #D5D5D5;
 }
 
 /* Media Queries */
@@ -192,7 +192,7 @@ footer a {
     padding-bottom: 0.2rem;
   }
 
-  .coursel-caption-btn {
+  .carousel-caption-btn {
     font-size: 0.95rem;
     padding: 8px 14px;
   }
@@ -222,7 +222,7 @@ footer a {
     padding-bottom: 0.2rem;
   }
 
-  .coursel-caption-btn {
+  .carousel-caption-btn {
     font-size: 0.90rem;
     padding: 4px 8px;
   }
