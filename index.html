@@ -36,8 +36,8 @@
     <!-- TODO: Might want to import a Google font -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <script type="text/javascript">
-      alert("This page is currently under construction and being added to &
-      improved daily.\nPlease enjoy!");
+      window.alert("This page is currently under construction and being added to &
+      improved daily.Please enjoy!");
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
@@ -80,10 +80,11 @@
 
       </nav>
 
-<!-- I M A G E   S L I D E R -->
+<!-- C A R O U S E L -->
     <!-- TODO: Does it repeat? -->
     <!-- TODO: All images need to display at a constant size (bigger images expand the slider) -->
     <!-- IDEA: Might want to adjust the rate at which images change (faster.) -->
+    <!-- Currently items MUST be sized 1280x800 in order not to resize carousel! -->
     <div id="slides" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
         <li data-target="#slides" data-slide-to="0"></li>
@@ -98,17 +99,13 @@
         <!-- TODO: Edit this class so the images automatically get resized and do not shrink/expand container? -->
         <!-- Welcome slide -->
         <div class="carousel-item active">
-          <img src="img/pexels-nadezhda-moryak-6743124_comp.mp4" alt="There's supposed to be an image here, Marty!">
+          <img src="img/pexels-nadezhda-moryak-6743124_comp.mp4"
+               width="1280px"
+               height="800px"
+               alt="There's supposed to be an image here, Marty!">
           <div class="carousel-caption">
             <h1 class="display-2">Welcome!</h1>
             <h3>Come take a look around!</h3>
-            <!-- Note that these don't have a name property included (it's default). -->
-            <!-- <a href="https://github.com/jjtroiano0272">
-              <button type="button" class="btm btn-outline-light btn-lg">GitHub</button>
-            </a>
-            <a href="https://www.youtube.com/channel/UCy-_Q3UO3KjKQWTYhaWgeww">
-              <button type="button" class="btn btn-primary btn-lg">YouTube</button>
-            </a> -->
           </div>
         </div>
 
@@ -142,17 +139,16 @@
         </div>
 
         <!-- Jules's Site slide-->
-          <div class="carousel-item">
-            <a href="#">
+        <div class="carousel-item">
+          <a href="#">
             <img src="img/coming_soon_preview.png" alt="There's supposed to be an image here, Marty!">
-            </a>
-            <div class="carousel-caption">
-              <a href="#">
+          </a>
+          <div class="carousel-caption">
+            <a href="#">
               <h1 class="display-2">Websites I've developed</h1>
-              </a>
-              <!-- Note that these don't have a name property included (it's default). -->
-            </div>
+            </a>
           </div>
+        </div>
       </div>
 
       <!-- Previous/Next buttons on carousel -->
@@ -207,7 +203,7 @@
   <!-- TODO: Class welcome we will style later -->
   <div class="row welcome text-center">
     <div class="col-12 ">
-      <h1 class="display-4">Built with D (...znutz.)</h1>
+      <h1 class="display-4">Master Data Management at Gartner</h1>
     </div>
 
     <hr>
@@ -422,7 +418,7 @@
     <div class="row text-center">
       <!-- TODO: Centered logo -->
       <div class="col-12">
-        <img src="img/logo-2.svg" height="100" width="200" alt="Mon companie!">
+        <img class="logo-footer" src="img/logo-2.svg" height="100" width="200" alt="Mon companie!">
       </div>
 
       <div class="col-12">
