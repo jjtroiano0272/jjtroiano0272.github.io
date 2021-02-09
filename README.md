@@ -1,3 +1,3 @@
-# 5--Personal-Portfolio-Page
- FreeCodeCamp.org project 5
- This hsould eventually actuall contain all the documentation...
+# Portfolio: Jonathan Troiano
+ This will contain the documentation of the process of creating this page. 
+ Short, maybe with a few gifs.
