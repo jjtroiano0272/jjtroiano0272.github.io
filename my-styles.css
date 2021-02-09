@@ -73,6 +73,14 @@ hr.light-100 {
   padding-bottom: 1rem;
 }
 
+.carousel-caption a {
+  color: #FFFFFF;
+}
+
+.carousel-caption a:hover {
+  color: #D3D3D3;
+}
+
 .carousel-inner img {
   width: 100%;
   height: 100%;
