@@ -53,6 +53,10 @@ hr.light-100 {
   border-color: #563D7C;
 }
 
+.carousel-crop {
+  overflow: hidden;
+  height: 720px;
+}
 .carousel-caption {
   position: absolute;
   top: 50%;
