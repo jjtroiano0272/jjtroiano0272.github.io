@@ -27,7 +27,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ffc40d">
     <meta name="msapplication-TileColor" content="#ffc40d">
     <meta name="theme-color" content="#ffffff">
 
@@ -38,10 +38,6 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-    <script type="text/javascript">
-      window.alert("This page is currently under construction and being added to &
-      improved daily.Please enjoy!");
-    </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
@@ -57,7 +53,7 @@
                   bg-light
                   sticky-top">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#"><img src="img/logo-2.svg" height="100" width="200" alt="Mon Companie!"></a>
+          <a class="navbar-brand" href="#"><img src="img/logo-2_min.svg" height="50" width="100" alt="Mon Companie!"></a>
           <button class="navbar-toggler"
                   type="button"
                   data-toggle="collapse"
@@ -84,11 +80,13 @@
       </nav>
 
 <!-- C A R O U S E L -->
-    <!-- TODO: Does it repeat? -->
     <!-- TODO: All images need to display at a constant size (bigger images expand the slider) -->
     <!-- IDEA: Might want to adjust the rate at which images change (faster.) -->
     <!-- Currently items MUST be sized 1280x800 in order not to resize carousel! -->
-    <div id="slides" class="carousel carousel-crop slide" data-ride="carousel">
+    <div id="slides"
+         class="carousel carousel-crop slide"
+         data-ride="carousel"
+         data-touch="true">
       <ol class="carousel-indicators">
         <li data-target="#slides" data-slide-to="0"></li>
         <li data-target="#slides" data-slide-to="1"></li>
@@ -100,12 +98,20 @@
 
       <div class="carousel-inner">
         <!-- TODO: Edit this class so the images automatically get resized and do not shrink/expand container? -->
+
         <!-- Welcome slide -->
         <div class="carousel-item active">
-          <img src="img/pexels-nadezhda-moryak-6743124_comp.mov"
+          <video id="myVideo"
+                 autoplay
+                 muted
+                 loop>
+            <source src="img/pexels-nadezhda-moryak-6743124_comp.mov" type="video/mp4">
+          </video>
+
+          <!-- <img src="img/pexels-nadezhda-moryak-6743124_comp.mov"
                width="1280px"
                height="800px"
-               alt="There's supposed to be an image here, Marty!">
+               alt="There's supposed to be an image here, Marty!"> -->
           <div class="carousel-caption">
             <h1 class="display-2">Welcome!</h1>
             <h3>Come take a look around!</h3>
@@ -129,7 +135,7 @@
 
         <!-- TODO: Classes at FGCU -->
         <div class="carousel-item">
-          <img src="img/pexels-sigrid-abalos-824572.jpg" alt="There's supposed to be an image here, Marty!">
+          <img src="img/bg-1_1920x1080.jpg" alt="There's supposed to be an image here, Marty!">
         </div>
 
         <!-- TODO: Improv -->
@@ -138,7 +144,7 @@
 
         <!-- Cooking slide? -->
         <div class="carousel-item">
-          <img src="img/pexels-aleksandar-pasaric-3310691.jpg" alt="There's supposed to be an image here, Marty!">
+          <img src="img/bg-2_1920x1080.jpg" alt="There's supposed to be an image here, Marty!">
         </div>
 
         <!-- Jules's Site slide-->
@@ -391,7 +397,7 @@
   <hr class="my-4" id="hr-connect">
 </div>
 
-<!--- Connect -->
+<!--- C O N N E C T -->
 <div class="container-fluid padding">
   <div class="row text-center padding">
     <div class="col-12">
@@ -408,8 +414,6 @@
       <a href="https://www.linkedin.com/in/jonathan-troiano/">
         <i class="fab fa-linkedin-in"></i>
       </a>
-      <!-- TODO: Ziprecruiter -->
-      <!-- TODO: DICE.org -->
     </div>
 
   </div>

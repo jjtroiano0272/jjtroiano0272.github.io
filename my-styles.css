@@ -55,7 +55,9 @@ hr.light-100 {
 
 .carousel-crop {
   overflow: hidden;
-  height: 720px;
+  /* height: 720px; */
+  height: 87vh;
+  /* width: 100%; */
 }
 .carousel-caption {
   position: absolute;
@@ -91,6 +93,7 @@ hr.light-100 {
 }
 
 .carousel-inner > .carousel-item > img,
+.carousel-inner > .carousel-item > video,
 .carousel-inner > .carousel-item > a > img {
     width: 100%;
     height: auto;
