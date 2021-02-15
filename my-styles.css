@@ -53,12 +53,11 @@ hr.light-100 {
   border-color: #563D7C;
 }
 
-.carousel-crop {
+.carousel {
   overflow: hidden;
-  /* height: 720px; */
-  height: 87vh;
-  /* width: 100%; */
+  height: 89vh;
 }
+
 .carousel-caption {
   position: absolute;
   top: 50%;
@@ -92,6 +91,11 @@ hr.light-100 {
   height: 100%;
 }
 
+.carousel-item .img-fluid {
+  width:100%;
+  height:100%;
+}
+
 .carousel-inner > .carousel-item > img,
 .carousel-inner > .carousel-item > video,
 .carousel-inner > .carousel-item > a > img {
@@ -120,7 +124,6 @@ hr.light-100 {
 
 }
 
-/* TODO: Give these boys a hover color! */
 .fa-github {
   color: #4078C0;
 }
@@ -307,8 +310,9 @@ figure {
 
   .carousel-crop {
     overflow: hidden;
-    height: 87vh;
-    width: 100%;
+    /* height: 720px; */
+    height: 89vh;
+    /* width: 100%; */
   }
 
   .carousel-indicators {
@@ -320,6 +324,7 @@ figure {
   .carousel-inner > .carousel-item > a > img {
       width: 100%;
       height: auto;
+      background-size: cover;
   }
 
   .display-4 {
