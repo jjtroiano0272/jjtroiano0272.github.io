@@ -34,15 +34,9 @@
     <!-- My sheet -->
     <link rel="stylesheet" href="my-styles.css">
     <!-- TODO: Might want to import a Google font -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <!-- Source for social media icons -->
-    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+          integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+          crossorigin="anonymous">
   </head>
 
   <body>
@@ -84,9 +78,9 @@
     <!-- IDEA: Might want to adjust the rate at which images change (faster.) -->
     <!-- Currently items MUST be sized 1280x800 in order not to resize carousel! -->
     <div id="slides"
-         class="carousel carousel-crop slide"
+         class="carousel slide carousel-crop"
          data-ride="carousel"
-         data-touch="true">
+         data-touch=true>
       <ol class="carousel-indicators">
         <li data-target="#slides" data-slide-to="0"></li>
         <li data-target="#slides" data-slide-to="1"></li>
@@ -121,7 +115,9 @@
         <!-- GitHub projects & coding slide-->
           <div class="carousel-item">
             <a href="https://github.com/jjtroiano0272">
-              <img src="img/coding-bg.png" alt="There's supposed to be an image here, Marty!">
+              <img class="d-block w-100"
+                   src="img/coding-bg.png"
+                   alt="There's supposed to be an image here, Marty!">
             </a>
             <div class="carousel-caption">
               <a href="https://github.com/jjtroiano0272">
@@ -185,14 +181,15 @@
                 col-sm-12
                 col-md-9
                 col-lg-9
-                col-xl-10">
+                col-xl-12">
       <p class="lead">First off I'd like to welcome you to my website, a project
       I decided to do to serve as my portfolio for any company looking to hire me.
       I've showcased my skills and previous projets here so you can get an idea
       of what I can do! I've included links to my GitHub page as well as my
       YouTube page, where I upload the music I've been making.</p>
     </div>
-    <div class="col-xs-12
+    <!-- Button to right -->
+    <!-- <div class="col-xs-12
                 col-sm-12
                 col-md-3
                 col-lg-3
@@ -201,35 +198,38 @@
         <button type="button" class="btn btn-outline-secondary btn-lg">ChzBrgr!?</button>
       </a>
 
-    </div>
+    </div> -->
   </div>
-
 </div>
 
 <!-- W E L C O M E   S E C T I O N -->
 <div class="container-fluid padding">
   <!-- TODO: Class welcome we will style later -->
   <div class="row welcome text-center">
-    <div class="col-12 ">
+    <div class="col-12">
       <h1 class="display-4">Master Data Management at Gartner</h1>
+      <h4 class="display-5">Stamford, CT</h4>
     </div>
 
     <hr>
-    <div class="col-12">
-      <!-- TODO: Justify the text. -->
-      <p class="lead">Window of opportunity closing these latest prospects is like
-      putting socks on an octopus, a tentative event rundown is attached for your
-      reference, including other happenings on the day you are most welcome
-      to join us beforehand for a light lunch we would also like to invite you
-      to other activities on the day, including the interim and closing panel
-      discussions on the intersection of businesses and social innovation, and
-      on building a stronger social innovation eco-system respectively and fire
-      up your browser, nor back of the net, but no scraps hit the floor flesh
-      that out.</p>
-
+  </div>
+  <div class="col-9 row text-justify">
+    <!-- TODO: Justify the text. -->
+    <p class="lead">Managed database connections and curated the data we would
+      query from multiple sources, creating health checks on our data. Created
+      an automated process for querying databases and summarizing that data
+      output in a mass email to the other members of our department providing
+      them with a snapshot of how the accounts we manage were performing and
+      which accounts (out of more than 750,000 managed accounts) may have needed
+      further attention (e.g. if account details were only partially filled in
+      or had duplicate entries). We used this data as a basis for creating a
+      browser-accessible report (dashboard) in Microsoft Power BI.</p>
+    <div class="col-3">
+      <img src="img/gartner_hq.jpg" class="pull-right" alt="">
     </div>
 
   </div>
+
 
 </div>
 
@@ -432,13 +432,24 @@
       <div class="col-12">
         <hr class="light-100">
         <h5>&copy;Jonathan Troiano 2021</h5>
-
       </div>
 
     </div>
   </div>
 </footer>
 
-
+<script type="text/javascript">
+  window.alert("Be aware that this page is under construction so what you are
+                seeing may not be indicative of the final outcome!\nEnjoy and thanks for coming!");
+</script>
+<!-- jQuery & Bootstrap JS bundle -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+<!-- Source for social media icons -->
+<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
 </body>
 </html>

@@ -284,6 +284,7 @@ figure {
   }
 }
 
+/* iPhone SE */
 @media (max-width:576px) {
   .carousel-caption {
     top: 40%;
@@ -304,8 +305,21 @@ figure {
     padding: 4px 8px;
   }
 
+  .carousel-crop {
+    overflow: hidden;
+    height: 87vh;
+    width: 100%;
+  }
+
   .carousel-indicators {
     display: none;
+  }
+
+  .carousel-inner > .carousel-item > img,
+  .carousel-inner > .carousel-item > video,
+  .carousel-inner > .carousel-item > a > img {
+      width: 100%;
+      height: auto;
   }
 
   .display-4 {
