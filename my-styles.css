@@ -199,6 +199,9 @@ hr.light-100 {
   margin-bottom: 1rem;
 }
 
+/* TODO: Alphabetize with all code */
+.object-fit-cover { object-fit: cover; }
+
 /* B U G   F I X E S */
 /*---Firefox Bug Fix --*/
 .carousel-item {
@@ -290,7 +293,7 @@ figure {
 /* iPhone SE */
 @media (max-width:576px) {
   .carousel-caption {
-    top: 40%;
+    /* top: 40%; */
   }
 
   .carousel-caption h1 {
@@ -335,4 +338,7 @@ figure {
     font-size: 2rem;
     padding: 0.7rem;
   }
+
+  .vertical { margin-top: 50%; }
+
 }
