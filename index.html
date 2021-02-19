@@ -37,6 +37,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
           integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
           crossorigin="anonymous">
+    <!-- Source for social media icons -->
+    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <script src="https://kit.fontawesome.com/c4507a90e4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/v4-shims.css">
+
   </head>
 
   <body>
@@ -242,19 +248,41 @@
   </div>
 </div>
 
-<!-- W E L C O M E   S E C T I O N -->
+<!-- CERTIFICATION SECTION
+**************************************************************************** -->
 <div class="container-fluid padding">
-  <!-- TODO: Class welcome we will style later -->
-  <div class="row welcome text-center justify-content-center">
-    <div class="col-12">
+  <!-- <div class="row col-12 welcome text-center justify-content-center">
+    <div class="col-xl-12">
+      <h1 class="display-4">Certified in...</h1>
+      <hr>
+    </div>
+  </div> -->
+  <div class="row text-center justify-content-center">
+    <div class="col-xl-6 col-sm-12 col-xs-12">
+      <img class="certification-badge" src="img/aws_cert_badge.png" alt="Amazon Web Services Certified Cloud Practitioner">
+    </div>
+    <div class="col-xl-6 col-sm-12 col-xs-12">
+      <!-- <img class="img-fluid object-fit-cover pull-right" src="img/gartner_hq.jpg" alt="" style="border-radius: 5%;"> -->
+      <img class="certification-badge" src="img/oracle_cert_badge.png" alt="Oracle Certified Junior Associate Java Programmer">
+    </div>
+  </div>
+</div>
+
+<!-- E X P E R I E N C E   S E C T I O N -->
+<!-- TODO: Class welcome we will style later -->
+<div class="container-fluid padding">
+
+  <!-- Gartner Internship -->
+  <div class="row col-12 welcome text-center justify-content-center">
+    <div class="col-xl-12">
       <h1 class="display-4">Master Data Management at Gartner</h1>
       <h4 class="display-5">Stamford, CT</h4>
       <hr>
     </div>
   </div>
-  <div class="col-9 row text-justify">
-    <!-- TODO: Justify the text. -->
-    <p class="lead">Managed database connections and curated the data we would
+  <div class="row text-justify">
+    <div class="col-xl-7 col-sm-12 col-xs-12 text-justify">
+      <p class="lead">Managed database connections and curated the data we would
       query from multiple sources, creating health checks on our data. Created
       an automated process for querying databases and summarizing that data
       output in a mass email to the other members of our department providing
@@ -263,38 +291,133 @@
       further attention (e.g. if account details were only partially filled in
       or had duplicate entries). We used this data as a basis for creating a
       browser-accessible report (dashboard) in Microsoft Power BI.</p>
-    <div class="col-3">
-      <img class="object-fit-cover" src="img/gartner_hq.jpg" class="pull-right" alt="">
     </div>
-
+    <div class="col-xl-5 col-sm-12 col-xs-12">
+      <img class="img-fluid object-fit-cover pull-right" src="img/gartner_hq.jpg" alt="" style="border-radius: 5%;">
+    </div>
   </div>
 
+  <!-- IT Technician -->
+  <div class="row col-12 welcome text-center justify-content-center">
+    <div class="col-xl-12">
+      <h1 class="display-4">IT Technician at 21<sup>st</sup> Century Technology, LLC</h1>
+      <h4 class="display-5">Estero, FL</h4>
+      <hr>
+    </div>
+  </div>
+  <div class="row text-justify">
+    <div class="col-xl-5 col-sm-12 col-xs-12">
+      <img class="img-fluid object-fit-cover pull-left" src="https://upload.wikimedia.org/wikipedia/commons/e/e8/Computer_technician_04.jpg" alt="" style="border-radius: 5%;">
+    </div>
+    <div class="col-xl-7 col-sm-12 col-xs-12 text-justify">
+      <p class="lead">Part of a two-man team in which I schedule appointments
+        with clients to troubleshoot computer issues, everything from help in
+         using an unfamiliar program to OS installs, data recovery, lessons, to
+         installing a home doorbell & camera system. Appointments with clients
+         are solo one-on-one jobs, interpreting a layperson’s distress into
+         actionable IT solutions. Laid off during pandemic.</p>
+    </div>
+  </div>
 
+  <!-- Tutor & Camp Counselor -->
+  <div class="row col-12 welcome text-center justify-content-center">
+    <div class="col-xl-12">
+      <h1 class="display-4">Camp Counselor; Math Tutor</h1>
+      <h4 class="display-5">Fort Myers, FL</h4>
+      <hr>
+    </div>
+  </div>
+  <div class="row text-justify">
+    <div class="col-xl-7 col-md-8 text-justify">
+      <p class="lead">Assisted students with comprehending course material in
+        real-time, grading assignments for classes with 30-50 students. Courses
+        covered : Introduction to Computer Science & Introduction to Programming.
+        Worked as a camp counselor in 2017 for the FGCU Coding Academy, STEM
+        Academy, and Mathletes camps.</p>
+    </div>
+    <div class="col-xl-5 col-md-4">
+      <!-- <img class="img-fluid object-fit-cover pull-right" src="https://images.pexels.com/photos/1181672/pexels-photo-1181672.jpeg?cs=srgb&dl=pexels-christina-morillo-1181672.jpg&fm=jpg" alt="" style="border-radius: 5%;"> -->
+      <iframe class="img-fluid object-fit-cover pull-right" width="560" height="315" src="https://www.youtube.com/embed/tANQxUoA3So" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </div>
 </div>
 
-<!--- Three Column Section -->
+<!--- Three Column Icon Section -->
+<!-- TODO: Little section here displaying the languages I know, with a caption
+stating the no. years I have experience (coded as a JS function as time difference) -->
+<!-- 1) C++
+     2) CSS
+     3) HTML
+     4) Java
+     5) M Power Query
+     6) Python
+     7) R 8)
+     8) MySQL -->
+<!-- Applicaitons expertise
+      1) Photoshop
+      2) TOAD Data Point
+      3) Logic Pro -->
+
+
+<!-- ROW 1 -->
+      <!-- <div class="row col-12 text-center justify-content-center">
+        <div class="col-xl-12"></div>
+      </div> -->
+<!-- ROW 2, 2 col -->
+      <!-- <div class="row text-justify">
+        <div class="col-xl-7 col-md-8 text-justify"></div>
+        <div class="col-xl-5 col-md-4"></div>
+      </div> -->
+
 <div class="container-fluid padding">
+  <!-- ROW 1 -->
   <div class="row text-center padding">
     <div class="col-xs-12 col-sm-6 col-md-4">
-      <i class="fas fa-code"></i>
-      <h3>HTML5</h3>
-      <p>We need to leverage our synergies three-martini lunch!</p>
+      <i class="fab fa-java fas fa-code" style="color: #FF0000;"></i>
+      <h3>Java</h3>
+      <p>n years</p>
     </div>
 
     <div class="col-xs-12 col-sm-6 col-md-4">
-      <i class="fas fa-bold"></i>
-      <h3>BOOTYSTRAP</h3>
-      <p>High performance keywords hire the best for you. Gotta smoke test!</p>
+      <i class="fas fa-code" style="color: #075AAA;"></i>
+      <h3>C++</h3>
+      <p>n years</p>
     </div>
 
-    <div class="col-sm-12 col-md-4">
-      <i class="fab fa-css3"></i>
-      <h3>THE HIGH SEAS OF THREE</h3>
-      <p>Keep it lean, execute, but nail jelly to the hothouse!</p>
+    <div class="col-xs-12 col-sm-6 col-md-4">
+      <i class="fab fa-html5"></i>
+      <h3>HTML</h3>
+      <p>n years</p>
     </div>
-
   </div>
-  <hr class="my-4">
+
+  <!-- ROW 2 -->
+  <div class="row text-center padding">
+    <div class="col-xs-12 col-sm-6 col-md-3">
+      <i class="fab fa-css3"></i>
+      <h3>CSS</h3>
+      <p>n years</p>
+    </div>
+
+    <div class="col-xs-12 col-sm-6 col-md-3">
+      <i class="fab fa-python"></i>
+      <h3>Python</h3>
+      <p>n years</p>
+    </div>
+
+    <div class="col-xs-12 col-sm-6 col-md-3">
+      <i class="fas fa-database"></i>
+      <h3>MySQL</h3>
+      <p>n years</p>
+    </div>
+
+    <div class="col-xs-12 col-sm-6 col-md-3">
+      <i class="fab fa-r-project"></i>
+      <h3>R</h3>
+      <p>n years</p>
+    </div>
+  </div>
+
 </div>
 
 <!--- Two Column Section -->
@@ -314,9 +437,9 @@
       <br>
       <a class="btn btn-primary" href="#">Flavortown is near...</a>
     </div>
-      <div class="col-lg-6">
-        <img src="http://unsplash.it/500/300" class="img-fluid" alt="The clams are sad, Jerry!">
-      </div>
+    <div class="col-lg-6">
+      <img src="http://unsplash.it/500/300" class="img-fluid" alt="The clams are sad, Jerry!">
+    </div>
 
   </div>
 </div>
@@ -488,7 +611,6 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
         crossorigin="anonymous"></script>
-<!-- Source for social media icons -->
-<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
 </body>
 </html>

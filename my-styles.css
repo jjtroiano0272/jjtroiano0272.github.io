@@ -103,8 +103,7 @@ hr.light-100 {
     height: auto;
 }
 ﻿
-
-.fa-code {
+.fa-html5 {
   color: #E54D26;
 }
 
@@ -112,16 +111,32 @@ hr.light-100 {
   color: #563D7C;
 }
 
+.fa-code {
+  color: #075AAA;
+}
+
 .fa-css3 {
   color: #2163AF;
 }
 
+.fa-database {
+  color: #00758F;
+}
+
+.fa-python {
+  color: #FFDE57;
+}
+
 .fa-code,
 .fa-bold,
-.fa-css3 {
+.fa-css3,
+.fa-html5,
+.fa-database,
+.fa-r-project,
+.fa-java,
+.fa-python {
   font-size: 4em;
   margin: 1rem;
-
 }
 
 .fa-github {
@@ -341,4 +356,9 @@ figure {
 
   .vertical { margin-top: 50%; }
 
+}
+
+.certification-badge {
+  width: auto;
+  height: 200px;
 }
