@@ -1,6 +1,8 @@
 <!--  Author:         Jonathan J. troiano
       Date Created:   January 25, 2021 (approx.)
       Last Modified:  February 04, 2021 -->
+<!--  RULES:  >> Bootstrap column sizing start with smallest
+              >> Text justification classes only get applied to the text element, not div! -->
 
 <!-- TODO: Some sections aren't sized properly...is this due to em vs. rem? -->
 <!-- TODO: Justify the damn text! -->
@@ -31,33 +33,39 @@
     <meta name="msapplication-TileColor" content="#ffc40d">
     <meta name="theme-color" content="#ffffff">
 
-    <!-- My sheet -->
-    <link rel="stylesheet" href="my-styles.css">
+    <link rel="stylesheet" href="my-styles.css"> <!-- My sheet -->
     <!-- TODO: Might want to import a Google font -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
-          integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
-          crossorigin="anonymous">
-    <!-- Source for social media icons -->
-    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
-    <script src="https://kit.fontawesome.com/c4507a90e4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/v4-shims.css">
-
+    <script defer src="/fontawesome-free-5.15.2-web/js/brands.js"></script>
+    <script defer src="/fontawesome-free-5.15.2-web/js/solid.js"></script>
+    <script type="text/javascript">alert("Page under construction. Enjoy!");</script>
   </head>
 
   <body>
+    <!--Modal: modalCookie-->
+    <div class="modal fade top" id="modalCookie1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="true">
+      <div class="modal-dialog modal-frame modal-top modal-notify modal-info" role="document">
+        <!--Content-->
+        <div class="modal-content">
+          <!--Body-->
+          <div class="modal-body">
+            <div class="row d-flex justify-content-center align-items-center">
+              <p class="pt-3 pr-2">We use cookies to improve your website experience</p>
+              <a type="button" class="btn btn-outline-primary waves-effect" data-dismiss="modal">Okie Dokie</a>
+            </div>
+          </div>
+        </div>
+        <!--/.Content-->
+      </div>
+    </div>
+
       <!-- TODO: Customize your colors! -->
-      <nav class="navbar
-                  navbar-expand-md
-                  navbar-light
-                  bg-light
-                  sticky-top">
+      <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
         <div class="container-fluid">
           <a class="navbar-brand" href="#"><img src="img/logo-2_min.svg" height="50" width="100" alt="Mon Companie!"></a>
-          <button class="navbar-toggler"
-                  type="button"
-                  data-toggle="collapse"
-                  data-target="#navbarResponsive">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarResponsive">
@@ -68,6 +76,9 @@
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Projects</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Research</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#hr-connect">Connect</a>
@@ -126,17 +137,10 @@
         <!-- 2) GitHub projects & coding slide-->
         <div class="carousel-item">
           <!-- Images get wrapped in a div in order to fill screen -->
-          <div class="d-flex
-                      align-items-center
-                      justify-content-center
-                      min-vh-100">
+          <div class="d-flex align-items-center justify-content-center min-vh-100">
           <a href="https://github.com/jjtroiano0272">
             <!-- TODO: Stretches image now, but distorts it. -->
-            <img class="d-block
-                        w-100
-                        min-vh-100
-                        object-fit
-                        object-fit-cover"
+            <img class="d-block w-100 min-vh-100 object-fit object-fit-cover"
                  src="img/coding-bg.png"
                  alt="There's supposed to be an image here, Marty!">
           </a>
@@ -153,16 +157,13 @@
 
         <!-- TODO: 3) Classes at FGCU -->
         <div class="carousel-item">
-          <div class="d-flex
-                      align-items-center
-                      justify-content-center
-                      min-vh-100">
+          <div class="d-flex align-items-center justify-content-center min-vh-100">
             <img class="min-vh-100 object-fit-cover" src="img/bg-1_1920x1080.jpg" alt="There's supposed to be an image here, Marty!">
           </div>
           <!-- Text in slide -->
           <div class="carousel-caption row justify-content-center">
             <a href="#">
-              <h1 class="display-2">Slide <i>n</i></h1>
+              <h1 class="display-2">Research</h1>
             </a>
           </div>
         </div>
@@ -173,17 +174,14 @@
 
         <!-- 6) Cooking slide? -->
         <div class="carousel-item">
-          <div class="d-flex
-                      align-items-center
-                      justify-content-center
-                      min-vh-100">
-          <img class="min-vh-100 object-fit-cover" src="img/bg-2_1920x1080.jpg" alt="There's supposed to be an image here, Marty!">
-        </div>
-        <div class="carousel-caption row justify-content-center">
-          <a href="#">
-            <h1 class="display-2">Slide <i>n</i></h1>
-          </a>
-        </div>
+          <div class="d-flex align-items-center justify-content-center min-vh-100">
+            <img class="min-vh-100 object-fit-cover" src="img/bg-2_1920x1080.jpg" alt="There's supposed to be an image here, Marty!">
+          </div>
+          <div class="carousel-caption row justify-content-center">
+            <a href="#">
+              <h1 class="display-2">Slide <em>n</em></h1>
+            </a>
+          </div>
         </div>
 
         <!-- 7) Jules's Site slide-->
@@ -203,31 +201,23 @@
 
       <!-- Previous/Next buttons on carousel -->
       <!-- Prev/Next buttons do not display on smaller screens -->
-      <a class="carousel-control-prev"
-         href="#slides"
-         role="button"
-         data-slide="prev">
+      <a class="carousel-control-prev" href="#slides" role="button" data-slide="prev">
          <span class="sr-only">Previous</span>
          <span class="carousel-control-prev-icon d-none d-sm-block" aria-hidden="true"></span>
       </a>
-      <a class="carousel-control-next"
-         href="#slides"
-         role="button"
-         data-slide="next">
+      <a class="carousel-control-next" href="#slides" role="button" data-slide="next">
          <span class="sr-only">Previous</span>
          <span class="carousel-control-next-icon d-none d-sm-block" aria-hidden="true"></span>
       </a>
     </div>
 
 
-<!-- J U M B O T R O N -->
+<!-- J U M B O T R O N
+**************************************************************************** -->
 <div class="container-fluid">
-  <div class="row jumbotron">
-    <div class="col-xs-12
-                col-sm-12
-                col-md-9
-                col-lg-9
-                col-xl-12">
+  <div class="row jumbotron text-justify">
+    <!-- <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-12"> -->
+    <div class="col-xs-12 col-md-9 col-xl-12">
       <p class="lead">First off I'd like to welcome you to my website, a project
       I decided to do to serve as my portfolio for any company looking to hire me.
       I've showcased my skills and previous projets here so you can get an idea
@@ -259,89 +249,95 @@
   </div> -->
   <div class="row text-center justify-content-center">
     <div class="col-xl-6 col-sm-12 col-xs-12">
-      <img class="certification-badge" src="img/aws_cert_badge.png" alt="Amazon Web Services Certified Cloud Practitioner">
+      <img class="certification-badge" src="img/aws-cert-badge.svg" alt="Amazon Web Services Certified Cloud Practitioner">
     </div>
     <div class="col-xl-6 col-sm-12 col-xs-12">
       <!-- <img class="img-fluid object-fit-cover pull-right" src="img/gartner_hq.jpg" alt="" style="border-radius: 5%;"> -->
-      <img class="certification-badge" src="img/oracle_cert_badge.png" alt="Oracle Certified Junior Associate Java Programmer">
+      <img class="certification-badge" src="img/oracle-cert-badge.svg" alt="Oracle Certified Junior Associate Java Programmer">
     </div>
   </div>
 </div>
 
 <!-- E X P E R I E N C E   S E C T I O N
 *****************************************************************************-->
-<!-- TODO: Class welcome we will style later -->
-<div class="container-fluid padding">
-
+<!-- <div class="container-fluid padding"> Removed padding because I think it's forcing the space for the background-->
+<div class="container-fluid padding" style="overflow: hidden;"> <!-- Don't think it needs overflow hidden! -->
   <!-- Gartner Internship -->
-  <div class="row col-12 welcome text-center justify-content-center">
+  <!-- <div class="row col-12 container-fluid welcome text-center justify-content-center padding"> -->
+  <div class="row jobs-bg-light">
     <div class="col-xl-12">
-      <h1 class="display-4">Master Data Management at Gartner</h1>
-      <h4 class="display-5">Stamford, CT</h4>
+      <h1 class="display-4 text-center" style="font-size: 3.0rem;">Master Data Management at Gartner</h1>
+      <h4 class="display-5 text-center text-muted"><em>Stamford, CT</em></h4>
       <hr>
     </div>
-  </div>
-  <div class="row text-justify">
-    <div class="col-xl-7 col-sm-12 col-xs-12 text-justify">
-      <p class="lead">Managed database connections and curated the data we would
-      query from multiple sources, creating health checks on our data. Created
-      an automated process for querying databases and summarizing that data
-      output in a mass email to the other members of our department providing
-      them with a snapshot of how the accounts we manage were performing and
-      which accounts (out of more than 750,000 managed accounts) may have needed
-      further attention (e.g. if account details were only partially filled in
-      or had duplicate entries). We used this data as a basis for creating a
-      browser-accessible report (dashboard) in Microsoft Power BI.</p>
-    </div>
-    <div class="col-xl-5 col-sm-12 col-xs-12">
-      <img class="img-fluid object-fit-cover pull-right" src="img/gartner_hq.jpg" alt="" style="border-radius: 5%;">
+    <!-- </div> -->
+    <div class="row">
+      <div class="col-xs-12 col-xl-7">
+        <p class="lead text-left">During the summer of 2019 (May to August) I worked at the
+          Gartner Headquarters in Stamford, CT, 30 minutes from New York City. Here
+          I worked as part of a team whre we managed database connections and
+          curated the data we would query from multiple sources, creating health
+          checks on our data. Created an automated process for querying databases
+          and summarizing that data output in a mass email to the other members
+          of our department providing them with a snapshot of how the accounts
+          we manage were performing and which accounts (out of more than 750,000
+          managed accounts) may have needed further attention (e.g. if account
+          details were only partially filled in or had duplicate entries). We
+          used this data as a basis for creating a browser-accessible report
+          (dashboard) in Microsoft Power BI.</p>
+       </div>
+      <div class="col-xs-12 col-xl-5">
+        <img class="img-fluid object-fit-cover pull-right" src="img/gartner_hq.jpg" alt="" style="border-radius: 5%;">
+      </div>
     </div>
   </div>
 
   <!-- IT Technician -->
-  <div class="row col-12 welcome text-center justify-content-center">
+  <!-- <div class="row col-12 text-center justify-content-center jobs-bg-dark padding"> -->
+  <div class="row jobs-bg-dark">
     <div class="col-xl-12">
-      <h1 class="display-4">IT Technician at 21<sup>st</sup> Century Technology, LLC</h1>
-      <h4 class="display-5">Estero, FL</h4>
+      <h1 class="display-4 text-center" style="font-size: 3.0rem;">IT Technician at 21<sup>st</sup> Century Technology, LLC</h1>
+      <h4 class="display-5 text-center text-muted"><em>Estero, FL</em></h4>
       <hr>
     </div>
-  </div>
-  <div class="row text-justify">
-    <div class="col-xl-5 col-sm-12 col-xs-12">
-      <img class="img-fluid object-fit-cover pull-left" src="https://upload.wikimedia.org/wikipedia/commons/e/e8/Computer_technician_04.jpg" alt="" style="border-radius: 5%;">
-    </div>
-    <div class="col-xl-7 col-sm-12 col-xs-12 text-justify">
-      <p class="lead">Part of a two-man team in which I schedule appointments
-        with clients to troubleshoot computer issues, everything from help in
-         using an unfamiliar program to OS installs, data recovery, lessons, to
-         installing a home doorbell & camera system. Appointments with clients
-         are solo one-on-one jobs, interpreting a layperson’s distress into
-         actionable IT solutions. Laid off during pandemic.</p>
+  <!-- This is where the bg-dark used to end for row col-12 -->
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-xl-5">
+        <img class="img-fluid object-fit-cover pull-left" src="https://upload.wikimedia.org/wikipedia/commons/e/e8/Computer_technician_04.jpg" alt="" style="border-radius: 5%;">
+      </div>
+      <div class="col-xs-12 col-sm-12 col-xl-7">
+        <p class="lead text-left">Part of a two-man team in which I schedule
+          appointments with clients to troubleshoot computer issues, everything
+          from help in using an unfamiliar program to OS installs, data
+          recovery, lessons, to installing a home doorbell & camera system.
+          Appointments with clients are solo one-on-one jobs, interpreting a
+          layperson’s distress into actionable IT solutions. Laid off during pandemic.</p>
+      </div>
     </div>
   </div>
 
   <!-- Tutor & Camp Counselor -->
-  <div class="row col-12 welcome text-center justify-content-center">
+  <div class="row jobs-bg-light">
     <div class="col-xl-12">
-      <h1 class="display-4">Camp Counselor; Math Tutor</h1>
-      <h4 class="display-5">Fort Myers, FL</h4>
+      <h1 class="display-4 text-center">Camp Counselor; Math Tutor</h1>
+      <h4 class="display-5 text-center text-muted"><em>Fort Myers, FL</em></h4>
       <hr>
     </div>
-  </div>
-  <div class="row text-justify">
-    <div class="col-xl-7 col-md-8 text-justify">
-      <p class="lead">Assisted students with comprehending course material in
-        real-time, grading assignments for classes with 30-50 students. Courses
-        covered : Introduction to Computer Science & Introduction to Programming.
-        Worked as a camp counselor in 2017 for the FGCU Coding Academy, STEM
-        Academy, and Mathletes camps.</p>
+    <div class="row">
+      <div class="col-md-8 col-xl-7 text-justify">
+        <p class="lead text-left">Assisted students with comprehending course material in
+          real-time, grading assignments for classes with 30-50 students. Courses
+          covered : Introduction to Computer Science & Introduction to Programming.
+          Worked as a camp counselor in 2017 for the FGCU Coding Academy, STEM
+          Academy, and Mathletes camps.</p>
+      </div>
+      <div class="col-md-4 col-xl-5">
+        <!-- <img class="img-fluid object-fit-cover pull-right" src="https://images.pexels.com/photos/1181672/pexels-photo-1181672.jpeg?cs=srgb&dl=pexels-christina-morillo-1181672.jpg&fm=jpg" alt="" style="border-radius: 5%;"> -->
+        <iframe class="img-fluid object-fit-cover pull-right" width="560" height="315" src="https://www.youtube.com/embed/tANQxUoA3So" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
     </div>
-    <div class="col-xl-5 col-md-4">
-      <!-- <img class="img-fluid object-fit-cover pull-right" src="https://images.pexels.com/photos/1181672/pexels-photo-1181672.jpeg?cs=srgb&dl=pexels-christina-morillo-1181672.jpg&fm=jpg" alt="" style="border-radius: 5%;"> -->
-      <iframe class="img-fluid object-fit-cover pull-right" width="560" height="315" src="https://www.youtube.com/embed/tANQxUoA3So" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
   </div>
-</div>
+</div> <!-- Close of Experience Section -->
 
 <!--- THREE COLUMN ICON SECTION
 **************************************************************************** -->
@@ -375,9 +371,22 @@ stating the no. years I have experience (coded as a JS function as time differen
   <!-- ROW 1 -->
   <div class="row text-center padding">
     <div class="col-xs-12 col-sm-6 col-md-4">
-      <i class="fab fa-java fas fa-code" style="color: #FF0000;"></i>
+      <i class="fab fa-java" style="color: #FF0000;"></i>
+      <!-- <img class="language-icon" src="img/java-logo.svg"> -->
       <h3>Java</h3>
-      <p>n years</p>
+      <p>
+        <script type="text/javascript">
+          var prevTime = new Date(2017,7,20,0,0);  // Feb 1, 2011
+          var thisTime = new Date();              // now
+          var diff = thisTime.getTime() - prevTime.getTime();   // now - Feb 1
+          var dateDiff = diff / (1000*60*60*24);
+          document.write("<p>" + dateDiff + "</p>");
+        </script> years
+        <!-- <script src="dateDiff.js">
+          var diff = timeSince(new Date(Date.now()-aDay));
+          document.write("<p>"+diff+" years</p>");
+        </script> -->
+      </p>
     </div>
 
     <div class="col-xs-12 col-sm-6 col-md-4">
@@ -429,37 +438,39 @@ stating the no. years I have experience (coded as a JS function as time differen
 <!-- IDEA: Card gets a button to subscribe to my YT channel -->
 <!-- CARD STYLE -->
 <div class="container-fluid padding">
-  <div class="row padding text-center">
+  <div class="row text-center padding">
     <!-- <div class="row text-justify">
       <div class="col-xl-7 col-sm-12 col-xs-12 text-justify"> -->
-    <div class="col-xl-4 col-lg-4">
-      <div class="card" style="width: 18rem;">
+    <div class="col-md-4">
+      <div class="card yt-card">
         <!-- <img src="..." class="card-img-top" alt="..."> -->
         <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/PszSWH0edjg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <div class="card-body">
-          <a href="#" class="btn btn-primary" style="background-color: #C4302B;">SUBSCRIBE</a>
+          <!-- <a href="#" class="btn btn-primary" style="background-color: #C4302B;">SUBSCRIBE</a> -->
+          <div class="g-ytsubscribe" data-channelid="UCy-_Q3UO3KjKQWTYhaWgeww" data-layout="default" data-count="default"></div>
         </div>
       </div>
     </div>
 
-    <div class="col-xl-4 col-lg-4">
-      <div class="card" style="width: 18rem;">
+    <div class="col-md-4">
+      <div class="card yt-card">
         <iframe class="embed-responsive-item" src="https://www.youtube.com/watch?v=ajsgV1UTxgs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <div class="card-body">
-          <a href="#" class="btn btn-primary" style="background-color: #C4302B;">SUBSCRIBE</a>
+          <!-- <a href="#" class="btn btn-primary" style="background-color: #C4302B;">SUBSCRIBE</a> -->
+          <div class="g-ytsubscribe" data-channelid="UCy-_Q3UO3KjKQWTYhaWgeww" data-layout="default" data-count="default"></div>
         </div>
       </div>
     </div>
 
-    <div class="col-xl-4 col-lg-4">
-      <div class="card" style="width: 18rem;">
+    <div class="col-md-4">
+      <div class="card yt-card">
         <iframe class="embed-responsive-item" src="https://www.youtube.com/watch?v=S2LVFWpQnWE&" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <div class="card-body text-center">
-          <a href="#" class="btn btn-primary" style="background-color: #C4302B;">SUBSCRIBE</a>
+        <div class="card-body">
+          <!-- <a href="#" class="btn btn-primary" style="background-color: #C4302B;">SUBSCRIBE</a> -->
+          <div class="g-ytsubscribe" data-channelid="UCy-_Q3UO3KjKQWTYhaWgeww" data-layout="default" data-count="default"></div>
         </div>
       </div>
     </div>
-
   </div>
 </div>
 
@@ -505,11 +516,12 @@ stating the no. years I have experience (coded as a JS function as time differen
        <span class="carousel-control-next-icon d-none d-sm-block" aria-hidden="true"></span>
     </a>
   </div>
-</div> -->
-<hr>
+</div>
+<hr> -->
 
 <!--- Two Column Section -->
-<div class="container-fluid padding">
+<!-- Currently Filler crap! -->
+<!-- <div class="container-fluid padding">
   <div class="row padding">
     <div class="col-lg-6">
       <h2>Can you make it pop? That's great...</h2>
@@ -531,15 +543,12 @@ stating the no. years I have experience (coded as a JS function as time differen
 
   </div>
 </div>
-
-<hr class="my-4">
+<hr class="my-4"> -->
 
 <!--- Fixed background -->
 <figure>
   <div class="fixed-wrap">
-    <div id="fixed">
-
-    </div>
+    <div id="fixed"></div>
   </div>
 </figure>
 
@@ -569,18 +578,20 @@ stating the no. years I have experience (coded as a JS function as time differen
 
 <!--- MEET THE TEAM
 **************************************************************************** -->
-<div class="container-fluid padding">
+<!-- Currently filler crap! -->
+<!-- <div class="container-fluid padding">
   <div class="row welcome col-12 text-center">
     <div class="col-12">
       <h1 class="display-4">Meet The Team</h1>
       <hr>
     </div>
   </div>
-</div>
+</div> -->
 
 <!--- Cards -->
-<div class="container-fluid padding">
-  <div class="row padding">
+<!-- Currently filler crap! -->
+<!-- <div class="container-fluid padding"> -->
+  <!-- <div class="row padding">
     <div class="col-md-4">
       <div class="card">
         <img class="card-img-top" src="img/harold-1.jpeg" alt="Harold!">
@@ -623,10 +634,11 @@ stating the no. years I have experience (coded as a JS function as time differen
     </div>
   </div>
 
-</div>
+</div> -->
 
 <!--- Two Column Section -->
-<div class="container-fluid padding">
+<!-- Currently filler crap! -->
+<!-- <div class="container-fluid padding">
   <div class="row padding">
     <div class="col-lg-6">
       <h2>Focus on the customer journey...</h2>
@@ -639,18 +651,19 @@ stating the no. years I have experience (coded as a JS function as time differen
          awareness. Can you ballpark the cost per unit for me show pony streamline
          the right info at the right time to the right people, loop back.</p>
     </div>
-    <div class="col-lg-6">
+    <div class="col-lg-6"> -->
       <!-- TODO: Shouldn't I redefine the Bootstrap class for this to resize to a set size? -->
-      <img src="img/bench-fall-park-rest-40884.jpeg"
+      <!-- <img src="img/bench-fall-park-rest-40884.jpeg"
            class="img-fluid"
            style="width: 500px; height: 300px"
            alt="The clams are sad, Jerry!">
     </div>
   </div>
   <hr class="my-4" id="hr-connect">
-</div>
+</div> -->
 
-<!--- C O N N E C T -->
+<!--- C O N N E C T
+**************************************************************************** -->
 <div class="container-fluid padding">
   <div class="row text-center padding">
     <div class="col-12">
@@ -673,7 +686,8 @@ stating the no. years I have experience (coded as a JS function as time differen
 
 </div>
 
-<!--- Footer -->
+<!--- F O O T E R
+**************************************************************************** -->
 <footer>
   <div class="container-fluid padding">
     <div class="row text-center">
@@ -691,17 +705,35 @@ stating the no. years I have experience (coded as a JS function as time differen
   </div>
 </footer>
 
-<!-- <script>
-  // TODO: How to center alert box...?
-  alert("Page under construction continually. Final page may be quite different!");
-</script> -->
-<!-- jQuery & Bootstrap JS bundle -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
-        crossorigin="anonymous"></script>
-
 </body>
+<!-- S C R I P T S
+**************************************************************************** -->
+<!-- // TODO: How to center alert box...? -->
+
+<!-- jQuery & Bootstrap JS bundle -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+<script src="https://apis.google.com/js/platform.js"></script> <!-- YouTube API -->
+<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script> <!-- social media icons -->
+<script src="https://kit.fontawesome.com/c4507a90e4.js" crossorigin="anonymous"></script>
+<script defer src="/fontawesome-free-5.15.2-web/js/all.js"></script> <!--load all styles -->
+<script src="my-js.js"></script>
+<!-- <script type="text/javascript">
+  const storageType = localStorage;
+  const consentPropertyName = my_consent;
+
+  // Helper function
+  const showPopUp = () => !storageType.getItem(consentPropertyName);
+  const saveToStorage = () => storageType.setItem(consentPropertyName, true);
+
+  window.onLoad() = () => {
+    if (showPopUp()) {
+      const consent = confirm('This site is currently under construction. Enjoy!');
+
+      if (consent) {
+        saveToStorage();
+      }
+    }
+  }
+</script> -->
 </html>

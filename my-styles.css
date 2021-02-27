@@ -358,7 +358,34 @@ figure {
 
 }
 
+/* MY STYLES
+----------------------------------------------------------------------------- */
 .certification-badge {
   width: auto;
   height: 200px;
+}
+
+.jobs-bg-light {
+  padding: 2rem 1rem;
+  /* margin-bottom: 2rem; */
+  /* background-color: #e9ecef; */
+  border-radius: 0.3rem;
+}
+
+.jobs-bg-dark {
+  padding: 2rem 1rem;
+  /* margin-bottom: 2rem; */
+  background-color: #e9ecef;
+  border-radius: 0.3rem;
+}
+
+.yt-card {
+  /* width: 18rem; */
+  min-width: 18rem;
+}
+
+.language-icon {
+  /* font-size: 0.5em; */
+  height: 8em;
+  width: 100%;
 }
