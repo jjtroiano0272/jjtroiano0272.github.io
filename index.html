@@ -38,6 +38,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/v4-shims.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
     <script defer src="/fontawesome-free-5.15.2-web/js/brands.js"></script>
     <script defer src="/fontawesome-free-5.15.2-web/js/solid.js"></script>
     <script type="text/javascript">alert("Page under construction. Enjoy!");</script>
@@ -173,7 +174,7 @@
         <!-- TODO: 5) Internship at Gartner -->
 
         <!-- 6) Cooking slide? -->
-        <div class="carousel-item">
+        <!-- <div class="carousel-item">
           <div class="d-flex align-items-center justify-content-center min-vh-100">
             <img class="min-vh-100 object-fit-cover" src="img/bg-2_1920x1080.jpg" alt="There's supposed to be an image here, Marty!">
           </div>
@@ -182,7 +183,7 @@
               <h1 class="display-2">Slide <em>n</em></h1>
             </a>
           </div>
-        </div>
+        </div> -->
 
         <!-- 7) Jules's Site slide-->
         <div class="carousel-item">
@@ -343,62 +344,49 @@
 **************************************************************************** -->
 <!-- TODO: Little section here displaying the languages I know, with a caption
 stating the no. years I have experience (coded as a JS function as time difference) -->
-<!-- 1) C++
-     2) CSS
-     3) HTML
-     4) Java
-     5) M Power Query
-     6) Python
-     7) R 8)
-     8) MySQL -->
-<!-- Applicaitons expertise
-      1) Photoshop
-      2) TOAD Data Point
-      3) Logic Pro -->
-
-
-<!-- ROW 1 -->
-      <!-- <div class="row col-12 text-center justify-content-center">
-        <div class="col-xl-12"></div>
-      </div> -->
-<!-- ROW 2, 2 col -->
-      <!-- <div class="row text-justify">
-        <div class="col-xl-7 col-md-8 text-justify"></div>
-        <div class="col-xl-5 col-md-4"></div>
-      </div> -->
-
 <div class="container-fluid padding">
   <!-- ROW 1 -->
   <div class="row text-center padding">
     <div class="col-xs-12 col-sm-6 col-md-4">
-      <i class="fab fa-java" style="color: #FF0000;"></i>
+      <!-- <i class="fab fa-java" style="color: #FF0000;"></i> -->
+      <img width="96" src="https://camo.githubusercontent.com/a870803f30db1d15495072fa9e946a7fa6a6fc1a47fe12324aaf7509c410fc4a/68747470733a2f2f6564656e742e6769746875622e696f2f537570657254696e7949636f6e732f696d616765732f7376672f6a6176612e737667" alt="Java">
       <!-- <img class="language-icon" src="img/java-logo.svg"> -->
       <h3>Java</h3>
       <p>
-        <script type="text/javascript">
-          var prevTime = new Date(2017,7,20,0,0);  // Feb 1, 2011
-          var thisTime = new Date();              // now
-          var diff = thisTime.getTime() - prevTime.getTime();   // now - Feb 1
-          var dateDiff = diff / (1000*60*60*24);
-          document.write("<p>" + dateDiff + "</p>");
+        <script src="scripts/dateDiff.js"></script>
+        <script language"javascript">
+          var startDate = new Date(2017, 7, 20, 0, 0);  // Feb 1, 2011
+          var endDate = new Date();                     // now
+          document.write(roundedToFixed(timeElapsed(startDate, endDate)), 1));
         </script> years
-        <!-- <script src="dateDiff.js">
-          var diff = timeSince(new Date(Date.now()-aDay));
-          document.write("<p>"+diff+" years</p>");
-        </script> -->
       </p>
     </div>
 
     <div class="col-xs-12 col-sm-6 col-md-4">
       <i class="fas fa-code" style="color: #075AAA;"></i>
       <h3>C++</h3>
-      <p>n years</p>
+      <p>
+        <script src="scripts/dateDiff.js"></script>
+        <script language"javascript">
+          var startDate = new Date(2018, 1, 20, 0, 0);  // Feb 1, 2011
+          var endDate = new Date();                     // now
+          document.write(roundedToFixed(timeElapsed(startDate, endDate)), 1));
+        </script> years
+      </p>
     </div>
 
     <div class="col-xs-12 col-sm-6 col-md-4">
-      <i class="fab fa-html5"></i>
+      <!-- <i class="fab fa-html5"></i> -->
+      <img width="96" src="https://camo.githubusercontent.com/72e5df59529a42423d671ba4c02bfb327d917517bfff18595c5e5dc17a5abece/68747470733a2f2f6564656e742e6769746875622e696f2f537570657254696e7949636f6e732f696d616765732f7376672f68746d6c352e737667" alt="HTML">
       <h3>HTML</h3>
-      <p>n years</p>
+      <p>
+        <script src="scripts/dateDiff.js"></script>
+        <script language"javascript">
+          var startDate = new Date(2020, 9, 20, 0, 0);  // Feb 1, 2011
+          var endDate = new Date();                     // now
+          document.write(roundedToFixed(timeElapsed(startDate, endDate)), 1));
+        </script> years
+      </p>
     </div>
   </div>
 
@@ -407,25 +395,47 @@ stating the no. years I have experience (coded as a JS function as time differen
     <div class="col-xs-12 col-sm-6 col-md-3">
       <i class="fab fa-css3"></i>
       <h3>CSS</h3>
-      <p>n years</p>
+      <p>
+        <script src="scripts/dateDiff.js"></script>
+        <script language"javascript">
+          var startDate = new Date(2017, 9, 20, 0, 0);  // Feb 1, 2011
+          var endDate = new Date();                     // now
+          document.write(roundedToFixed(timeElapsed(startDate, endDate)), 1));
+        </script> years
+      </p>
     </div>
 
     <div class="col-xs-12 col-sm-6 col-md-3">
-      <i class="fab fa-python"></i>
+      <!-- <i class="fab fa-python"></i> -->
+      <img width="96" src="https://camo.githubusercontent.com/aa96ee3a3352c9c3c2161d3e95698d0885a277ab85d617fe77912627d37a3959/68747470733a2f2f6564656e742e6769746875622e696f2f537570657254696e7949636f6e732f696d616765732f7376672f707974686f6e2e737667" alt="Python">
       <h3>Python</h3>
-      <p>n years</p>
+      <p>
+        <script src="scripts/dateDiff.js"></script>
+        <script language"javascript">
+          var startDate = new Date(2017, 7, 20, 0, 0);  // Feb 1, 2011
+          var endDate = new Date();                     // now
+          document.write(roundedToFixed(timeElapsed(startDate, endDate)), 1));
+        </script> years
+      </p>
     </div>
 
     <div class="col-xs-12 col-sm-6 col-md-3">
       <i class="fas fa-database"></i>
       <h3>MySQL</h3>
-      <p>n years</p>
+      <p>
+        <script src="scripts/dateDiff.js"></script>
+        <script language"javascript">
+          var startDate = new Date(2019, 4, 28, 0, 0);  // Feb 1, 2011
+          var endDate = new Date();                     // now
+          document.write(roundedToFixed(timeElapsed(startDate, endDate)), 1));
+        </script> years
+      </p>
     </div>
 
     <div class="col-xs-12 col-sm-6 col-md-3">
       <i class="fab fa-r-project"></i>
       <h3>R</h3>
-      <p>n years</p>
+      <p>0.5 years</p>
     </div>
   </div>
 
@@ -454,7 +464,7 @@ stating the no. years I have experience (coded as a JS function as time differen
 
     <div class="col-md-4">
       <div class="card yt-card">
-        <iframe class="embed-responsive-item" src="https://www.youtube.com/watch?v=ajsgV1UTxgs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ajsgV1UTxgs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <div class="card-body">
           <!-- <a href="#" class="btn btn-primary" style="background-color: #C4302B;">SUBSCRIBE</a> -->
           <div class="g-ytsubscribe" data-channelid="UCy-_Q3UO3KjKQWTYhaWgeww" data-layout="default" data-count="default"></div>
@@ -464,7 +474,7 @@ stating the no. years I have experience (coded as a JS function as time differen
 
     <div class="col-md-4">
       <div class="card yt-card">
-        <iframe class="embed-responsive-item" src="https://www.youtube.com/watch?v=S2LVFWpQnWE&" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/S2LVFWpQnWE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <div class="card-body">
           <!-- <a href="#" class="btn btn-primary" style="background-color: #C4302B;">SUBSCRIBE</a> -->
           <div class="g-ytsubscribe" data-channelid="UCy-_Q3UO3KjKQWTYhaWgeww" data-layout="default" data-count="default"></div>
@@ -473,6 +483,45 @@ stating the no. years I have experience (coded as a JS function as time differen
     </div>
   </div>
 </div>
+
+<!-- COURTESY STACK -->
+<script>
+    /**
+     * Put your video IDs in this array
+     */
+    var videoIDs = [
+        'PszSWH0edjg',
+        'ajsgV1UTxgs',
+        'S2LVFWpQnWE'
+    ];
+
+    var player, currentVideoId = 0;
+
+    function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+            height: '350',
+            width: '425',
+            events: {
+                'onReady': onPlayerReady,
+                'onStateChange': onPlayerStateChange
+            }
+        });
+    }
+
+    function onPlayerReady(event) {
+        event.target.loadVideoById(videoIDs[currentVideoId]);
+    }
+
+    function onPlayerStateChange(event) {
+        if (event.data == YT.PlayerState.ENDED) {
+            currentVideoId++;
+            if (currentVideoId < videoIDs.length) {
+                player.loadVideoById(videoIDs[currentVideoId]);
+            }
+        }
+    }
+</script>
+
 
 <!-- <div class="container-fluid padding"> -->
   <!-- small carousel here for my tracks? -->
@@ -554,22 +603,32 @@ stating the no. years I have experience (coded as a JS function as time differen
 
 <!--- HIDDEN CODE SECTION
 **************************************************************************** -->
-<button class="fun" data-toggle="collapse" data-target="#emoji">Show site code</button>
+<button class="fun" data-toggle="collapse" data-target="#emoji">Show me some code</button>
 <div id="emoji" class="collapse">
-  <div class="container-fluid padding bg-dark">
-    <div class="row text-center">
+  <div class="container-fluid bg-dark">
+    <div class="row text-left">
       <div class="col-12">
         <pre><code class="text-light">
-          &lt;h2&gt;Can you make it pop? That's great...&lt;/h2&gt;
-          &lt;p&gt; trust you there are more projects lined up charge extra the next time
-          I want you to take it to the next level. It looks a bit empty, try to
-          make everything bigger. Something summery; colourful the hair is just
-          too polarising, we exceed the clients' expectations do less with more
-          for it needs to be the same, but totally different , but I want you to
-          take it to the next level.&lt;/p&gt;
-          &lt;p&gt;Try a more powerful colour can you make it look more designed make it
-          sexy i cant pay you , I got your invoice...it seems really high, why
-          did you charge so much can you make the font bigger?.&lt;/p&gt;
+          &lt;div class="row jobs-bg-light"&gt;
+            &lt;div class="col-xl-12"&gt;
+              &lt;h1 class="display-4 text-center"&gt;Camp Counselor; Math Tutor&lt;/h1&gt;
+              &lt;h4 class="display-5 text-center text-muted"&gt;&lt;em&gt;Fort Myers, FL&lt;/em&gt;&lt;/h4&gt;
+              &lt;hr&gt;
+            &lt;/div&gt;
+            &lt;div class="row"&gt;
+              &lt;div class="col-md-8 col-xl-7 text-justify"&gt;
+                &lt;p class="lead text-left"&gt;Assisted students with comprehending course material in
+                  real-time, grading assignments for classes with 30-50 students. Courses
+                  covered : Introduction to Computer Science & Introduction to Programming.
+                  Worked as a camp counselor in 2017 for the FGCU Coding Academy, STEM
+                  Academy, and Mathletes camps.&lt;/p&gt;
+              &lt;/div&gt;
+              &lt;div class="col-md-4 col-xl-5"&gt;
+                &lt;!-- &lt;img class="img-fluid object-fit-cover pull-right" src="https://images.pexels.com/photos/1181672/pexels-photo-1181672.jpeg?cs=srgb&dl=pexels-christina-morillo-1181672.jpg&fm=jpg" alt="" style="border-radius: 5%;"&gt; --&gt;
+                &lt;iframe class="img-fluid object-fit-cover pull-right" width="560" height="315" src="https://www.youtube.com/embed/tANQxUoA3So" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
         </code></pre>
       </div>
     </div>
@@ -668,7 +727,6 @@ stating the no. years I have experience (coded as a JS function as time differen
   <div class="row text-center padding">
     <div class="col-12">
       <h2>Connect</h2>
-
     </div>
     <div class="col-12 social padding">
       <a href="https://github.com/jjtroiano0272">
@@ -681,9 +739,7 @@ stating the no. years I have experience (coded as a JS function as time differen
         <i class="fab fa-linkedin-in"></i>
       </a>
     </div>
-
   </div>
-
 </div>
 
 <!--- F O O T E R
@@ -699,6 +755,16 @@ stating the no. years I have experience (coded as a JS function as time differen
       <div class="col-12">
         <hr class="light-100">
         <h5>&copy;Jonathan Troiano 2021</h5>
+        <p>Developed with</p>
+      </div>
+      <div class="col-4">
+        <img width="96" src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg" style="opacity: .80;" alt="Bootstrap">
+      </div>
+      <div class="col-4">
+        <img width="96" src="https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg" style="opacity: .80;" alt="Javascript">
+      </div>
+      <div class="col-4">
+        <img width="96" src="https://camo.githubusercontent.com/0a52f68a159b75266c4ae21683fffa9cbc1af29ea6febc2a8c9ce260a05e521d/68747470733a2f2f6564656e742e6769746875622e696f2f537570657254696e7949636f6e732f696d616765732f7376672f616e67756c61722e737667" style="opacity: .80;" alt="Javascript">
       </div>
 
     </div>
