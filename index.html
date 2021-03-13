@@ -24,16 +24,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Portfolio: Jonathan Troiano</title>
 
-    <!-- FAVICON     -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ffc40d">
+    <!-- FAVICONS     -->
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+    <link rel="manifest" href="icons/site.webmanifest">
+    <link rel="mask-icon" href="icons/safari-pinned-tab.svg" color="#ffc40d">
     <meta name="msapplication-TileColor" content="#ffc40d">
     <meta name="theme-color" content="#ffffff">
 
-    <link rel="stylesheet" href="my-styles.css"> <!-- My sheet -->
+    <link rel="stylesheet" href="css/my-styles.css"> <!-- My sheet -->
     <!-- TODO: Might want to import a Google font -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css">
@@ -49,7 +49,7 @@
       <!-- TODO: Customize your colors! -->
       <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#"><img src="img/logo-2_min.svg" height="50" width="100" alt="Mon Companie!"></a>
+          <a class="navbar-brand" href="#"><img src="icons/logo-2_min.svg" height="50" width="100" alt="Mon Companie!"></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -82,10 +82,7 @@
     <!-- TODO: All images need to display at a constant size (bigger images expand the slider) -->
     <!-- IDEA: Might want to adjust the rate at which images change (faster.) -->
     <!-- Currently items MUST be sized 1280x800 in order not to resize carousel! -->
-    <div id="slides"
-         class="carousel slide"
-         data-ride="carousel"
-         data-touch=true>
+    <div id="slides" class="carousel slide" data-ride="carousel" data-touch=true>
       <ol class="carousel-indicators">
         <li data-target="#slides" data-slide-to="0"></li>
         <li data-target="#slides" data-slide-to="1"></li>
@@ -120,7 +117,7 @@
             <!-- </div> -->
           <!-- </div> -->
           <!-- </div> -->
-          </div>
+        </div>
 
         <!-- 2) GitHub projects & coding slide-->
         <div class="carousel-item">
@@ -128,9 +125,7 @@
           <div class="d-flex align-items-center justify-content-center min-vh-100">
           <a href="https://github.com/jjtroiano0272">
             <!-- TODO: Stretches image now, but distorts it. -->
-            <img class="d-block w-100 min-vh-100 object-fit object-fit-cover"
-                 src="img/coding-bg.png"
-                 alt="There's supposed to be an image here, Marty!">
+            <img class="d-block w-100 min-vh-100 object-fit object-fit-cover" src="img/coding-bg.png" alt="There's supposed to be an image here, Marty!">
           </a>
           </div>
           <div class="carousel-caption row justify-content-center">
@@ -140,7 +135,7 @@
               <h4>Java certified, AWS certified</h4>
             </a>
           </div>
-      </div>
+        </div>
 
 
         <!-- TODO: 3) Classes at FGCU -->
@@ -185,7 +180,8 @@
           </div>
         </div>
         </div>
-      </div>
+
+      </div> <!-- Closing carousel-inner -->
 
       <!-- Previous/Next buttons on carousel -->
       <!-- Prev/Next buttons do not display on smaller screens -->
@@ -194,7 +190,7 @@
          <span class="carousel-control-prev-icon d-none d-sm-block" aria-hidden="true"></span>
       </a>
       <a class="carousel-control-next" href="#slides" role="button" data-slide="next">
-         <span class="sr-only">Previous</span>
+         <span class="sr-only">Next</span>
          <span class="carousel-control-next-icon d-none d-sm-block" aria-hidden="true"></span>
       </a>
     </div>
@@ -237,11 +233,11 @@
   </div> -->
   <div class="row text-center justify-content-center">
     <div class="col-xl-6 col-sm-12 col-xs-12">
-      <img class="certification-badge" src="img/aws-cert-badge.svg" alt="Amazon Web Services Certified Cloud Practitioner">
+      <img class="certification-badge" src="icons/aws-cert-badge.svg" alt="Amazon Web Services Certified Cloud Practitioner">
     </div>
     <div class="col-xl-6 col-sm-12 col-xs-12">
       <!-- <img class="img-fluid object-fit-cover pull-right" src="img/gartner_hq.jpg" alt="" style="border-radius: 5%;"> -->
-      <img class="certification-badge" src="img/oracle-cert-badge.svg" alt="Oracle Certified Junior Associate Java Programmer">
+      <img class="certification-badge" src="icons/oracle-cert-badge.svg" alt="Oracle Certified Junior Associate Java Programmer">
     </div>
   </div>
 </div>
@@ -336,11 +332,10 @@ stating the no. years I have experience (coded as a JS function as time differen
   <div class="row text-center padding">
     <div class="col-xs-12 col-sm-6 col-md-4">
       <!-- <i class="fab fa-java" style="color: #FF0000;"></i> -->
-      <img width="96" src="https://camo.githubusercontent.com/a870803f30db1d15495072fa9e946a7fa6a6fc1a47fe12324aaf7509c410fc4a/68747470733a2f2f6564656e742e6769746875622e696f2f537570657254696e7949636f6e732f696d616765732f7376672f6a6176612e737667" alt="Java">
-      <!-- <img class="language-icon" src="img/java-logo.svg"> -->
+      <img width="96" src="icons/java-logo.svg" alt="Java">
       <h3>Java</h3>
       <p>
-        <script src="scripts/dateDiff.js"></script>
+        <script src="js/dateDiff.js"></script>
         <script language"javascript">
           var startDate = new Date(2017, 7, 20, 0, 0);  // Feb 1, 2011
           var endDate = new Date();                     // now
@@ -350,10 +345,11 @@ stating the no. years I have experience (coded as a JS function as time differen
     </div>
 
     <div class="col-xs-12 col-sm-6 col-md-4">
-      <i class="fas fa-code" style="color: #075AAA;"></i>
+      <!-- <i class="fas fa-code" style="color: #075AAA;"></i> -->
+      <img width="96" src="icons/cpp-logo.svg" alt="C++">
       <h3>C++</h3>
       <p>
-        <script src="scripts/dateDiff.js"></script>
+        <script src="js/dateDiff.js"></script>
         <script language"javascript">
           var startDate = new Date(2018, 1, 20, 0, 0);  // Feb 1, 2011
           var endDate = new Date();                     // now
@@ -367,7 +363,7 @@ stating the no. years I have experience (coded as a JS function as time differen
       <img width="96" src="https://camo.githubusercontent.com/72e5df59529a42423d671ba4c02bfb327d917517bfff18595c5e5dc17a5abece/68747470733a2f2f6564656e742e6769746875622e696f2f537570657254696e7949636f6e732f696d616765732f7376672f68746d6c352e737667" alt="HTML">
       <h3>HTML</h3>
       <p>
-        <script src="scripts/dateDiff.js"></script>
+        <script src="js/dateDiff.js"></script>
         <script language"javascript">
           var startDate = new Date(2020, 9, 20, 0, 0);  // Feb 1, 2011
           var endDate = new Date();                     // now
@@ -383,7 +379,7 @@ stating the no. years I have experience (coded as a JS function as time differen
       <i class="fab fa-css3"></i>
       <h3>CSS</h3>
       <p>
-        <script src="scripts/dateDiff.js"></script>
+        <script src="js/dateDiff.js"></script>
         <script language"javascript">
           var startDate = new Date(2017, 9, 20, 0, 0);  // Feb 1, 2011
           var endDate = new Date();                     // now
@@ -394,10 +390,10 @@ stating the no. years I have experience (coded as a JS function as time differen
 
     <div class="col-xs-12 col-sm-6 col-md-3">
       <!-- <i class="fab fa-python"></i> -->
-      <img width="96" src="https://camo.githubusercontent.com/aa96ee3a3352c9c3c2161d3e95698d0885a277ab85d617fe77912627d37a3959/68747470733a2f2f6564656e742e6769746875622e696f2f537570657254696e7949636f6e732f696d616765732f7376672f707974686f6e2e737667" alt="Python">
+      <img width="96" src="icons/python-logo.svg" alt="Python">
       <h3>Python</h3>
       <p>
-        <script src="scripts/dateDiff.js"></script>
+        <script src="js/dateDiff.js"></script>
         <script language"javascript">
           var startDate = new Date(2017, 7, 20, 0, 0);  // Feb 1, 2011
           var endDate = new Date();                     // now
@@ -410,7 +406,7 @@ stating the no. years I have experience (coded as a JS function as time differen
       <i class="fas fa-database"></i>
       <h3>MySQL</h3>
       <p>
-        <script src="scripts/dateDiff.js"></script>
+        <script src="js/dateDiff.js"></script>
         <script language"javascript">
           var startDate = new Date(2019, 4, 28, 0, 0);  // Feb 1, 2011
           var endDate = new Date();                     // now
@@ -420,7 +416,8 @@ stating the no. years I have experience (coded as a JS function as time differen
     </div>
 
     <div class="col-xs-12 col-sm-6 col-md-3">
-      <i class="fab fa-r-project"></i>
+      <!-- <i class="fab fa-r-project"></i> -->
+      <img width="96" src="icons/r-logo.svg" alt="R Statistical Programming">
       <h3>R</h3>
       <p>0.5 years</p>
     </div>
@@ -594,7 +591,7 @@ stating the no. years I have experience (coded as a JS function as time differen
 <div id="emoji" class="collapse">
   <div class="container-fluid bg-dark">
     <div class="row text-left">
-      <div class="col-12">
+      <div class="col-md-12">
         <pre><code class="text-light">
           &lt;div class="row jobs-bg-light"&gt;
             &lt;div class="col-xl-12"&gt;
@@ -717,13 +714,13 @@ stating the no. years I have experience (coded as a JS function as time differen
     </div>
     <div class="col-12 social padding">
       <a href="https://github.com/jjtroiano0272">
-        <i class="fab fa-github"></i>
+        <i class="fab fa-github" style="font-size: 1.4;"></i>
       </a>
       <a href="https://www.youtube.com/channel/UCy-_Q3UO3KjKQWTYhaWgeww">
-        <i class="fab fa-youtube"></i>
+        <i class="fab fa-youtube" style="font-size: 1.4;"></i>
       </a>
       <a href="https://www.linkedin.com/in/jonathan-troiano/">
-        <i class="fab fa-linkedin-in"></i>
+        <i class="fab fa-linkedin-in" style="font-size: 1.4;"></i>
       </a>
     </div>
   </div>
@@ -734,23 +731,22 @@ stating the no. years I have experience (coded as a JS function as time differen
 <footer>
   <div class="container-fluid padding">
     <div class="row text-center">
-      <!-- TODO: Centered logo -->
       <div class="col-12">
-        <img class="logo-footer" src="img/logo-2.svg" height="100" width="200" alt="Mon companie!">
+        <img class="logo-footer" src="icons/logo-2.svg" height="100" width="200" alt="Mon companie!">
       </div>
 
       <div class="col-12">
         <hr class="light-100">
         <h5>&copy;Jonathan Troiano 2021</h5>
-        <p style="margin-top: 5em;">Developed with</p>
+        <p style="margin-top: 5em;"><i>Developed with</i></p>
       </div>
-      <div class="col-4">
+      <div class="col-xs-6 col-md-4">
         <img width="96" src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg" alt="Bootstrap">
       </div>
-      <div class="col-4">
+      <div class="col-xs-6 col-md-4">
         <img width="96" src="https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg" alt="Javascript">
       </div>
-      <div class="col-4">
+      <div class="col-xs-12 col-md-4">
         <img width="96" src="https://camo.githubusercontent.com/0a52f68a159b75266c4ae21683fffa9cbc1af29ea6febc2a8c9ce260a05e521d/68747470733a2f2f6564656e742e6769746875622e696f2f537570657254696e7949636f6e732f696d616765732f7376672f616e67756c61722e737667" alt="Javascript">
       </div>
 
