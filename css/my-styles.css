@@ -21,6 +21,16 @@ footer a {
   color: #D5D5D5;
 }
 
+.footer-purple {
+  background-color: #301934;
+  color: #D5D5D5;
+  padding-top: 2rem;
+}
+
+.footer-purple a {
+  color: #D5D5D5;
+}
+
 hr.light {
   border-top-width: 1px;
   border-top-style: solid;

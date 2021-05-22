@@ -47,7 +47,7 @@
   <body>
 
       <!-- TODO: Customize your colors! -->
-      <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+      <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top" id="menu">
         <div class="container-fluid">
           <a class="navbar-brand" href="#"><img src="icons/logo-2_min.svg" height="50" width="100" alt="Mon Companie!"></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
@@ -57,7 +57,7 @@
             <!-- ml-auto pushes navigation to the right when it's at full width -->
             <ul class="navbar-nav ml-auto">
               <li class="nav-item">
-                <a class="nav-link" href="#">Home</a>
+                <a class="nav-link" href="https://jjtroiano0272.github.io/">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Projects</a>
@@ -98,8 +98,6 @@
         <!-- 1) Welcome slide -->
         <div class="carousel-item active">
           <!-- <div class="d-flex align-items-center justify-content-center min-vh-100 object-fit"> -->
-
-
           <!-- This is the one I added -->
           <!-- <div class="container d-flex h-100 row"> -->
           <!-- <div class="container d-flex h-100"> -->
@@ -258,12 +256,12 @@
     <div class="row">
       <div class="col-xs-12 col-xl-7">
         <p class="lead text-left">During the summer of 2019 (May to August) I worked at the
-          Gartner Headquarters in Stamford, CT, 30 minutes from New York City. Here
-          I worked as part of a team whre we managed database connections and
-          curated the data we would query from multiple sources, creating health
-          checks on our data. Created an automated process for querying databases
-          and summarizing that data output in a mass email to the other members
-          of our department providing them with a snapshot of how the accounts
+          Gartner Headquarters in Stamford, CT 30 minutes from New York City. Here
+          I worked as part of a team where we managed database connections and
+          curated the data that we would query from multiple sources, creating health
+          checks on our data. Here I developed an automated process for querying databases
+          and summarizing that data output as a mass email to the other members
+          of our department providing them a snapshot of how the accounts
           we manage were performing and which accounts (out of more than 750,000
           managed accounts) may have needed further attention (e.g. if account
           details were only partially filled in or had duplicate entries). We
@@ -290,12 +288,13 @@
         <img class="img-fluid object-fit-cover pull-left" src="https://upload.wikimedia.org/wikipedia/commons/e/e8/Computer_technician_04.jpg" alt="" style="border-radius: 5%;">
       </div>
       <div class="col-xs-12 col-sm-12 col-xl-7">
-        <p class="lead text-left">Part of a two-man team in which I schedule
+        <p class="lead text-left">In this role I worked as one half of a two-man team in which I scheduled
           appointments with clients to troubleshoot computer issues, everything
-          from help in using an unfamiliar program to OS installs, data
-          recovery, lessons, to installing a home doorbell & camera system.
-          Appointments with clients are solo one-on-one jobs, interpreting a
-          layperson’s distress into actionable IT solutions. Laid off during pandemic.</p>
+          from help in using an unfamiliar program to Operating System installations, data
+          recovery, use lessons, to installing a home doorbell & camera system.
+          Appointments with clients were solo one-on-one jobs, interpreting a
+          layperson’s distress into actionable IT solutions. I was laid off from
+          this position due to the start of the COVID-19 pandemic whhen work dried up.</p>
       </div>
     </div>
   </div>
@@ -309,11 +308,13 @@
     </div>
     <div class="row">
       <div class="col-md-8 col-xl-7 text-justify">
-        <p class="lead text-left">Assisted students with comprehending course material in
+        <p class="lead text-left">I worked as both a tutor & Learning Assistant
+          for other students during the semester and a camp counselor during the
+          summer at FGCU. As an LA I assisted students with comprehending course material in
           real-time, grading assignments for classes with 30-50 students. Courses
-          covered : Introduction to Computer Science & Introduction to Programming.
-          Worked as a camp counselor in 2017 for the FGCU Coding Academy, STEM
-          Academy, and Mathletes camps.</p>
+          included: <i>Introduction to Computer Science</i> & <i>Introduction to Programming.</i>
+          During the summer of 2017 I worked as a camp counselor for the <i>Coding
+          Academy</i>, <i>STEM Academy</i>, and <i>Mathletes</i> camps.</p>
       </div>
       <div class="col-md-4 col-xl-5">
         <!-- <img class="img-fluid object-fit-cover pull-right" src="https://images.pexels.com/photos/1181672/pexels-photo-1181672.jpeg?cs=srgb&dl=pexels-christina-morillo-1181672.jpg&fm=jpg" alt="" style="border-radius: 5%;"> -->
@@ -417,7 +418,7 @@ stating the no. years I have experience (coded as a JS function as time differen
 
     <div class="col-xs-12 col-sm-6 col-md-3">
       <!-- <i class="fab fa-r-project"></i> -->
-      <img width="96" src="icons/r-logo.svg" alt="R Statistical Programming">
+      <img width="96" src="icons/R-logo.svg" alt="R Statistical Programming">
       <h3>R</h3>
       <p>0.5 years</p>
     </div>
@@ -468,7 +469,7 @@ stating the no. years I have experience (coded as a JS function as time differen
   </div>
 </div>
 
-<!-- COURTESY STACK -->
+<!-- COURTESY: STACK -->
 <script>
     /**
      * Put your video IDs in this array
@@ -581,7 +582,9 @@ stating the no. years I have experience (coded as a JS function as time differen
 <!--- Fixed background -->
 <figure>
   <div class="fixed-wrap">
-    <div id="fixed"></div>
+    <div id="fixed">
+      <img src="img/pexels-breston-kenya-2880122.jpg" alt="">
+    </div>
   </div>
 </figure>
 
@@ -785,4 +788,20 @@ stating the no. years I have experience (coded as a JS function as time differen
     }
   }
 </script> -->
+<!-- Hidden menu show up on scroll -->
+<script src="https://code.jquery.com/jquery-latest.js"></script>
+<script type="text/javascript">
+(function($) {
+    $(document).ready(function(){
+        $(window).scroll(function(){
+            if ($(this).scrollTop() > 200) {
+                $('#menu').fadeIn(500);
+            } else {
+                $('#menu').fadeOut(500);
+            }
+        });
+    });
+})(jQuery);
+</script>
+
 </html>
