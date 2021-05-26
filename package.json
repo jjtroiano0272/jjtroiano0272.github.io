@@ -1,0 +1,29 @@
+{
+  "name": "jjtroiano0272.github.io",
+  "version": "1.0.0",
+  "description": "Personal Portfolio Website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jjtroiano0272/jjtroiano0272.github.io.git"
+  },
+  "keywords": [
+    "Angular",
+    "ThreeJS",
+    "WebGL",
+    "JS",
+    "Bootstrap"
+  ],
+  "author": "Jonathan J. Troiano",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jjtroiano0272/jjtroiano0272.github.io/issues"
+  },
+  "homepage": "https://github.com/jjtroiano0272/jjtroiano0272.github.io#readme",
+  "dependencies": {
+    "three": "^0.128.0"
+  }
+}
