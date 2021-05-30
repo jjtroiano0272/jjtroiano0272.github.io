@@ -13,7 +13,7 @@
     "three": "^0.128.0"
   },
   "description": "This will contain the documentation of the process of creating this page.   Short, maybe with a few gifs.",
-  "main": "index.html",
+  "main": "main.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jjtroiano0272/jjtroiano0272.github.io.git"
