@@ -3,7 +3,3 @@ node_modules
 dist
 dist-ssr
 *.local
-
-# Dependency directories
-node_modules/
-jspm_packages/
