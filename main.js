@@ -1,4 +1,4 @@
-import './css/style.css';
+import '/style.css';
 import * as THREE from 'three';
 // Allows us to pan around the scene with our controller (mouse/finger)
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
