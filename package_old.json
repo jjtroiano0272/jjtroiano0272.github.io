@@ -1,9 +1,7 @@
-
 {
   "name": "jjtroiano0272.github.io",
   "version": "1.0.0",
   "scripts": {
-    "start": "node .",
     "dev": "vite",
     "build": "vite build",
     "serve": "vite preview"
