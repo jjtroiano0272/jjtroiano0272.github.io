@@ -2,10 +2,10 @@
    https://www.scrapingbee.com/blog/node-fetch/
    STARTED: 07 MAY 2021 */
 
-const fetch = require('node-fetch');
-const cheerio = require('cheerio');
-const puppeteer = require('puppeteer');
-const { URL, URLSearchParams } = require('url');
+import fetch from 'node-fetch';
+import { load } from 'cheerio';
+import { launch } from 'puppeteer';
+import { URL, URLSearchParams } from 'url';
 
 
 /* When fetch is called, it returns a promise which will resolve to a Response object 
@@ -15,7 +15,7 @@ const getReddit = async () => {
     const body = await response.text();
 
     // Parse html for selector
-    const $ = cheerio.load(body);
+    const $ = load(body);
     const titleList = [];
     // Post titles are under <h1 class="_eYtD2XCVieq6emjKBH3m">
     $('._eYtD2XCVieq6emjKBH3m').each((i, title) => {
@@ -29,7 +29,7 @@ const getReddit = async () => {
 }
 
 const getGartner = async (url) => {
-    const browser = await puppeteer.launch({
+    const browser = await launch({
         headless: true,
         slowMo: 50,
     });
@@ -50,7 +50,7 @@ const getGartner = async (url) => {
     const titleSelector = '#search-results-list > ul > li > a > h2';
     const titleList = [];
     const locationList = [];
-    const $ = await cheerio.load(body);
+    const $ = await load(body);
     $(titleSelector).each(
         (i, title) => {
             const titleNode = $(title);
