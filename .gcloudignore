@@ -15,5 +15,5 @@
 
 # Node.js dependencies:
 node_modules/
-fontawesome-free-5.15.2-web/
+fontawesome/
 __old_bootstrapped_only_version/
