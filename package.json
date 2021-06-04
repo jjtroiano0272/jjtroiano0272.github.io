@@ -1,6 +1,6 @@
 {
   "name": "jjtroiano0272.github.io",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "scripts": {
     "start": "node .",
     "dev": "vite",
@@ -26,7 +26,7 @@
     "portfolio"
   ],
   "author": "Jonathan J. Troiano",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/jjtroiano0272/jjtroiano0272.github.io/issues"
   },
