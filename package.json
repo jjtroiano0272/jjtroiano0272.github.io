@@ -9,6 +9,7 @@
     "vite": "^2.3.5"
   },
   "dependencies": {
+    "esbuild": "^0.12.6",
     "three": "^0.129.0"
   }
 }
