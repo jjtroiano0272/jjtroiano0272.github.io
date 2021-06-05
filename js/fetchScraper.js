@@ -2,11 +2,10 @@
    https://www.scrapingbee.com/blog/node-fetch/
    STARTED: 07 MAY 2021 */
 
-import fetch from 'node-fetch';
-import { load } from 'cheerio';
-import { launch } from 'puppeteer';
-import { URL, URLSearchParams } from 'url';
-
+const fetch = require('node-fetch');
+const load = require('cheerio');
+const launch = require('puppeteer');
+// import { URL, URLSearchParams } from 'url';
 
 /* When fetch is called, it returns a promise which will resolve to a Response object 
 as soon as the server responds with the headers */ 
