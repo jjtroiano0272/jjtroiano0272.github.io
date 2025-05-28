@@ -1,33 +1,918 @@
+<!-- Source: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/ -->
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <title>Redirecting to CloudFlare host...</title>
-  <meta http-equiv="refresh" content="1; URL=lizard-silver-9mtt.squarespace.com/"/>
-  <link rel="stylesheet" href="style.css">
-  <!-- Bootstrap v5 -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-  <!-- Google fonts -->
-  <link rel="preconnect" href="https://fonts.gstatic.com"> 
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
+	<meta charset="utf-8" />
+	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+	<title>Portflio: Jonathan Troiano</title>
+	<meta content="" name="description" />
+	<meta content="" name="keywords" />
+
+	<!-- Favicons -->
+	<link href="assets/img/favicon.png" rel="icon" />
+	<link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+	<!-- Fonts -->
+	<link href="https://fonts.googleapis.com" rel="preconnect" />
+	<link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+		rel="stylesheet" />
+
+	<!-- Vendor CSS Files -->
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+	<!-- <link
+			rel="stylesheet"
+			type="text/css"
+			href="assets/vendor/icomoon-icons/style.css"
+		/> -->
+	<link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+	<link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+	<link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
+	<link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+	<!-- <link
+			href="assets/vendor//fontawesome-icons/fontawesome.min.css"
+			rel="stylesheet"
+		/>
+		<link
+			href="assets/vendor/fontawesome-icons/brands.min.css"
+			rel="stylesheet"
+		/>
+		<link
+			href="assets/vendor/fontawesome-icons/solid.min.css"
+			rel="stylesheet"
+		/> -->
+	<link href="/assets/vendor/my-custom-icons/my-icon-styles.css" rel="stylesheet" />
+	<script src="https://kit.fontawesome.com/d6e5d3c97c.js" crossorigin="anonymous"></script>
+	<script src="/assets/arrayDataSets/skills.js"></script>
+
+	<!-- Main CSS File -->
+	<link href="assets/css/main.css" rel="stylesheet" />
 </head>
 
-<body style="background-color: black;">
-  <div class="container d-flex h-100 w-100">
-    <div class="row mx-auto justify-content-center align-self-center">
-      <div class="col-sm-12 my-auto">
-        <h1 class="display-1 text-light text-center">Page has moved! Redirecting...</h1>
-      </div>
-    </div>
-  </div>
+<body class="index-page">
+	<header id="header" class="header d-flex flex-column justify-content-center">
+		<i class="header-toggle d-xl-none bi bi-list"></i>
 
-<!-- Bootstrap core JavaScript
-================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="../../assets/js/vendor/popper.min.js"></script>
+		<nav id="navmenu" class="navmenu">
+			<ul>
+				<li>
+					<a href="#hero" class="active"><i class="bi bi-house navicon"></i><span>Home</span></a>
+				</li>
+				<li>
+					<a href="#portfolio"><i class="bi bi-images navicon"></i><span>Portfolio</span></a>
+				</li>
+				<li>
+					<a href="#resume"><i class="bi bi-file-earmark-text navicon"></i><span>Resume</span></a>
+				</li>
+				<li>
+					<a href="#skills"><i class="bi bi-hdd-stack navicon"></i><span>Skills</span></a>
+				</li>
+				<li>
+					<a href="#certifications"><i class="bi bi-patch-check navicon"></i><span
+							style="font-size: small;">Certifications</span></a>
+				</li>
+				<li>
+					<a href="#about"><i class="bi bi-person navicon"></i><span>About</span></a>
+				</li>
 
+				<li>
+					<a href="#contact"><i class="bi bi-envelope navicon"></i><span>Contact</span></a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+
+	<main class="main">
+		<!-- Hero Section -->
+		<section id="hero" class="hero section">
+			<img src="assets/img/hero-bg.png" alt="" />
+
+			<div class="container" data-aos="zoom-out">
+				<div class="row justify-content-center">
+					<div class="col-lg-9">
+						<h2>I<span style="color: var(--nav-hover-color)">'</span>m</h2>
+						<!-- TODO mouse-over pronunciation tip -->
+						<h2>
+							Jonathan Troiano<span style="
+										color: var(--nav-hover-color);
+										font-family: 'Times New Roman', Times, serif;
+									">.</span>
+						</h2>
+						<!-- Description -->
+						<p>
+							<span class="typed"
+								data-typed-items="Software Engineer, Designer, Developer, Freelancer, Team player">Designer</span><span
+								class="typed-cursor typed-cursor--blink" aria-hidden="true"></span>
+						</p>
+						<div class="social-links">
+							<a href="https://github.com/jjtroiano0272"><i class="bi bi-github"></i></a>
+							<a href="https://www.linkedin.com/in/jonathan-troiano/"><i class="bi bi-linkedin"></i></a>
+							<a href="https://bsky.app/profile/jjtroiano.bsky.social">
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+									class="bi bi-bluesky" viewBox="0 0 16 16">
+									<path
+										d="M3.468 1.948C5.303 3.325 7.276 6.118 8 7.616c.725-1.498 2.698-4.29 4.532-5.668C13.855.955 16 .186 16 2.632c0 .489-.28 4.105-.444 4.692-.572 2.04-2.653 2.561-4.504 2.246 3.236.551 4.06 2.375 2.281 4.2-3.376 3.464-4.852-.87-5.23-1.98-.07-.204-.103-.3-.103-.218 0-.081-.033.014-.102.218-.379 1.11-1.855 5.444-5.231 1.98-1.778-1.825-.955-3.65 2.28-4.2-1.85.315-3.932-.205-4.503-2.246C.28 6.737 0 3.12 0 2.632 0 .186 2.145.955 3.468 1.948" />
+								</svg>
+							</a>
+							<a href="https://twitter.com/TroianoJonathan"><i class="bi bi-twitter"></i></a>
+							<a href="#contact"><i class="bi bi-email"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- /Hero Section -->
+
+		<!-- Portfolio Section -->
+		<section id="portfolio" class="portfolio section">
+			<!-- Section Title -->
+			<div class="container section-title" data-aos="fade-up">
+				<h2>Portfolio</h2>
+				<!-- <p>
+						Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex
+						aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos
+						quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia
+						fugiat sit in iste officiis commodi quidem hic quas.
+					</p> -->
+			</div>
+			<!-- End Section Title -->
+
+			<div class="container">
+				<div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+					<ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+						<li data-filter="*" class="filter-active">All</li>
+						<li data-filter=".filter-mobile">Mobile</li>
+						<li data-filter=".filter-web">Web</li>
+						<li data-filter=".filter-unity">Unity</li>
+					</ul>
+					<!-- End Portfolio Filters -->
+
+					<div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+						<div class="col-lg-4 col-md-6 shadow-sm rounded portfolio-item isotope-item filter-mobile">
+							<div class="portfolio-image-wrapper">
+								<img src="assets/img/portfolio/1_pelli-raw-with-icon.png" class="img-fluid" alt="" />
+
+								<div class="overlay">
+									<a href="https://apps.apple.com/us/app/pelli/id6737356623">
+										<div class="see-more-content">
+											<i class="fa-brands fa-app-store-ios fa-6x"></i>
+
+											<span class="see-more-text">View in App Store</span>
+										</div>
+									</a>
+								</div>
+							</div>
+							<div class="portfolio-info">
+								<h4>Pelli</h4>
+								<p>
+									The yelp-for-hairstylists full stack social app I developed
+									as a solo developer. Uses supabase and MySQL database
+									integration.
+								</p>
+								<a href="https://github.com/jjtroiano0272/Pelli" data-gallery="portfolio-gallery-app">
+									<i class="bi bi-github"></i>
+								</a>
+							</div>
+						</div>
+
+						<!-- End Portfolio Item -->
+
+						<div class="col-lg-4 col-md-6 shadow-sm rounded portfolio-item isotope-item filter-mobile">
+							<img src="assets/img/portfolio/2_plusOnBlock.png" class="img-fluid" alt="" />
+							<div class="portfolio-info">
+								<h4>Plus on Block</h4>
+								<p>
+									An application built with X and Y and Z. Uses React Native
+									Reanimated.
+								</p>
+								<a href="https://github.com/jjtroiano0272/Pelli" data-gallery="portfolio-gallery-app"><i
+										class="bi bi-github"></i></a>
+								<a href="#" title="More Details" class="details-link"><i
+										class="bi bi-box-arrow-up-right"></i></a>
+							</div>
+						</div>
+						<!-- End Portfolio Item -->
+
+						<div class="col-lg-4 col-md-6 shadow-sm rounded portfolio-item isotope-item filter-unity">
+							<img src="assets/img/portfolio/3_threshold.MP4" class="img-fluid" alt="" />
+							<div class="portfolio-info">
+								<h4>Threshold</h4>
+								<p>Unity project developed as a demo.</p>
+								<!-- <a href="assets/img/threshold.MP4" title="Threshold" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a> -->
+								<a href="https://github.com/jjtroiano0272/Threshold"
+									data-gallery="portfolio-gallery-product"><i class="bi bi-github"></i></a>
+							</div>
+						</div>
+						<!-- End Portfolio Item -->
+
+						<div class="col-lg-4 col-md-6 shadow-sm rounded portfolio-item isotope-item filter-web">
+							<img src="assets/img/previous coding projects images/1_gwordle-light.png" class="img-fluid"
+								alt="" />
+							<div class="portfolio-info">
+								<h4>Wordle Variant</h4>
+								<p>A variant on Wordle.</p>
+								<a href="https://gwordle-jjt.netlify.app/" data-gallery="portfolio-gallery-product"><i
+										class="bi bi-github"></i></a>
+							</div>
+						</div>
+
+						<div class="col-lg-4 col-md-6 shadow-sm rounded portfolio-item isotope-item filter-web">
+							<img src="assets/img/previous coding projects images/2_travel-experiences-app-light.png"
+								class="img-fluid" alt="" />
+							<div class="portfolio-info">
+								<h4>Travel Experiences</h4>
+								<p>A 'book-a-travel-experience' app á la AirBnB.</p>
+								<a href="https://react-travel-experiences.netlify.app/"
+									data-gallery="portfolio-gallery-product"><i class="bi bi-github"></i></a>
+							</div>
+						</div>
+
+						<div class="col-lg-4 col-md-6 shadow-sm rounded portfolio-item isotope-item filter-web">
+							<img src="assets/img/previous coding projects images/3_studio-mockup-light.png"
+								class="img-fluid" alt="" />
+							<div class="portfolio-info">
+								<h4>Studio Mockup</h4>
+								<p>Site redesign mockup for a tattoo studio.</p>
+								<a href="https://studio-mockup.netlify.app/" data-gallery="portfolio-gallery-product"><i
+										class="bi bi-github"></i></a>
+							</div>
+						</div>
+
+						<div class="col-lg-4 col-md-6 shadow-sm rounded portfolio-item isotope-item filter-web">
+							<img src="assets/img/previous coding projects images/4_vidly-app-light.png"
+								class="img-fluid" alt="" />
+							<div class="portfolio-info">
+								<h4>SaaS - Video rental service</h4>
+								<p>Web app for a larger-scale style of business.</p>
+								<a href="https://vidly-app.pages.dev/" data-gallery="portfolio-gallery-product"><i
+										class="bi bi-github"></i></a>
+							</div>
+						</div>
+
+						<div class="col-lg-4 col-md-6 shadow-sm rounded portfolio-item isotope-item filter-web">
+							<img src="assets/img/previous coding projects images/5_quiz.png" class="img-fluid" alt="" />
+							<div class="portfolio-info">
+								<h4>RESTful API Trivia</h4>
+								<p>
+									Test your trivia knowledge by pulling random questions from
+									the OpenTrivia API!
+								</p>
+								<a href="https://react-trivia-app-jjt.netlify.app/"
+									data-gallery="portfolio-gallery-product"><i class="bi bi-github"></i></a>
+							</div>
+						</div>
+
+						<div class="col-lg-4 col-md-6 shadow-sm rounded portfolio-item isotope-item filter-web">
+							<img src="assets/img/previous coding projects images/6_tenzies.png" class="img-fluid"
+								alt="" />
+							<div class="portfolio-info">
+								<h4>Tenzies: The Dice Game</h4>
+								<p>
+									If you've played Yahtzee, you're already familiar with how
+									to play! Roll dice and choose which to hold on to until they
+									all match.
+								</p>
+								<a href="https://react-tenzies-app.netlify.app/"
+									data-gallery="portfolio-gallery-product"><i class="bi bi-github"></i></a>
+							</div>
+						</div>
+
+						<div class="col-lg-4 col-md-6 shadow-sm rounded portfolio-item isotope-item filter-web">
+							<img src="assets/img/previous coding projects images/7_notes-app.png" class="img-fluid"
+								alt="" />
+							<div class="portfolio-info">
+								<h4>Notes Markdown Editor</h4>
+								<p>
+									An in-browser MDE that lets you write and preview text like
+									you can in GitHub documentation.
+								</p>
+								<a href="https://react-notes-mde.netlify.app/"
+									data-gallery="portfolio-gallery-product"><i class="bi bi-github"></i></a>
+							</div>
+						</div>
+
+						<div class="col-lg-4 col-md-6 shadow-sm rounded portfolio-item isotope-item filter-web">
+							<img src="assets/img/previous coding projects images/8_ml-meme-gen.png" class="img-fluid"
+								alt="" />
+							<div class="portfolio-info">
+								<h4>Machine Learning Meme Generator</h4>
+								<p>
+									An app for creating your own memes. Bonus: It has a section
+									for Machine-Learning-generated memes.
+								</p>
+								<a href="https://react-ml-meme-generator.netlify.app/"
+									data-gallery="portfolio-gallery-product"><i class="bi bi-github"></i></a>
+							</div>
+						</div>
+
+						<div class="col-lg-4 col-md-6 shadow-sm rounded portfolio-item isotope-item filter-web">
+							<img src="assets/img/previous coding projects images/9_counter.png" class="img-fluid"
+								alt="" />
+							<div class="portfolio-info">
+								<h4>Simple Counter App</h4>
+								<p>The first simple React app I built.</p>
+								<a href="https://counter-app.pages.dev/" data-gallery="portfolio-gallery-product"><i
+										class="bi bi-github"></i></a>
+							</div>
+						</div>
+
+						<!-- <div class="col-lg-4 col-md-6 shadow-sm rounded portfolio-item isotope-item filter-branding">
+              <img src="assets/img/masonry-portfolio/masonry-portfolio-3.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Branding 1</h4>
+                <p>Lorem ipsum, dolor sit</p>
+                <a href="assets/img/masonry-portfolio/masonry-portfolio-3.jpg" title="Branding 1" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div> -->
+						<!-- End Portfolio Item -->
+
+						<!-- <div class="col-lg-4 col-md-6 shadow-sm rounded portfolio-item isotope-item filter-product">
+              <img src="assets/img/masonry-portfolio/masonry-portfolio-5.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Product 2</h4>
+                <p>Lorem ipsum, dolor sit</p>
+                <a href="assets/img/masonry-portfolio/masonry-portfolio-5.jpg" title="Product 2" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div> -->
+						<!-- End Portfolio Item -->
+
+						<!-- <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <img src="assets/img/masonry-portfolio/masonry-portfolio-6.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Branding 2</h4>
+                <p>Lorem ipsum, dolor sit</p>
+                <a href="assets/img/masonry-portfolio/masonry-portfolio-6.jpg" title="Branding 2" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div> -->
+						<!-- End Portfolio Item -->
+
+						<!-- <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <img src="assets/img/masonry-portfolio/masonry-portfolio-7.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>App 3</h4>
+                <p>Lorem ipsum, dolor sit</p>
+                <a href="assets/img/masonry-portfolio/masonry-portfolio-7.jpg" title="App 3" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div> -->
+						<!-- End Portfolio Item -->
+
+						<!-- <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <img src="assets/img/masonry-portfolio/masonry-portfolio-8.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Product 3</h4>
+                <p>Lorem ipsum, dolor sit</p>
+                <a href="assets/img/masonry-portfolio/masonry-portfolio-8.jpg" title="Product 3" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div> -->
+						<!-- End Portfolio Item -->
+
+						<!-- <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <img src="assets/img/masonry-portfolio/masonry-portfolio-9.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Branding 3</h4>
+                <p>Lorem ipsum, dolor sit</p>
+                <a href="assets/img/masonry-portfolio/masonry-portfolio-9.jpg" title="Branding 2" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div> -->
+						<!-- End Portfolio Item -->
+					</div>
+					<!-- End Portfolio Container -->
+				</div>
+			</div>
+		</section>
+		<!-- /Portfolio Section -->
+
+		<!-- Resume Section -->
+		<section id="resume" class="resume section">
+			<!-- Section Title -->
+
+			<div class="container section-title" data-aos="fade-up">
+				<h2>Previous Positions Held</h2>
+				<!-- <p>
+						Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex
+						aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos
+						quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia
+						fugiat sit in iste officiis commodi quidem hic quas.
+					</p> -->
+			</div>
+			<!-- End Section Title -->
+
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12" data-aos="fade-up" data-aos-delay="200">
+						<h3 class="resume-title">Professional Experience</h3>
+
+						<div class="accordion" id="accordionPanelsStayOpenExample">
+							<div class="accordion-item resume-item">
+								<h2 class="accordion-header" id="panelsStayOpen-headingOne">
+									<button class="accordion-button" type="button" data-bs-toggle="collapse"
+										data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+										aria-controls="panelsStayOpen-collapseOne">
+										Aquatik
+									</button>
+								</h2>
+								<div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
+									aria-labelledby="panelsStayOpen-headingOne">
+									<div class="accordion-body">
+										<h5>DATE_NEEDED</h5>
+										<p><em>Naples, FL</em></p>
+										<ul>
+											<li>
+												Developed numerous marketing programs (logos,
+												brochures,infographics, presentations, and
+												advertisements).
+											</li>
+											<li>
+												Managed up to 5 projects or tasks at a given time
+												while under pressure
+											</li>
+											<li>
+												Recommended and consulted with clients on the most
+												appropriate graphic design
+											</li>
+											<li>
+												Created 4+ design presentations and proposals a month
+												for clients and account managers
+											</li>
+										</ul>
+										<p>
+											*Drop-dead date old boys club performance review. That
+											jerk from finance really threw me under the bus we
+											should leverage existing asserts that ladder up to the
+											message, but on-brand but completeley fresh low-hanging
+											fruit, yet design thinking. Are there any leftovers in
+											the kitchen? minimize backwards overflow, nor can you
+											champion this. The horse is out of the barn let's take
+											this conversation offline. Moving the goalposts pre
+											launch due diligence, one-sheet, so upsell even dead
+											cats bounce.
+										</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="accordion-item resume-item">
+								<h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+									<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+										data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+										aria-controls="panelsStayOpen-collapseTwo">
+										Inceptus Cybersecuity
+									</button>
+								</h2>
+								<div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
+									aria-labelledby="panelsStayOpen-headingTwo">
+									<div class="accordion-body">
+										<h5>DATE_NEEDED</h5>
+										<p><em>Cape Coral, FL</em></p>
+										<ul>
+											<li>
+												Developed numerous marketing programs (logos,
+												brochures,infographics, presentations, and
+												advertisements).
+											</li>
+											<li>
+												Managed up to 5 projects or tasks at a given time
+												while under pressure
+											</li>
+											<li>
+												Recommended and consulted with clients on the most
+												appropriate graphic design
+											</li>
+										</ul>
+										<p>
+											*Drop-dead date old boys club performance review. That
+											jerk from finance really threw me under the bus we
+											should leverage existing asserts that ladder up to the
+											message, but on-brand but completeley fresh low-hanging
+											fruit, yet design thinking. Are there any leftovers in
+											the kitchen? minimize backwards overflow, nor can you
+											champion this. The horse is out of the barn let's take
+											this conversation offline. Moving the goalposts pre
+											launch due diligence, one-sheet, so upsell even dead
+											cats bounce.
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Edn Resume Item -->
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- /Resume Section -->
+
+		<!-- Skills Section -->
+		<section id="skills" class="skills portfolio section">
+			<!-- Section Title -->
+			<div class="container section-title" data-aos="fade-up">
+				<h2>Skills</h2>
+				<!-- <p>
+						Necessitatibus eius consequatur ex aliquid fuga eum quidem sint
+						consectetur velit
+					</p> -->
+			</div>
+			<!-- End Section Title -->
+
+			<!-- <div class="container">
+					<div
+						class="isotope-layout"
+						data-default-filter="*"
+						data-layout="masonry"
+						data-sort="original-order"
+					>
+						<ul
+							class="portfolio-filters isotope-filters"
+							data-aos="fade-up"
+							data-aos-delay="100"
+						>
+							<li data-filter="*" class="filter-active">All</li>
+							<li data-filter=".filter-skills-languages">Languages</li>
+							<li data-filter=".filter-skills-web-dev">Web Dev</li>
+							<li data-filter=".filter-skills-business-analytics">Business Analyics</li>
+						</ul> -->
+			<!-- End Portfolio Filters -->
+
+			<!-- <div class="container" data-aos="fade-up" data-aos-delay="100"> -->
+			<!-- TODO show time on mouseover, or percentage chart like the other one -->
+
+			<!-- Filter Buttons -->
+			<div class="container py-5">
+				<!-- Filter Buttons -->
+				<div class="filter-btns d-flex justify-content-center gap-2 mb-4">
+					<button class="btn btn-outline-primary active" data-filter="*">
+						All
+					</button>
+					<button class="btn btn-outline-primary" data-filter=".programming-languages">
+						Programming Languages
+					</button>
+					<button class="btn btn-outline-primary" data-filter=".web-dev">
+						Web Dev
+					</button>
+					<button class="btn btn-outline-primary" data-filter=".mobile-dev">
+						Mobile
+					</button>
+					<button class="btn btn-outline-primary" data-filter=".dbms">
+						DBMS
+					</button>
+					<button class="btn btn-outline-primary" data-filter=".business-analytics"
+						aria-label="Business Intel & Analyitcs" alt="foo">
+						B.I.
+					</button>
+					<button class="btn btn-outline-primary" data-filter=".game-dev" aria-label="Game Dev" alt="foo">
+						Game
+					</button>
+				</div>
+
+				<!-- Icon Grid -->
+				<div id="skills-grid" class="row icon-grid row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-6 g-4">
+					<script>
+						const container = document.getElementById("skills-grid");
+
+						skills.forEach((skill) => {
+							const col = document.createElement("div");
+							col.className = `col isotope-item ${skill.category}`;
+							col.innerHTML = `
+      <i class="${skill.icon}"></i>
+      <div class="icon-label">${skill.name}</div>
+    `;
+							container.appendChild(col);
+						});
+					</script>
+				</div>
+			</div>
+
+			<script>
+				window.addEventListener("load", function () {
+					const grid = document.querySelector(".icon-grid");
+					const iso = new Isotope(grid, {
+						itemSelector: ".isotope-item",
+						layoutMode: "fitRows",
+					});
+
+					const filterButtons = document.querySelectorAll(
+						".filter-btns .btn"
+					);
+					filterButtons.forEach((btn) => {
+						btn.addEventListener("click", function () {
+							filterButtons.forEach((b) => b.classList.remove("active"));
+							this.classList.add("active");
+
+							const filterValue = this.getAttribute("data-filter");
+							iso.arrange({ filter: filterValue });
+						});
+					});
+				});
+			</script>
+		</section>
+		<!-- /Skills Section -->
+
+		<!-- Certifications section -->
+		<section id="certifications" class="testimonials section">
+			<!-- Section Title -->
+			<div class="container section-title" data-aos="fade-up">
+				<h2>Certifications</h2>
+				<!-- <p>
+						Necessitatibus eius consequatur ex aliquid fuga eum quidem sint
+						consectetur velit
+					</p> -->
+			</div>
+			<!-- End Section Title -->
+
+			<div class="container" data-aos="fade-up" data-aos-delay="100">
+				<div class="swiper init-swiper">
+					<script type="application/json" class="swiper-config">
+							{
+								"loop": true,
+								"speed": 800,
+								"autoplay": {
+									"delay": 5000
+								},
+								"slidesPerView": "auto",
+								"pagination": {
+									"el": ".swiper-pagination",
+									"type": "bullets",
+									"clickable": true
+								}
+							}
+						</script>
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="testimonial-item">
+								<div class="row gy-4 justify-content-center">
+									<div class="col-lg-6">
+										<div class="testimonial-content">
+											<p>
+												<i class="bi bi-quote quote-icon-left"></i>
+												<span>
+													This credential helps organizations identify and
+													develop talent with critical knowledge related to
+													implementing cloud initiatives. Earning AWS
+													Certified Cloud Practitioner validates cloud fluency
+													and foundational AWS knowledge.</span>
+												<i class="bi bi-quote quote-icon-right"></i>
+											</p>
+											<h3>
+												Amazon Web Services Certified Cloud Practitioner
+											</h3>
+											<!-- <h4>Ceo &amp; Founder</h4> -->
+											<!-- <div class="stars">
+													<i class="bi bi-star-fill"></i
+													><i class="bi bi-star-fill"></i
+													><i class="bi bi-star-fill"></i
+													><i class="bi bi-star-fill"></i
+													><i class="bi bi-star-fill"></i>
+												</div> -->
+										</div>
+									</div>
+									<div class="col-lg-2 text-center">
+										<img src="assets/img/aws_cloud_cert.png" class="img-fluid testimonial-img"
+											alt="" />
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- End testimonial item -->
+
+						<div class="swiper-slide">
+							<div class="testimonial-item">
+								<div class="row gy-4 justify-content-center">
+									<div class="col-lg-6">
+										<div class="testimonial-content">
+											<p>
+												<i class="bi bi-quote quote-icon-left"></i>
+												<span>Demonstrates: Java basics, working with data types,
+													using operators and decision constructs, creating
+													and using arrays, using loop constructs, working
+													with methods, encapsulation & inheritance, handling
+													exceptions and working with the Java API.</span>
+												<i class="bi bi-quote quote-icon-right"></i>
+											</p>
+											<h3>Oracle Java SE 8 Programmer I (1Z0-808)</h3>
+											<!-- <h4>Designer</h4> -->
+											<!-- <div class="stars">
+													<i class="bi bi-star-fill"></i
+													><i class="bi bi-star-fill"></i
+													><i class="bi bi-star-fill"></i
+													><i class="bi bi-star-fill"></i
+													><i class="bi bi-star-fill"></i>
+												</div> -->
+										</div>
+									</div>
+									<div class="col-lg-2 text-center">
+										<img src="assets/img/oracl_cert.png" class="img-fluid testimonial-img" alt="" />
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- End testimonial item -->
+					</div>
+					<div class="swiper-pagination"></div>
+				</div>
+			</div>
+		</section>
+
+		<!-- About Section -->
+		<section id="about" class="about section">
+			<!-- Section Title -->
+			<div class="container section-title" data-aos="fade-up">
+				<h2>About</h2>
+			</div>
+			<h4 style="color: maroon;">
+				After receiving my B.A. in 2015, I found few satisfactory work
+				opportunities. I chose to return to school in pursuit of Math &
+				Computer Science. As I progressed, I found I.T. most exquisitely
+				intriguing and engaging. <br /><br />I was fortunate enough to get
+				an I.T. internship at Gartner in Conneticut wherein I learned about
+				Data Analysis, followed by another internship as an I.T. Technician.
+				That internship turned into regular employment that I loved, which
+				ended due to the pandemic. <br /><br />I took advantage of the
+				downtime to work hard and self-educate in front-end development
+				every day on a set, consistent schedule. This continues now, where I
+				am practicing my skill, improving, and learning daily.
+				<br /><br />My hope is now to find a job with a solid company where
+				I can contribute to its success every day I'm there, and become an
+				ever-stronger developer. <br /><br />
+			</h4>
+			<h2>
+				You've got challenges that must be overcome for your business. I've
+				got the discipline to solve those problems as part of your team.
+			</h2>
+			</div>
+			<!-- End Section Title -->
+
+			<!-- Mini-resume section -->
+		</section>
+		<!-- /About Section -->
+
+		<!-- Stats Section -->
+
+		<!-- Services Section -->
+
+		<!-- Testimonials Section -->
+
+		<!-- Contact Section -->
+		<section id="contact" class="contact section">
+			<!-- Section Title -->
+			<div class="container section-title" data-aos="fade-up">
+				<h2>Let's work together.</h2>
+				<!-- <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p> -->
+			</div>
+			<!-- End Section Title -->
+
+			<div class="container" data-aos="fade" data-aos-delay="100">
+				<div class="row gy-4">
+					<div class="col-lg-4">
+						<div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+							<a href="tel:239-206-7536">
+								<i class="bi bi-telephone flex-shrink-0"></i>
+							</a>
+
+							<div>
+								<h3>Call</h3>
+							</div>
+						</div> <!-- End Info Item -->
+
+						<div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+							<a href="mailto:jonathan.j.troiano@gmail.com"><i
+									class="bi bi-envelope flex-shrink-0"></i></a>
+							<div>
+								<h3>Email</h3>
+								<!-- <p></p> -->
+							</div>
+						</div>
+						<!-- End Info Item -->
+					</div>
+
+					<!-- Prev PHP form to send email -->
+
+					<!-- new contact form -->
+					<div class="col-lg-8">
+						<!-- target="_blank"  -->
+						<!--  this class crashes the thing class="php-email-form" -->
+						<form id="contact-form" action="https://formspree.io/f/xeogyeyw" method="POST"
+							class="formspree-email-form" data-aos="fade-up" data-aos-delay="200">
+							<div class="row gy-4">
+								<div class="col-md-6">
+									<input type="text" name="name" class="form-control" placeholder="Name" required>
+								</div>
+								<div class="col-md-6">
+									<input type="email" name="email" class="form-control" placeholder="Email Address"
+										required>
+								</div>
+								<div class="col-md-12">
+									<textarea placeholder="Your Message" class="form-control" name="message" rows="10"
+										required></textarea>
+								</div>
+								<div class="col-md-12 text-center">
+									<button type="submit" class="btn btn-lg btn-dark btn-block">Send Message</button>
+								</div>
+							</div>
+						</form>
+						<script>
+							document.addEventListener("keydown", function (event) {
+								const isCtrlOrCmd = event.ctrlKey || event.metaKey; // Windows Ctrl or macOS Cmd
+								const isEnter = event.key === "Enter";
+
+								if (isCtrlOrCmd && isEnter) {
+									event.preventDefault(); // Prevents newline in textarea (if needed)
+									const form = document.getElementById("contact-form");
+									if (form) {
+										form.submit();
+									}
+								}
+							});
+						</script>
+
+
+
+					</div>
+					<!-- End new contact form -->
+
+
+
+
+
+
+					<!-- End Contact Form -->
+
+				</div>
+			</div>
+		</section>
+		<!-- /Contact Section -->
+	</main>
+
+	<footer id="footer" class="footer position-relative light-background">
+		<div class="container">
+			<h3 class="sitename">Jonathan Troiano</h3>
+			<!-- <p>
+					Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni
+					eligendi fuga maxime saepe commodi placeat.
+				</p> -->
+			<div class="social-links d-flex justify-content-center">
+				<a href="https://github.com/jjtroiano0272"><i class="bi bi-github"></i></a>
+				<a href="https://www.linkedin.com/in/jonathan-troiano/"><i class="bi bi-linkedin"></i></a>
+				<a href="https://bsky.app/profile/jjtroiano.bsky.social">
+					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+						class="bi bi-bluesky" viewBox="0 0 16 16">
+						<path
+							d="M3.468 1.948C5.303 3.325 7.276 6.118 8 7.616c.725-1.498 2.698-4.29 4.532-5.668C13.855.955 16 .186 16 2.632c0 .489-.28 4.105-.444 4.692-.572 2.04-2.653 2.561-4.504 2.246 3.236.551 4.06 2.375 2.281 4.2-3.376 3.464-4.852-.87-5.23-1.98-.07-.204-.103-.3-.103-.218 0-.081-.033.014-.102.218-.379 1.11-1.855 5.444-5.231 1.98-1.778-1.825-.955-3.65 2.28-4.2-1.85.315-3.932-.205-4.503-2.246C.28 6.737 0 3.12 0 2.632 0 .186 2.145.955 3.468 1.948" />
+					</svg>
+				</a>
+				<a href="https://twitter.com/TroianoJonathan"><i class="bi bi-twitter"></i></a>
+			</div>
+			<div class="container">
+				<div class="copyright">
+					<span>Copyright</span>
+					<strong class="px-1 sitename">Jonathan Troiano</strong>
+					<span>All Rights Reserved</span>
+				</div>
+				<div class="credits">
+					<!-- All the links in the footer should remain intact. -->
+					<!-- You can delete the links only if you've purchased the pro version. -->
+					<!-- Licensing information: https://bootstrapmade.com/license/ -->
+					<!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+					<!-- Designed by
+						<a href="https://bootstrapmade.com/">BootstrapMade</a> Distribuited
+						by <a href="https://themewagon.com">ThemeWagon</a> -->
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- Scroll Top -->
+	<a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+			class="bi bi-arrow-up-short"></i></a>
+
+	<!-- Preloader -->
+	<div id="preloader"></div>
+
+	<!-- Vendor JS Files -->
+	<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="assets/vendor/php-email-form/validate.js"></script>
+	<script src="assets/vendor/aos/aos.js"></script>
+	<script src="assets/vendor/typed.js/typed.umd.js"></script>
+	<script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+	<script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+	<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+	<script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+	<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+	<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+	<script src="assets/arrayDataSets/skills.js"></script>
+
+	<!-- Main JS File -->
+	<script src="assets/js/main.js"></script>
 </body>
 
 </html>

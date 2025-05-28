@@ -1,0 +1,95 @@
+https://apps.apple.com/us/app/pelli/id6737356623
+
+Typewriter effect if you decide to use premium or migrate to self-hosted.
+https://www.thesquaregenius.com/squarespace-tips/creating-a-typewriter-text-effect-for-squarespace-websites
+
+	PORTFOLIO
+
+Threshold
+Unity project developed as a demo.
+View source at GitHub﻿ → (link)
+
+Pelli
+The yelp-for-hairstylists full stack social app I developed as a solo developer. Uses supabase and MySQL database integration.
+View in App Store → (https://apps.apple.com/us/app/pelli/id6737356623)
+View source at GitHub﻿ → (https://github.com/jjtroiano0272/Pelli)
+
+PlusOnBlock
+An application built with X and Y and Z. Uses React Native Reanimated.
+View in App Store → (https://apps.apple.com/us/app/pelli/id6737356623)
+View source at GitHub﻿ → (https://github.com/jjtroiano0272/Pelli)
+
+
+
+	PREVIOUS CODING PROJECTS 
+Wordle Variant
+A variant on Wordle.
+
+Travel Experiences
+A 'book-a-travel-experience' app á la AirBnB.
+
+Studio Mockup
+Site redesign mockup for a tattoo studio.
+
+SaaS - Video rental service
+Web app for a larger-scale style of business.
+
+RESTful API Trivia
+Test your trivia knowledge by pulling random questions from the OpenTrivia API!
+
+Tenzies: The Dice Game
+If you've played Yahtzee, you're already familiar with how to play! Roll dice and choose which to hold on to until they all match.
+
+Machine Learning Meme Generator
+An app for creating your own memes. Bonus: It has a section for Machine-Learning-generated memes.
+
+Simple Counter App
+The first simple React app I built.
+
+
+
+	WORK EXPERIENCE
+Aquatik
+Hybrid
+*Drop-dead date old boys club performance review. That jerk from finance really threw me under the bus we should leverage existing asserts that ladder up to the message, but on-brand but completeley fresh low-hanging fruit, yet design thinking. Are there any leftovers in the kitchen? minimize backwards overflow, nor can you champion this. The horse is out of the barn let's take this conversation offline. Moving the goalposts pre launch due diligence, one-sheet, so upsell even dead cats bounce.
+
+Inceptus Cybersecurity
+On-site
+Fire up your browser my capacity is full red flag. Both the angel on my left shoulder and the devil on my right are eager to go to the next board meeting and say weâ€™re ditching the business model not a hill to die on, but business impact the horse is out of the barn. Make it more corporate please into the weeds race without a finish line, nor how much bandwidth do you have. Iâ€™ve been doing some research this morning and we need to better work. Bob called an all-hands this afternoon clear blue water, mobile friendly get six alpha pups in here for a focus group, so peel the onion, or we need a paradigm shift.
+foo
+
+bar
+
+baz
+
+
+	SKILLS (multiple open at same time)
+Programming Languages
+C#, C++, CSS, HTML, Java, Javascript, TypeScript, M Power Query, Python, R,  SQL
+
+Web Dev
+APIs, Bootstrap, Node.js, Responsive Web Development, Three.js, React, React Native Reanimated, Material UI Design
+
+Business Analytics
+Microsoft Power BI, TOAD Data Point
+
+
+
+	CERTIFICATIONS
+Amazon Web Services Certified Cloud Practitioner
+This credential helps organizations identify and develop talent with critical knowledge related to implementing cloud initiatives. Earning AWS Certified Cloud Practitioner validates cloud fluency and foundational AWS knowledge.
+
+Oracle Java SE 8 Programmer I (1Z0-808)
+Demonstrates: Java basics, working with data types, using operators and decision constructs, creating and using arrays, using loop constructs, working with methods, encapsulation & inheritance, handling exceptions and working with the Java API.
+
+
+
+	ABOUT
+My Story
+It all begins with an idea. Maybe you want to launch a business. Maybe you want to turn a hobby into something more. Or maybe you have a creative project to share with the world.. foo
+
+But it also means binding our particular grievances - for better health care, and better schools, and better jobs - to the larger aspirations of all Americans - the white woman struggling to break the glass ceiling, the white man whose been laid off, the immigrant trying to feed his family. Born into poverty? Pull yourself up by your own bootstraps - even if you don't have boots. And it is on their behalf that I intend to win this election and keep our promise alive as President of the United States. They could've been told to succumb to the fear and frustration of so many dreams deferred. So let there be no doubt: the situation for the Palestinian people is intolerable. 
+
+Whatever it is, the way you tell your story online can make all the difference.
+
+You've got challenges that must be overcome for your business. I've got the discipline to solve those problems as part of your team.

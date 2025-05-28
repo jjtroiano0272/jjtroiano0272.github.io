@@ -1,0 +1,22 @@
+/* Custom Devicon-style SVG injection */
+.devicon-customicon-unity {
+  display: inline-block;
+  width: 128px;
+  height: 128px;
+  mask: url('/assets/vendor/my-custom-icons/svg/unity.svg') no-repeat center / contain;
+  -webkit-mask: url('/assets/vendor/my-custom-icons/svg/unity.svg') no-repeat center / contain;
+  background-color: currentColor;
+}
+
+.devicon-customicon-unity.colored {
+    color: #36a5cc; /* or any color to match other colored icons */
+}
+
+.devicon-customicon-code-block {
+  display: inline-block;
+  width: 128px;
+  height: 128px;
+  mask: url('/assets/vendor/my-custom-icons/svg/code-block.svg') no-repeat center / contain;
+  -webkit-mask: url('/assets/vendor/my-custom-icons/svg/code-block.svg') no-repeat center / contain;
+  background-color: currentColor;
+}
