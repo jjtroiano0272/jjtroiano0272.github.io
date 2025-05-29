@@ -47,7 +47,6 @@
 		/> -->
 	<link href="/assets/vendor/my-custom-icons/my-icon-styles.css" rel="stylesheet" />
 	<script src="https://kit.fontawesome.com/d6e5d3c97c.js" crossorigin="anonymous"></script>
-	<script src="/assets/arrayDataSets/skills.js"></script>
 
 	<!-- Main CSS File -->
 	<link href="assets/css/main.css" rel="stylesheet" />
@@ -510,6 +509,63 @@
 					</div>
 				</div>
 			</div>
+
+			<script>
+				// external js: isotope.pkgd.js
+
+				// init Isotope
+				var iso = new Isotope('.grid', {
+					itemSelector: '.element-item',
+					layoutMode: 'fitRows'
+				});
+
+				// filter functions
+				var filterFns = {
+					// show if number is greater than 50
+					numberGreaterThan50: function (itemElem) {
+						var number = itemElem.querySelector('.number').textContent;
+						return parseInt(number, 10) > 50;
+					},
+					// show if name ends with -ium
+					ium: function (itemElem) {
+						var name = itemElem.querySelector('.name').textContent;
+						return name.match(/ium$/);
+					}
+				};
+
+				// bind filter button click
+				var filtersElem = document.querySelector('.filters-button-group');
+				filtersElem.addEventListener('click', function (event) {
+					// only work with buttons
+					if (!matchesSelector(event.target, 'button')) {
+						return;
+					}
+					var filterValue = event.target.getAttribute('data-filter');
+					// use matching filter function
+					filterValue = filterFns[filterValue] || filterValue;
+					iso.arrange({ filter: filterValue });
+				});
+
+				// change is-checked class on buttons
+				var buttonGroups = document.querySelectorAll('.button-group');
+				for (var i = 0, len = buttonGroups.length; i < len; i++) {
+					var buttonGroup = buttonGroups[i];
+					radioButtonGroup(buttonGroup);
+				}
+
+				function radioButtonGroup(buttonGroup) {
+					buttonGroup.addEventListener('click', function (event) {
+						// only work with buttons
+						if (!matchesSelector(event.target, 'button')) {
+							return;
+						}
+						buttonGroup.querySelector('.is-checked').classList.remove('is-checked');
+						event.target.classList.add('is-checked');
+					});
+				}
+
+
+			</script>
 		</section>
 		<!-- /Resume Section -->
 
@@ -525,96 +581,81 @@
 			</div>
 			<!-- End Section Title -->
 
-			<!-- <div class="container">
-					<div
-						class="isotope-layout"
-						data-default-filter="*"
-						data-layout="masonry"
-						data-sort="original-order"
-					>
-						<ul
-							class="portfolio-filters isotope-filters"
-							data-aos="fade-up"
-							data-aos-delay="100"
-						>
-							<li data-filter="*" class="filter-active">All</li>
-							<li data-filter=".filter-skills-languages">Languages</li>
-							<li data-filter=".filter-skills-web-dev">Web Dev</li>
-							<li data-filter=".filter-skills-business-analytics">Business Analyics</li>
-						</ul> -->
-			<!-- End Portfolio Filters -->
 
 			<!-- <div class="container" data-aos="fade-up" data-aos-delay="100"> -->
 			<!-- TODO show time on mouseover, or percentage chart like the other one -->
 
 			<!-- Filter Buttons -->
-			<div class="container py-5">
-				<!-- Filter Buttons -->
-				<div class="filter-btns d-flex justify-content-center gap-2 mb-4">
-					<button class="btn btn-outline-primary active" data-filter="*">
-						All
-					</button>
-					<button class="btn btn-outline-primary" data-filter=".programming-languages">
-						Programming Languages
-					</button>
-					<button class="btn btn-outline-primary" data-filter=".web-dev">
-						Web Dev
-					</button>
-					<button class="btn btn-outline-primary" data-filter=".mobile-dev">
-						Mobile
-					</button>
-					<button class="btn btn-outline-primary" data-filter=".dbms">
-						DBMS
-					</button>
-					<button class="btn btn-outline-primary" data-filter=".business-analytics"
-						aria-label="Business Intel & Analyitcs" alt="foo">
-						B.I.
-					</button>
-					<button class="btn btn-outline-primary" data-filter=".game-dev" aria-label="Game Dev" alt="foo">
-						Game
-					</button>
+			<!-- py-5 -->
+			<div class="container">
+				<div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+					<ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+						<li data-filter="*" class="filter-active">All</li>
+						<li data-filter=".filter-programming-languages">Programming Languages</li>
+						<li data-filter=".filter-web-dev">Web Dev</li>
+						<li data-filter=".filter-mobile-dev">Mobile</li>
+						<li data-filter=".filter-dbms">DBMS</li>
+						<li data-filter=".filter-business-analytics">B.I.</li>
+						<li data-filter=".filter-game-dev">Game</li>
+					</ul>
+					<!-- End Portfolio Filters -->
+
+					<div id='skills-container'
+						class="row icon-grid row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-6 g-4 isotope-container icon-grid">
+						<!-- new -->
+						<script>
+							const container = document.getElementById("skills-container"); skills.forEach((skill) => {
+								const badge = document.createElement("div");
+								badge.className = `col isotope-item col-xl-2 col-lg-4 col-md-6 ${skill.category}`;
+								badge.innerHTML = `
+									<div class="icon-box text-center p-3 border rounded shadow-sm hover-shadow">
+										<i class="${skill.icon} icon-label"></i>
+										<div class="icon-label">${skill.name}</div>
+									</div>
+									`;
+								container.appendChild(badge);
+							});
+
+							// Initialize Isotope after DOM is ready and content is added
+							const iso = new Isotope(container, {
+								itemSelector: '.isotope-item',
+								layoutMode: 'fitRows'
+							});
+
+						</script>
+					</div>
 				</div>
 
-				<!-- Icon Grid -->
-				<div id="skills-grid" class="row icon-grid row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-6 g-4">
-					<script>
-						const container = document.getElementById("skills-grid");
-
-						skills.forEach((skill) => {
-							const col = document.createElement("div");
-							col.className = `col isotope-item ${skill.category}`;
-							col.innerHTML = `
-      <i class="${skill.icon}"></i>
-      <div class="icon-label">${skill.name}</div>
-    `;
-							container.appendChild(col);
+				<script>
+					window.addEventListener("load", function () {
+						const grid = document.getElementById("skills-container");
+						const iso = new Isotope(grid, {
+							itemSelector: ".isotope-item",
+							layoutMode: "fitRows",
 						});
-					</script>
-				</div>
+
+						const filterButtons = document.querySelectorAll(
+							".filter-btns .btn"
+						);
+						filterButtons.forEach((btn) => {
+							btn.addEventListener("click", function () {
+								filterButtons.forEach((b) => b.classList.remove("active"));
+								this.classList.add("active");
+
+								const filterValue = this.getAttribute("data-filter");
+								iso.arrange({ filter: filterValue });
+							});
+						});
+					});
+				</script>
+				<!-- /new -->
 			</div>
 
-			<script>
-				window.addEventListener("load", function () {
-					const grid = document.querySelector(".icon-grid");
-					const iso = new Isotope(grid, {
-						itemSelector: ".isotope-item",
-						layoutMode: "fitRows",
-					});
 
-					const filterButtons = document.querySelectorAll(
-						".filter-btns .btn"
-					);
-					filterButtons.forEach((btn) => {
-						btn.addEventListener("click", function () {
-							filterButtons.forEach((b) => b.classList.remove("active"));
-							this.classList.add("active");
+			</div>
 
-							const filterValue = this.getAttribute("data-filter");
-							iso.arrange({ filter: filterValue });
-						});
-					});
-				});
-			</script>
+
+
 		</section>
 		<!-- /Skills Section -->
 
@@ -901,6 +942,7 @@
 	<div id="preloader"></div>
 
 	<!-- Vendor JS Files -->
+
 	<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 	<script src="assets/vendor/php-email-form/validate.js"></script>
 	<script src="assets/vendor/aos/aos.js"></script>
@@ -909,8 +951,12 @@
 	<script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
 	<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
 	<script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-	<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+	<!-- <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script> -->
+	<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+
 	<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+	<!-- Custom files -->
 	<script src="assets/arrayDataSets/skills.js"></script>
 
 	<!-- Main JS File -->

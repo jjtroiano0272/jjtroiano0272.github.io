@@ -139,3 +139,18 @@ const skills = [
 	// Game Dev
 	{ name: "Unity", icon: "devicon-unity-plain colored", category: "game-dev" },
 ];
+
+const container = document.getElementById("skills-container"); // Or any target element
+
+skills.forEach((skill) => {
+	const skillElement = document.createElement("div");
+	skillElement.className = `isotope-item filter-${skill.category} col-xl-2 col-lg-4 col-md-6`;
+
+	skillElement.innerHTML = `
+  <div class="icon-box d-flex flex-column justify-content-center align-items-center text-center p-3 rounded h-100">
+    <i class="${skill.icon}" style="font-size: 4rem; min-height: 3rem;"></i>
+    <div class="icon-label mt-2">${skill.name}</div>
+  </div>
+`;
+	container.appendChild(skillElement);
+});
