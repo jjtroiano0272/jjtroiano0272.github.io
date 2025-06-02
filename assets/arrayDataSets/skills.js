@@ -123,6 +123,11 @@ const skills = [
 		icon: "devicon-supabase-plain colored",
 		category: "dbms",
 	},
+	{
+		name: "MongoDB",
+		icon: "devicon-mongodb-plain colored",
+		category: "dbms",
+	},
 
 	// Business Analytics
 	{
@@ -138,6 +143,17 @@ const skills = [
 
 	// Game Dev
 	{ name: "Unity", icon: "devicon-unity-plain colored", category: "game-dev" },
+
+	// OS & Shell
+	{ name: "Bash", icon: "devicon-bash-plain colored", category: "os" },
+	{ name: "Linux", icon: "devicon-linux-plain colored", category: "os" },
+	{ name: "Ubuntu", icon: "devicon-ubuntu-plain colored", category: "os" },
+	{
+		name: "Windows",
+		icon: "devicon-windows11-original colored",
+		category: "os",
+	},
+	{ name: "Mac", icon: "devicon-apple-original colored", category: "os" },
 ];
 
 const container = document.getElementById("skills-container"); // Or any target element

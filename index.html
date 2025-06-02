@@ -95,7 +95,11 @@
 						<h2>I<span style="color: var(--nav-hover-color)">'</span>m</h2>
 						<!-- TODO mouse-over pronunciation tip -->
 						<h2>
-							Jonathan Troiano<span style="
+							Jonathan <span class="pronounce-word" onclick="document.getElementById('audio-foo').play()">
+								Troiano
+								<i class="speaker-icon bi bi-volume-up-fill"></i>
+							</span>
+							</span><span style="
 										color: var(--nav-hover-color);
 										font-family: 'Times New Roman', Times, serif;
 									">.</span>
@@ -197,7 +201,6 @@
 
 						<div class="col-lg-4 col-md-6 shadow-sm rounded portfolio-item isotope-item filter-unity">
 							<!-- <img src="assets/img/portfolio/3_threshold.MP4" class="img-fluid" alt="" /> -->
-
 							<div style="padding:56.25% 0 0 0;position:relative;"><iframe
 									src="https://player.vimeo.com/video/1088781918?h=6bb099b046&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;autoplay=1&amp;muted=1&amp;loop=1"
 									frameborder="0"
@@ -206,9 +209,30 @@
 									title="threshold clip"></iframe></div>
 							<script src="https://player.vimeo.com/api/player.js"></script>
 
+							<div class="portfolio-info">
+								<h4>Threshold</h4>
+								<p>Unity project developed as a demo.</p>
+								<!-- <a href="assets/img/threshold.MP4" title="Threshold" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a> -->
+								<a href="https://github.com/jjtroiano0272/Threshold"
+									data-gallery="portfolio-gallery-product"><i class="bi bi-github"></i></a>
+							</div>
+						</div>
+						<!-- End Portfolio Item -->
 
 
+						<!-- 
+						
+						<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1089533211?h=2d92b86767&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="3D Demo"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+						 -->
 
+						<div class="col-lg-4 col-md-6 shadow-sm rounded portfolio-item isotope-item filter-unity">
+							<div style="padding:56.25% 0 0 0;position:relative;"><iframe
+									src="https://player.vimeo.com/video/1089533211?h=2d92b86767&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;autoplay=1&amp;muted=1&amp;loop=1"
+									frameborder="0"
+									allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+									style="position:absolute;top:0;left:0;width:100%;height:100%;"
+									title="threshold clip"></iframe></div>
+							<script src="https://player.vimeo.com/api/player.js"></script>
 
 							<div class="portfolio-info">
 								<h4>Threshold</h4>
@@ -703,9 +727,6 @@
 				</div>
 			</div> -->
 
-
-
-
 			<!-- <div class="container" data-aos="fade-up" data-aos-delay="100"> -->
 			<!-- TODO show time on mouseover, or percentage chart like the other one -->
 
@@ -721,6 +742,7 @@
 						<li data-filter=".filter-dbms">DBMS</li>
 						<li data-filter=".filter-business-analytics">B.I.</li>
 						<li data-filter=".filter-game-dev">Game</li>
+						<li data-filter=".filter-os">OS</li>
 					</ul>
 					<!-- End Portfolio Filters -->
 
@@ -747,6 +769,7 @@
 							});
 
 						</script>
+
 					</div>
 				</div>
 
@@ -1058,7 +1081,11 @@
 					<strong class="px-1 sitename">Jonathan Troiano</strong>
 					<span>All Rights Reserved</span>
 				</div>
+				<a href="https://jonathan-troiano.netlify.app">
+					<span>See what this page <i>used</i> to look like!</span>
+				</a>
 				<div class="credits">
+
 				</div>
 			</div>
 		</div>
@@ -1148,12 +1175,35 @@
 
 
 	</script>
-
-
 	<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
 	<!-- Custom files -->
 	<script src="assets/arrayDataSets/skills.js"></script>
+
+	<!-- Audio element -->
+	<audio id="audio-foo" src="assets/audio/pronunciation_eng_fem.mp3"></audio>
+	<script>
+		const trigger = document.getElementById('fooTrigger');
+		const tooltip = document.getElementById('fooTooltip');
+
+		// Toggle tooltip on click
+		trigger.addEventListener('click', function (e) {
+			tooltip.classList.toggle('show');
+			e.stopPropagation(); // Prevent document click handler
+		});
+
+		// Close tooltip when clicking outside
+		document.addEventListener('click', function () {
+			tooltip.classList.remove('show');
+		});
+
+		// Prevent tooltip click from closing itself
+		tooltip.addEventListener('click', function (e) {
+			e.stopPropagation();
+		});
+	</script>
+
+
 
 	<!-- Main JS File -->
 	<script src="assets/js/main.js"></script>
