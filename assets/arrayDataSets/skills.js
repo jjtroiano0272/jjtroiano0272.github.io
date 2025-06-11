@@ -11,6 +11,11 @@ const skills = [
 		category: "programming-languages",
 	},
 	{
+		name: "PHP",
+		icon: "devicon-php colored",
+		category: "programming-languages",
+	},
+	{
 		name: "Java",
 		icon: "devicon-java-plain colored",
 		category: "programming-languages",
