@@ -64,7 +64,7 @@
 					<a href="#portfolio"><i class="bi bi-images navicon"></i><span>Portfolio</span></a>
 				</li>
 				<li>
-					<a href="#resume"><i class="bi bi-file-earmark-text navicon"></i><span>Resume</span></a>
+					<a href="#resume"><i class="bi bi-file-earmark-text navicon"></i><span>Résumé</span></a>
 				</li>
 				<li>
 					<a href="#skills"><i class="bi bi-hdd-stack navicon"></i><span>Skills</span></a>
@@ -86,48 +86,91 @@
 
 	<main class="main">
 		<!-- Hero Section -->
-		<section id="hero" class="hero section">
-			<img src="assets/img/hero-bg.png" alt="" />
-
-			<div class="container" data-aos="zoom-out">
-				<div class="row justify-content-center">
-					<div class="col-lg-9">
-						<h2>I<span style="color: var(--nav-hover-color)">'</span>m</h2>
-						<!-- TODO mouse-over pronunciation tip -->
-						<h2>
-							Jonathan <span class="pronounce-word" onclick="document.getElementById('audio-foo').play()">
-								Troiano
-								<i class="speaker-icon bi bi-volume-up-fill"></i>
-							</span>
-							</span><span style="
-										color: var(--nav-hover-color);
-										font-family: 'Times New Roman', Times, serif;
-									">.</span>
-						</h2>
-						<!-- Description -->
-						<p>
-							<span class="typed"
-								data-typed-items="Software Engineer, Designer, Developer, Freelancer, Team player">Designer</span><span
-								class="typed-cursor typed-cursor--blink" aria-hidden="true"></span>
-						</p>
-						<div class="social-links">
-							<a href="https://github.com/jjtroiano0272"><i class="bi bi-github"></i></a>
-							<a href="https://www.linkedin.com/in/jonathan-troiano/"><i class="bi bi-linkedin"></i></a>
-							<a href="https://bsky.app/profile/jjtroiano.bsky.social">
-								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-									class="bi bi-bluesky" viewBox="0 0 16 16">
-									<path
-										d="M3.468 1.948C5.303 3.325 7.276 6.118 8 7.616c.725-1.498 2.698-4.29 4.532-5.668C13.855.955 16 .186 16 2.632c0 .489-.28 4.105-.444 4.692-.572 2.04-2.653 2.561-4.504 2.246 3.236.551 4.06 2.375 2.281 4.2-3.376 3.464-4.852-.87-5.23-1.98-.07-.204-.103-.3-.103-.218 0-.081-.033.014-.102.218-.379 1.11-1.855 5.444-5.231 1.98-1.778-1.825-.955-3.65 2.28-4.2-1.85.315-3.932-.205-4.503-2.246C.28 6.737 0 3.12 0 2.632 0 .186 2.145.955 3.468 1.948" />
-								</svg>
-							</a>
-							<a href="https://twitter.com/TroianoJonathan"><i class="bi bi-twitter"></i></a>
-							<a href="#contact"><i class="bi bi-email"></i></a>
+		<div class="scroll-snap">
+			<section id="hero" class="hero section parallax-hero">
+				<!-- <img src="assets/img/hero-bg.png" alt="" /> -->
+				<div class="container" data-aos="zoom-out">
+					<div class="row justify-content-center">
+						<div class="col-lg-9">
+							<h2>I<span style="color: var(--nav-hover-color)">'</span>m</h2>
+							<!-- TODO mouse-over pronunciation tip -->
+							<h2>
+								Jonathan <span class="pronounce-word"
+									onclick="document.getElementById('audio-foo').play()">
+									Troiano
+									<i class="speaker-icon bi bi-volume-up-fill"></i>
+								</span>
+								</span><span style="
+											color: var(--nav-hover-color);
+											font-family: 'Times New Roman', Times, serif;
+										">.</span>
+							</h2>
+							<!-- Description -->
+							<p>
+								<span class="typed"
+									data-typed-items="Software Engineer, Designer, Developer, Freelancer, Team player">Designer</span><span
+									class="typed-cursor typed-cursor--blink" aria-hidden="true"></span>
+							</p>
+							<div class="social-links">
+								<a href="https://github.com/jjtroiano0272"><i class="bi bi-github"></i></a>
+								<a href="https://www.linkedin.com/in/jonathan-troiano/"><i
+										class="bi bi-linkedin"></i></a>
+								<a href="https://bsky.app/profile/jjtroiano.bsky.social">
+									<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+										class="bi bi-bluesky" viewBox="0 0 16 16">
+										<path
+											d="M3.468 1.948C5.303 3.325 7.276 6.118 8 7.616c.725-1.498 2.698-4.29 4.532-5.668C13.855.955 16 .186 16 2.632c0 .489-.28 4.105-.444 4.692-.572 2.04-2.653 2.561-4.504 2.246 3.236.551 4.06 2.375 2.281 4.2-3.376 3.464-4.852-.87-5.23-1.98-.07-.204-.103-.3-.103-.218 0-.081-.033.014-.102.218-.379 1.11-1.855 5.444-5.231 1.98-1.778-1.825-.955-3.65 2.28-4.2-1.85.315-3.932-.205-4.503-2.246C.28 6.737 0 3.12 0 2.632 0 .186 2.145.955 3.468 1.948" />
+									</svg>
+								</a>
+								<a href="https://twitter.com/TroianoJonathan"><i class="bi bi-twitter"></i></a>
+								<a href="#contact"><i class="bi bi-email"></i></a>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-		</section>
+			</section>
+		</div>
 		<!-- /Hero Section -->
+		<!-- <script>
+			document.addEventListener('DOMContentLoaded', () => {
+				const hero = document.getElementById('hero');
+				const jiggleTarget = hero.querySelector('.container');
+
+				let hasSnapped = false;
+				let userHasScrolled = false;
+
+				// Set flag once user scrolls (can use passive listener for performance)
+				window.addEventListener('scroll', () => {
+					userHasScrolled = true;
+
+					if (hasSnapped || !userHasScrolled) return;
+
+					const rect = hero.getBoundingClientRect();
+					const threshold = 200;
+
+					const nearTop = Math.abs(rect.top) < threshold;
+					const nearBottom = Math.abs(rect.bottom - window.innerHeight) < threshold;
+
+					if (nearTop || nearBottom) {
+						hasSnapped = true;
+
+						hero.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+						// Wait for scroll to finish, then jiggle
+						setTimeout(() => {
+							jiggleTarget.classList.add('jiggle');
+							setTimeout(() => jiggleTarget.classList.remove('jiggle'), 500);
+						}, 500);
+
+						// Reset snap lock after short delay
+						setTimeout(() => hasSnapped = false, 1500);
+					}
+				}, { passive: true });
+			});
+		</script> -->
+
+
+
 
 		<!-- Portfolio Section -->
 		<section id="portfolio" class="portfolio section">
@@ -441,22 +484,74 @@
 			</div>
 			<!-- End Section Title -->
 
+
+
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-12" data-aos="fade-up" data-aos-delay="200">
-						<h3 class="resume-title">Professional Experience</h3>
+
+
+						<div class="d-flex flex-wrap justify-content-between align-items-center mb-3">
+							<h3 class="resume-title mb-0">Professional Experience</h3>
+
+							<div class="d-flex gap-3">
+								<a href="/assets/files/resume-14jun25.pdf" target="_blank"
+									class="btn btn-outline-primary d-flex align-items-center">
+									<i class="bi bi-file-earmark-text me-2"></i>
+									View as PDF
+								</a>
+								<a href="/assets/files/resume-14jun25.pdf" download
+									class="btn btn-primary d-flex align-items-center">
+									<i class="bi bi-download me-2"></i>
+								</a>
+							</div>
+						</div>
+
 
 						<div class="accordion" id="accordionPanelsStayOpenExample">
+							<!-- ITEM 1 -->
 							<div class="accordion-item resume-item">
 								<h2 class="accordion-header" id="panelsStayOpen-headingOne">
 									<button class="accordion-button" type="button" data-bs-toggle="collapse"
 										data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
 										aria-controls="panelsStayOpen-collapseOne">
-										Aquatik
+										Freelance - Full Stack Developer
 									</button>
 								</h2>
 								<div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
 									aria-labelledby="panelsStayOpen-headingOne">
+									<div class="accordion-body">
+										<h5>2023-2025</h5>
+										<p><em>Remote</em></p>
+										<ul>
+											<li>
+												Delivered a production-ready iOS release “Pelli” using React Native,
+												designed for hairstylists to share client treatment insights by working
+												closely with a professional stylist to define features and UX
+												priorities.
+											</li>
+											<li>
+												Led full-stack development, rapidly prototyping with Expo and migrating
+												from Firebase to Supabase to support structured data and use scalable
+												backend architecture as the app evolved.
+											</li>
+										</ul>
+
+									</div>
+								</div>
+							</div>
+
+							<!-- ITEM 2 -->
+							<div class="accordion-item resume-item">
+								<h2 class="accordion-header" id="panelsStayOpen-headingOne">
+									<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+										data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+										aria-controls="panelsStayOpen-collapseTwo">
+										Aquatik - Software Engineer
+									</button>
+								</h2>
+								<div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
+									aria-labelledby="panelsStayOpen-headingTwo">
 									<div class="accordion-body">
 										<h5>2022</h5>
 										<p><em>Hybrid -- Naples, FL</em></p>
@@ -486,16 +581,17 @@
 								</div>
 							</div>
 
+							<!-- ITEM 3 -->
 							<div class="accordion-item resume-item">
-								<h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+								<h2 class="accordion-header" id="panelsStayOpen-headingThree">
 									<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-										data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
-										aria-controls="panelsStayOpen-collapseTwo">
-										Inceptus Cybersecuity
+										data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+										aria-controls="panelsStayOpen-collapseThree">
+										Inceptus Cybersecuity - Software Engineer
 									</button>
 								</h2>
-								<div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
-									aria-labelledby="panelsStayOpen-headingTwo">
+								<div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
+									aria-labelledby="panelsStayOpen-headingThree">
 									<div class="accordion-body">
 										<h5>2022</h5>
 										<p><em>On-site -- Cape Coral, FL</em></p>
