@@ -162,8 +162,12 @@ export function AutoCarousel({
       onBlurCapture={() => setPaused(false)}
     >
       <div
-        className="relative w-full overflow-hidden rounded-xl border border-border bg-card 
-                 hover:border-white/30 transition-all duration-300"
+        className="relative w-full overflow-hidden rounded-xl 
+                   border 
+                   border-zinc-200 dark:border-zinc-700 
+                   bg-zinc-200 dark:bg-zinc-900
+                   hover:border-zinc-400 dark:hover:border-zinc-500
+                  transition-all duration-300"
       >
         {/* Track */}
         <div
@@ -192,7 +196,13 @@ export function AutoCarousel({
               type="button"
               onClick={prev}
               aria-label="Previous slide"
-              className="absolute left-3 top-1/2 -translate-y-1/2 rounded-full border border-border bg-background/80 p-2 text-foreground shadow-sm backdrop-blur transition hover:bg-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+              className="absolute left-3 top-1/2 -translate-y-1/2 rounded-full border p-2 
+                       text-foreground 
+                       border-border bg-zinc-200/80 dark:bg-zinc-900/80 
+                       shadow-sm backdrop-blur  
+                       hover:bg-zinc-400 dark:hover:bg-background 
+                       focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring 
+                       transition-all duration-300"
             >
               <ChevronLeft className="size-5" />
             </button>
@@ -200,7 +210,13 @@ export function AutoCarousel({
               type="button"
               onClick={next}
               aria-label="Next slide"
-              className="absolute right-3 top-1/2 -translate-y-1/2 rounded-full border border-border bg-background/80 p-2 text-foreground shadow-sm backdrop-blur transition hover:bg-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+              className="absolute right-3 top-1/2 -translate-y-1/2 rounded-full border p-2 
+                       text-foreground 
+                       border-border bg-zinc-200/80 dark:bg-zinc-900/80 
+                       shadow-sm backdrop-blur  
+                       hover:bg-zinc-400 dark:hover:bg-background 
+                       focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring 
+                       transition-all duration-300"
             >
               <ChevronRight className="size-5" />
             </button>
@@ -216,7 +232,9 @@ export function AutoCarousel({
             onClick={() => setPlaying((p) => !p)}
             aria-label={playing ? "Pause autoplay" : "Start autoplay"}
             className="inline-flex items-center gap-1.5 rounded-full border 
-                     border-border bg-card px-3 py-1.5 
+                     border-zinc-300 bg-zinc-100 
+                     dark:border-zinc-700 dark:bg-zinc-900 
+                     px-3 py-1.5 
                      text-sm font-medium text-foreground transition 
                      hover:bg-accent hover:text-accent-foreground 
                      focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring
@@ -247,8 +265,8 @@ export function AutoCarousel({
                 className={cn(
                   "h-2 rounded-full transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring cursor-pointer",
                   i === active
-                    ? "w-6 bg-primary"
-                    : "w-2 bg-white/50 hover:bg-white/70",
+                    ? "w-6 bg-primary border-zinc-300 dark:border-zinc-900"
+                    : "w-2 bg-zinc-500/50 border-zinc-300 dark:border-zinc-900 dark:hover:bg-zinc-100/50 hover:bg-zinc-700/70 hover:border-zinc-700",
                 )}
               />
             ))}
@@ -265,14 +283,22 @@ function SkillCard({ skill }: { skill: SkillCategory }) {
   return (
     <div>
       <div className="mb-4 flex items-baseline justify-between gap-3">
-        <h3 className="flex items-center gap-2 text-pretty text-lg font-semibold text-card-foreground">
+        <h3
+          className="flex items-center gap-2 
+                       text-pretty text-lg font-semibold text-card-foreground 
+                       text-zinc-900 dark:text-zinc-100
+                       cursor-default"
+        >
           {/* Category Icon */}
-          <span className="flex size-8 shrink-0 items-center justify-center rounded-md bg-primary/10 text-primary [&>svg]:size-4">
+          <span
+            className="flex size-8 shrink-0 items-center justify-center rounded-md 
+                         bg-primary/10 text-primary [&>svg]:size-4"
+          >
             {skill.icon}
           </span>
           {skill.category}
         </h3>
-        <span className="text-sm text-muted-foreground">
+        <span className="text-sm tracking-tighter text-zinc-600 dark:text-zinc-100 cursor-default">
           {count} {count === 1 ? "item" : "items"}
         </span>
       </div>
@@ -294,7 +320,9 @@ function SkillCard({ skill }: { skill: SkillCategory }) {
                             cursor-pointer"
             >
               {/* Icon of Skill */}
-              <span className="[&>svg]:size-8">{item.icon}</span>
+              <span className="[&>svg]:size-8 text-zinc-900 dark:text-zinc-100">
+                {item.icon}
+              </span>
               <span className="line-clamp-1 w-full text-[11px] font-medium leading-tight">
                 {item.label}
               </span>

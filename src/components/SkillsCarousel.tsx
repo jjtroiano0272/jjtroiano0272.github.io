@@ -110,6 +110,7 @@ function SkillsCarousel() {
           </h2>
         </div>
 
+        {/* Skills */}
         <AutoCarousel />
         {/* <SkillsMarqueeMagicUI /> */}
 

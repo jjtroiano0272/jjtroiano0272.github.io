@@ -4,15 +4,14 @@ import "@radix-ui/themes/styles.css";
 import { TooltipProvider } from "@/components/ui/tooltip";
 
 export const metadata: Metadata = {
-  title: "Jonathan — Software Developer",
-  description: "Jonathan — Software Developer",
+  title: "J. Troiano | Portfolio",
+  description: "Portfolio",
   keywords: [
     // TODO: update/change
     "freelance developer",
     "UI designer",
     "portfolio",
     "Tailwind CSS",
-    "Alpine.js",
   ],
   authors: [{ name: "Jonathan" }],
   openGraph: {

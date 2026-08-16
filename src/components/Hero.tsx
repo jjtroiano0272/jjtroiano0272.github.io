@@ -65,8 +65,12 @@ export default function Hero() {
                 href="/files/resume-14jun25.pdf"
                 download
                 className="shimmer inline-flex items-center gap-2 
-                         bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 font-medium px-7 py-3.5 rounded-full 
-                         hover:bg-zinc-700 dark:hover:bg-zinc-200 transition-colors text-sm"
+                           font-medium px-7 py-3.5 rounded-full 
+                           text-sm tracking-wide
+                           text-white 
+                         bg-zinc-900 
+                         dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-zinc-200
+                         hover:bg-zinc-700  transition-colors"
               >
                 Résumé
                 <Download className="w-3 h-3" />
