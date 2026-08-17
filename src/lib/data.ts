@@ -163,7 +163,7 @@ export const categories: BrowserCategory[] = [
         image: "/images/pelli-raw-with-icon_828x1792.png",
         links: {
           github: "https://github.com/jjtroiano0272/pelli",
-          live: "https://pelli.app",
+          // live: "https://pelli.app",
           vimeo: "https://vimeo.com/54321",
           artstation: "https://artstation.com/jjtroiano0272",
         },
@@ -181,6 +181,9 @@ export const categories: BrowserCategory[] = [
         description:
           "A React native application built with RN Reanimated, Expo, Canvas Charts and Gesture Handling which leverages a fluid number picker for memory-training.",
         image: "/images/plusOnBlock_1283x1361.png",
+        links: {
+          github: "https://github.com/jjtroiano0272/PlusOnBlockThree",
+        },
         meta: [
           { label: "Format", value: "RAW + JPEG" },
           { label: "Resolution", value: "5472 × 3648" },
@@ -199,6 +202,10 @@ export const categories: BrowserCategory[] = [
         description: "Unity project developed as a demo.",
         video:
           "https://player.vimeo.com/video/1088781918?h=6bb099b046&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        links: {
+          github: "https://github.com/jjtroiano0272/Threshold",
+          vimeo: "https://vimeo.com/1088781918",
+        },
         meta: [
           { label: "Format", value: "TIFF" },
           { label: "Resolution", value: "7360 × 4912" },
@@ -211,6 +218,11 @@ export const categories: BrowserCategory[] = [
         description: "Created in Blender",
         video:
           "https://player.vimeo.com/video/1193356657?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        links: {
+          vimeo: "https://vimeo.com/1193356657",
+          // TODO: Add to AS and build that up
+          artstation: "",
+        },
         meta: [
           { label: "Format", value: "TIFF" },
           { label: "Resolution", value: "6720 × 4480" },
@@ -228,6 +240,10 @@ export const categories: BrowserCategory[] = [
         title: "Gwordle",
         description: "A variant on the classic Wordle game.",
         image: "/images/1_gwordle-light_640x640.png",
+        links: {
+          live: "https://gwordle-jjt.netlify.app/",
+          github: "https://github.com/jjtroiano0272/react-wordle-clone",
+        },
         meta: [
           { label: "Format", value: "RAW" },
           { label: "Resolution", value: "8256 × 5504" },
@@ -239,6 +255,10 @@ export const categories: BrowserCategory[] = [
         title: "Studio Mockup",
         description: "Site redesign mockup for a tattoo studio.",
         image: "/images/3_studio-mockup-light_640x640.png",
+        links: {
+          live: "https://studio-mockup.netlify.app/",
+          github: "https://github.com/jjtroiano0272/mockup_tattoo-studio",
+        },
         meta: [
           { label: "Format", value: "JPEG" },
           { label: "Resolution", value: "6000 × 4000" },
@@ -250,6 +270,10 @@ export const categories: BrowserCategory[] = [
         title: "SaaS - Video rental service",
         description: "Web app for a larger-scale style of business.",
         image: "/images/4_vidly-app-light_640x640.png",
+        links: {
+          live: "https://vidly-app.pages.dev/",
+          github: "https://github.com/jjtroiano0272/Vidly-http-app",
+        },
         meta: [
           { label: "Format", value: "JPEG" },
           { label: "Resolution", value: "6000 × 4000" },
@@ -262,6 +286,10 @@ export const categories: BrowserCategory[] = [
         description:
           "Test your trivia knowledge by pulling random questions from the OpenTrivia API!",
         image: "/images/5_quiz_640x640.png",
+        links: {
+          live: "https://react-trivia-app-jjt.netlify.app/",
+          github: "https://github.com/jjtroiano0272/react-quiz-app",
+        },
         meta: [
           { label: "Format", value: "JPEG" },
           { label: "Resolution", value: "6000 × 4000" },
@@ -274,6 +302,10 @@ export const categories: BrowserCategory[] = [
         description:
           "If you've played Yahtzee, you're already familiar with how to play! Roll dice and choose which to hold on to until they all match.",
         image: "/images/6_tenzies_412x628.png",
+        links: {
+          live: "https://react-tenzies-app.netlify.app/",
+          github: "https://github.com/jjtroiano0272/react-tenzies",
+        },
         meta: [
           { label: "Format", value: "JPEG" },
           { label: "Resolution", value: "6000 × 4000" },
@@ -286,6 +318,10 @@ export const categories: BrowserCategory[] = [
         description:
           "An in-browser MDE that lets you write and preview text like you can in GitHub documentation.",
         image: "/images/7_notes-app_640x640.png",
+        links: {
+          live: "https://react-notes-mde.netlify.app/",
+          github: "https://github.com/jjtroiano0272/react-notes",
+        },
         meta: [
           { label: "Format", value: "JPEG" },
           { label: "Resolution", value: "6000 × 4000" },
@@ -298,6 +334,10 @@ export const categories: BrowserCategory[] = [
         description:
           "An app for creating your own memes. Bonus: It has a section for Machine-Learning-generated memes.",
         image: "/images/8_ml-meme-gen_640x640.png",
+        links: {
+          live: "https://react-ml-meme-generator.netlify.app/",
+          github: "https://github.com/jjtroiano0272/meme-generator",
+        },
         meta: [
           { label: "Format", value: "JPEG" },
           { label: "Resolution", value: "6000 × 4000" },
@@ -309,6 +349,10 @@ export const categories: BrowserCategory[] = [
         title: "Simple Counter App",
         description: "The first simple React app I built.",
         image: "/images/9_counter_640x640.png",
+        links: {
+          live: "https://counter-app.pages.dev/",
+          github: "https://github.com/jjtroiano0272/Counter-app",
+        },
         meta: [
           { label: "Format", value: "JPEG" },
           { label: "Resolution", value: "6000 × 4000" },
@@ -334,6 +378,11 @@ export const socialLinks = [
     name: "Twitter",
     url: "https://twitter.com/jjtroiano0272",
     icon: "FaTwitter",
+  },
+  {
+    name: "ArtStation",
+    url: "https://www.artstation.com/jtroiano",
+    icon: "FaArtstation",
   },
 ];
 

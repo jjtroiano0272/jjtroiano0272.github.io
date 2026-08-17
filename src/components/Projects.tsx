@@ -8,7 +8,12 @@ export default function Projects() {
       id="projects"
       className="relative py-24 bg-zinc-50 dark:bg-zinc-900/40"
     >
-      <div className="max-w-6xl mx-auto px-6">
+      <div
+        className="max-w-full 
+                    mx-auto px-0
+                    md:max-w-6xl md:px-6 
+                    "
+      >
         {/* Heading */}
         <div className="mb-14">
           <p className="reveal text-xs font-medium text-accent tracking-widest uppercase mb-3">
@@ -62,7 +67,11 @@ export default function Projects() {
         </SidebarProvider> */}
 
         {/* v3 */}
-        <SidebarProvider className="h-120 min-h-0 w-full overflow-hidden rounded-2xl border border-zinc-200 bg-white shadow-sm dark:border-zinc-800 dark:bg-zinc-950">
+        <SidebarProvider
+          className="h-120 min-h-0 w-full overflow-hidden rounded-2xl 
+                                    border border-zinc-200 bg-white shadow-sm 
+                                    dark:border-zinc-800 dark:bg-zinc-950"
+        >
           <div className="flex h-full flex-col lg:flex-row">
             <AppSidebar />
 

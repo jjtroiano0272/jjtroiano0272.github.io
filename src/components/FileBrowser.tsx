@@ -83,7 +83,7 @@ export function FileBrowser({
 
         <div
           className={cn(
-            "flex flex-col overflow-hidden rounded-xl border border-border bg-gray-200 dark:bg-card text-card-foreground shadow-sm",
+            "flex flex-col overflow-auto rounded-xl border border-border bg-gray-200 dark:bg-card text-card-foreground shadow-sm",
             "h-140 md:h-150 md:flex-row",
             className,
           )}
@@ -143,11 +143,11 @@ export function FileBrowser({
                       type="button"
                       onClick={() => toggleCategory(category.id)}
                       className="flex w-full items-center gap-2 rounded-md px-2 py-2 
-                      text-left text-sm font-medium 
-                      text-foreground/80 
-                      hover:bg-gray-300 
-                      dark:hover:bg-background
-                      cursor-pointer"
+                                text-left text-sm font-medium 
+                                text-foreground/80 
+                                hover:bg-gray-300 hover:scale-105 transition-all duration-200
+                                dark:hover:bg-background
+                                cursor-pointer"
                       aria-expanded={isOpen}
                     >
                       <ChevronDown
@@ -162,9 +162,9 @@ export function FileBrowser({
                         aria-hidden="true"
                       />
                       <span className="truncate">{category.label}</span>
-                      <span className="ml-auto text-xs tabular-nums text-muted-foreground">
+                      {/* <span className="ml-auto text-xs tabular-nums text-muted-foreground">
                         {category.items.length}
-                      </span>
+                      </span> */}
                     </button>
 
                     {isOpen && (
@@ -183,7 +183,7 @@ export function FileBrowser({
                                   "flex w-full items-center gap-2 rounded-md py-1.5 pl-3 pr-2 text-left text-sm",
                                   active
                                     ? "bg-accent text-primary-foreground"
-                                    : "text-muted-foreground hover:bg-gray-300 dark:hover:bg-background",
+                                    : "text-muted-foreground hover:bg-gray-300 dark:hover:bg-background hover:scale-105 transition-all duration-200",
                                 )}
                               >
                                 {
@@ -213,11 +213,11 @@ export function FileBrowser({
           {/* Detail pane */}
           <section
             aria-label="Item details"
-            className="flex min-h-0 flex-1 flex-col overflow-y-hidden"
+            className="flex min-h-0 flex-1 flex-col overflow-y-auto"
           >
             {selected ? (
               <>
-                <div className="relative aspect-16/10 w-full shrink-0 bg-muted h-120">
+                <div className="relative aspect-16/10 w-full shrink-0 bg-muted h-100 overflow-hidden">
                   {selected.image ? (
                     <Image
                       src={selected.image || "images/placeholder.svg"}
@@ -230,58 +230,59 @@ export function FileBrowser({
                   ) : (
                     <iframe
                       src={selected.video}
-                      className="absolute inset-0 h-full w-full object-cover"
-                      // width="538"
-                      // height="1172"
-                      frameBorder="0"
-                      allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                      className="absolute inset-0 h-full w-full scale-125"
+                      style={{ border: 0 }}
+                      allow="autoplay; fullscreen; encrypted-media; web-share"
                       referrerPolicy="strict-origin-when-cross-origin"
-                      // title="quiz-app-demo"
-                    ></iframe>
+                      title={selected.title}
+                    />
                   )}
                 </div>
 
-                <div className="flex flex-col gap-4 p-5 md:p-6">
+                {/* LINKS */}
+                {selected.links ? (
+                  <div className="mt-3 flex flex-wrap items-center gap-2 px-5">
+                    {Object.entries(selected.links)
+                      .filter(([, url]) => Boolean(url))
+                      .map(([key, url]) => {
+                        const Icon =
+                          linkIconMap[key as keyof typeof linkIconMap];
+                        return (
+                          <a
+                            key={key}
+                            href={url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label={key}
+                            className="inline-flex items-center justify-center rounded-full 
+                                          border border-border bg-gray-300 
+                                          px-2 py-2 text-xs font-medium 
+                                          transition 
+                                          text-gray-700
+                                          hover:bg-accent/10
+                                          hover:scale-105"
+                          >
+                            {Icon ? <Icon className="h-4 w-4" /> : null}
+                            <span className="sr-only">{key}</span>
+                          </a>
+                        );
+                      })}
+                  </div>
+                ) : null}
+
+                <div className="flex flex-col gap-4 px-5 md:py-3 md:p-6">
                   <div className="flex flex-col gap-1.5">
                     <h1 className="text-balance text-xl font-semibold tracking-tight md:text-2xl">
                       {selected.title}
                     </h1>
-                    {/* LINKS */}
-                    {selected.links ? (
-                      <div className="mt-3 flex flex-wrap items-center gap-2">
-                        {Object.entries(selected.links)
-                          .filter(([, url]) => Boolean(url))
-                          .map(([key, url]) => {
-                            const Icon =
-                              linkIconMap[key as keyof typeof linkIconMap];
-                            return (
-                              <a
-                                key={key}
-                                href={url}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                aria-label={key}
-                                className="inline-flex items-center justify-center rounded-full 
-                                          border border-border bg-gray-300 
-                                          px-3 py-2 text-xs font-medium 
-                                          transition 
-                                          text-gray-700
-                                          hover:bg-accent/10"
-                              >
-                                {Icon ? <Icon className="h-4 w-4" /> : null}
-                                <span className="sr-only">{key}</span>
-                              </a>
-                            );
-                          })}
-                      </div>
-                    ) : null}
                     <p className="max-w-2xl text-pretty text-sm leading-relaxed text-muted-foreground">
                       {selected.description}
                     </p>
                   </div>
 
-                  <dl className="grid grid-cols-2 gap-3 border-t border-border pt-4 sm:grid-cols-3">
-                    {selected.meta.map((m) => (
+                  {/* horizontal line */}
+                  {/* <dl className="grid grid-cols-2 gap-3 border-t border-border pt-4 sm:grid-cols-3"> */}
+                  {/* {selected.meta.map((m) => (
                       <div key={m.label} className="flex flex-col gap-0.5">
                         <dt className="text-xs uppercase tracking-wide text-muted-foreground">
                           {m.label}
@@ -290,8 +291,8 @@ export function FileBrowser({
                           {m.value}
                         </dd>
                       </div>
-                    ))}
-                  </dl>
+                    ))} */}
+                  {/* </dl> */}
                 </div>
               </>
             ) : (

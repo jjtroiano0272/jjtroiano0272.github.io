@@ -31,6 +31,11 @@ export default function RootLayout({
     // TODO: Might have to move these to body classname instead of html clasName
     <html lang="en" suppressHydrationWarning className="h-full antialiased">
       <head>
+        <meta property="og:image" content="http://example.com/logo.jpg" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="1024" />
+        <meta property="og:image:height" content="1024" />
+
         <link
           rel="stylesheet"
           type="text/css"

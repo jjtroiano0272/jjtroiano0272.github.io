@@ -13,7 +13,7 @@ export default function About() {
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-1 gap-6 text-justify">
+        <div className="grid md:grid-cols-1 gap-6 text-left md:text-justify">
           <p className="reveal d2">
             After earning my B.A. in 2015, I discovered a passion for technology
             that led me back to school to study Math and Computer Science.

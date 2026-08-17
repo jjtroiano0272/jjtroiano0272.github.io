@@ -16,7 +16,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center pt-16 overflow-hidden"
+      className="relative min-h-screen flex items-center pt-0 sm:pt-16 overflow-hidden"
     >
       <div
         className="absolute top-1/4 right-0 w-96 h-96 bg-accent/10 rounded-full blur-3xl pointer-events-none"
@@ -81,7 +81,7 @@ export default function Hero() {
                            border border-zinc-300 dark:border-zinc-700 text-zinc-700 dark:text-zinc-300 
                            font-medium px-7 py-3.5 rounded-full hover:bg-zinc-50 
                            dark:hover:bg-zinc-900 text-sm
-                           hover:shadow-lg transition-all duration-300"
+                           hover:shadow-lg hover:scale-x-102 transition-all duration-300"
               >
                 Get in touch
               </a>
@@ -166,7 +166,14 @@ export default function Hero() {
                 />
               </PixelReveal> */}
 
-              <div className="absolute left-1/2 bottom-0 z-10 -translate-x-1/2 translate-y-1/2 flex items-center gap-3 rounded-full bg-white/95 px-3 py-2 shadow-xl ring-1 ring-zinc-200 dark:bg-zinc-950/95 dark:ring-zinc-800">
+              <div
+                className="absolute left-1/2 bottom-0 z-10 -translate-x-1/2 translate-y-1/2 
+                            flex items-center gap-3 px-3 py-2
+                            rounded-full shadow-xl ring-1
+                            bg-white/95 ring-zinc-200 
+                            dark:bg-zinc-950/95 dark:ring-zinc-800 
+                            hover:scale-102 transition duration-300"
+              >
                 {socialLinks.map((link) => {
                   const Icon = FaIcons[link.icon as keyof typeof FaIcons];
                   return (
@@ -175,7 +182,11 @@ export default function Hero() {
                       href={link.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex h-12 w-12 items-center justify-center rounded-full border border-zinc-200 bg-white text-zinc-700 shadow-sm transition hover:border-accent hover:bg-accent/10 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-200 dark:hover:bg-accent/10"
+                      className="flex h-12 w-12 items-center justify-center rounded-full border 
+                              border-zinc-200 bg-white text-zinc-700 shadow-sm 
+                              transition duration-200
+                              hover:scale-105
+                              hover:border-accent hover:bg-accent/10 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-200 dark:hover:bg-accent/10"
                     >
                       {Icon ? <Icon className="h-6 w-6" /> : null}
                     </a>

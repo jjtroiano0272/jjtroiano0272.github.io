@@ -238,8 +238,8 @@ export default function Header() {
             </svg>
           </a>
 
-          {/* Hamburger menu */}
-          <button
+          {/* Mobile Hamburger menu */}
+          {/* <button
             //   TODO: What's this?
             // :aria-expanded="mm"
             aria-label="Toggle menu"
@@ -290,7 +290,7 @@ export default function Header() {
                 />
               </svg>
             )}
-          </button>
+          </button> */}
         </div>
       </nav>
     </header>
