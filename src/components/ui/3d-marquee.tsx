@@ -1,25 +1,17 @@
-"use client";
-import React from "react";
-import DepthCarousel from "./DepthCarousel";
-import Carousel, { CarouselItem } from "./ui/carousel";
-import { Marquee } from "./ui/nyxMarquee";
+import { cn } from "@/lib/utils";
+import { Marquee } from "@/components/ui/marquee";
 import {
-  FiCircle,
-  FiFileText,
-  FiLayers,
-  FiLayout,
   FiBox,
   FiCode,
   FiGlobe,
   FiSmartphone,
+  FiActivity,
   FiDatabase,
   FiTrendingUp,
-  FiTerminal,
-  FiActivity,
   FiPieChart,
+  FiTerminal,
 } from "react-icons/fi";
-import { IoLogoJavascript } from "react-icons/io5";
-import { GiGamepad } from "react-icons/gi";
+import { CarouselItem } from "./carousel-other";
 import {
   SiBlender,
   SiCplusplus,
@@ -43,23 +35,45 @@ import {
   SiFirebase,
   SiSupabase,
   SiMongodb,
+  SiUnity,
   SiGnubash,
   SiLinux,
   SiUbuntu,
   SiApple,
-  SiUnity,
 } from "react-icons/si";
 import {
-  TbBrandCSharp,
-  TbBrandWindows,
   TbPaint,
+  TbBrandCSharp,
   TbApi,
   TbResize,
   TbTable,
   TbDatabaseSearch,
+  TbBrandWindows,
 } from "react-icons/tb";
+import { GiGamepad } from "react-icons/gi";
 
-const DEFAULT_ITEMS: CarouselItem[] = [
+const reviews = [
+  {
+    name: "Jack",
+    username: "@jack",
+    body: "I've never seen anything like this before. It's amazing. I love it.",
+    img: "https://avatar.vercel.sh/jack",
+  },
+  {
+    name: "Jill",
+    username: "@jill",
+    body: "I don't know what to say. I'm speechless. This is amazing.",
+    img: "https://avatar.vercel.sh/jill",
+  },
+  {
+    name: "John",
+    username: "@john",
+    body: "I'm at a loss for words. This is amazing. I love it.",
+    img: "https://avatar.vercel.sh/john",
+  },
+];
+
+const skills = [
   {
     id: 1,
     category: "3D",
@@ -243,7 +257,50 @@ const DEFAULT_ITEMS: CarouselItem[] = [
   },
 ];
 
-export const SkillsMarqueeNyx = () => {
+const firstRow = reviews.slice(0, reviews.length / 2);
+const secondRow = reviews.slice(reviews.length / 2);
+const thirdRow = reviews.slice(0, reviews.length / 2);
+const fourthRow = reviews.slice(reviews.length / 2);
+
+const ReviewCard = ({
+  img,
+  name,
+  username,
+  body,
+  icon,
+}: {
+  img?: string;
+  name?: string;
+  username?: string;
+  body?: string;
+  icon: React.ReactNode;
+}) => {
+  return (
+    <figure
+      className={cn(
+        "relative h-full w-fit cursor-pointer overflow-hidden rounded-xl border p-4 sm:w-36",
+        // light styles
+        "border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]",
+        // dark styles
+        "dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]",
+      )}
+    >
+      <div className="flex flex-row items-center gap-2">
+        {/* <img className="rounded-full" width="32" height="32" alt="" src={img} /> */}
+        <FiBox className="h-4 w-4" />
+        <div className="flex flex-col">
+          <figcaption className="text-sm font-medium dark:text-white">
+            {name}
+          </figcaption>
+          <p className="text-xs font-medium dark:text-white/40">{username}</p>
+        </div>
+      </div>
+      <blockquote className="mt-2 text-sm">{body}</blockquote>
+    </figure>
+  );
+};
+
+export function Marquee3D() {
   return (
     <section id="skills" className="py-24 bg-zinc-50 dark:bg-zinc-900/40">
       <div className="max-w-6xl mx-auto px-10">
@@ -256,59 +313,50 @@ export const SkillsMarqueeNyx = () => {
           </h2>
         </div>
 
-        {/* <div style={{ height: "600px", position: "relative" }}> */}
-        {/* <div className="flex flex-col max-w-4xl mx-auto w-full overflow-hidden"> */}
-        {/* <h1 className="text-2xl font-bold mb-10 text-center">Marquee</h1> */}
-
-        <div className="overflow-hidden flex items-center lg:max-w-full mx-auto">
-          <div className="flex flex-col max-w-4xl mx-auto w-full">
-            {DEFAULT_ITEMS.map((item) => (
-              <div key={item.id} className="mb-10">
-                {/* Category heading */}
-                <div className="flex items-center gap-2 mb-4">
-                  {item.icon}
-                  <h3 className="text-lg font-semibold text-zinc-900 dark:text-white">
-                    {item.category}
-                  </h3>
-                </div>
-
-                {/* Category marquee */}
-                <div className="overflow-hidden">
-                  <Marquee
-                    speed={50}
-                    direction="horizontal"
-                    fadeEdges={true}
-                    pauseOnTap={true}
-                    speedOnHover={15}
-                    className="h-32"
-                  >
-                    {item.subItems.map((subItem) => (
-                      <div
-                        key={subItem.label}
-                        className="flex flex-col items-center justify-center gap-2 p-6 rounded-lg h-24 w-32"
-                      >
-                        {subItem.icon}
-
-                        <p className="text-sm text-center text-zinc-700 dark:text-zinc-300">
-                          {subItem.label}
-                        </p>
-                      </div>
+        <div
+          className="relative flex h-96 w-full flex-row 
+                     items-center justify-center gap-4 overflow-hidden perspective-normal"
+        >
+          <div
+            className="flex flex-row items-center gap-4"
+            style={{
+              transform:
+                "translateX(-60px) translateY(0px) translateZ(-60px) rotateX(20deg) rotateY(-10deg) rotateZ(20deg)",
+            }}
+          >
+            {Array.from(new Set(skills.map((s) => s.category))).map(
+              (cat, idx) => (
+                <Marquee
+                  key={cat ?? idx}
+                  pauseOnHover
+                  vertical
+                  className="[--duration:20s]"
+                >
+                  {skills
+                    .filter((s) => s.category === cat)
+                    .flatMap((skill) =>
+                      skill.subItems.map((item) => ({ skill, item })),
+                    )
+                    .map(({ skill, item }, i) => (
+                      <ReviewCard
+                        key={`${skill.id}-${i}-${idx}`}
+                        name={item.label}
+                        username={skill.category}
+                        body={undefined}
+                        icon={item.icon as unknown as React.ReactNode}
+                      />
                     ))}
-                  </Marquee>
-                </div>
-              </div>
-            ))}
+                </Marquee>
+              ),
+            )}
           </div>
-          ```
+
+          {/* <div className="from-background pointer-events-none absolute inset-x-0 top-0 h-1/4 bg-linear-to-b"></div> */}
+          {/* <div className="from-background pointer-events-none absolute inset-x-0 bottom-0 h-1/4 bg-linear-to-t"></div> */}
+          {/* <div className="from-background pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-linear-to-r"></div> */}
+          {/* <div className="from-background pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-linear-to-l"></div> */}
         </div>
-
-        <p className="text-center mt-4 text-sm text-gray-500">
-          Click or drag the marquee to interact with it
-        </p>
-        {/* </div> */}
-
-        {/* </div> */}
       </div>
     </section>
   );
-};
+}

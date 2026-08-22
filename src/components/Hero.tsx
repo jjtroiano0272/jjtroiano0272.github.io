@@ -1,16 +1,10 @@
 "use client";
 
-import { Download, Mail } from "lucide-react";
-import Image from "next/image";
-import React from "react";
+import { ChevronDown, Download, Mail } from "lucide-react";
 import * as FaIcons from "react-icons/fa";
-import RepelOnHover from "./RepelOnHover";
-import ProfileCard from "./ProfileCard";
-import Magnet from "./Magnet";
 import { socialLinks } from "@/lib/data";
-import { TypingAnimation } from "./ui/typing-animation";
-import { PixelImage } from "./ui/pixel-image";
-import PixelReveal from "./ui/pixel-reveal";
+import { TypingAnimation } from "@/components/ui/typing-animation";
+import { PixelImage } from "@/components/ui/pixel-image";
 
 export default function Hero() {
   return (
@@ -83,7 +77,7 @@ export default function Hero() {
                            dark:hover:bg-zinc-900 text-sm
                            hover:shadow-lg hover:scale-x-102 transition-all duration-300"
               >
-                Get in touch
+                Get in touch <ChevronDown className="w-3 h-3" />
               </a>
             </div>
             <div className="reveal d4 flex gap-8 mt-14 pt-8 border-t border-zinc-100 dark:border-zinc-900">

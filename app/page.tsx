@@ -5,8 +5,8 @@ import Footer from "@/components/Footer";
 import Experience from "@/components/Experience";
 import About from "@/components/About";
 import Contact from "@/components/Contact";
-import { FileBrowser } from "@/components/FileBrowser";
-import SkillsCarousel from "@/components/SkillsCarousel";
+import { Projects } from "@/components/Projects";
+import Skills from "@/components/Skills";
 
 export default function Home() {
   return (
@@ -16,12 +16,10 @@ export default function Home() {
 
       <main>
         <Hero />
-        <FileBrowser />
+        <Projects />
         <Experience />
         {/* NOTE: overflows the x-edges when in mobile from the shadcn left/right arrows */}
-        {/* <Marquee3D /> */}
-        {/* <SkillsMarqueeMagicUI /> */}
-        <SkillsCarousel />
+        <Skills />
         <About />
         <Contact />
       </main>

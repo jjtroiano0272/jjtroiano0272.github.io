@@ -156,10 +156,16 @@ export function AutoCarousel({
       aria-label="Skill categories"
       aria-roledescription="carousel"
       className="w-full"
-      onMouseEnter={() => setPaused(true)}
-      onMouseLeave={() => setPaused(false)}
-      onFocusCapture={() => setPaused(true)}
-      onBlurCapture={() => setPaused(false)}
+      onMouseEnter={() => {
+        // setPaused(true);
+        // setPlaying(false);
+      }}
+      onMouseLeave={() => {
+        // setPaused(false);
+        // setPlaying(true);
+      }}
+      // onFocusCapture={() => setPaused(true)}
+      // onBlurCapture={() => setPaused(false)}
     >
       <div
         className="relative w-full overflow-hidden rounded-xl 
@@ -184,14 +190,14 @@ export function AutoCarousel({
               aria-hidden={index !== active}
               className="w-full shrink-0 grow-0 basis-full p-4 sm:p-6"
             >
-              <SkillCard skill={skill} />
+              <SkillCard skill={skill} paused={paused} setPaused={setPaused} />
             </div>
           ))}
         </div>
 
         {/* Prev / Next */}
         {total > 1 && (
-          <>
+          <div className="invisible md:visible">
             <button
               type="button"
               onClick={prev}
@@ -220,14 +226,14 @@ export function AutoCarousel({
             >
               <ChevronRight className="size-5" />
             </button>
-          </>
+          </div>
         )}
       </div>
 
       {/* Controls: play/pause + dots */}
       {total > 1 && (
         <div className="mt-4 mb-24 flex items-center justify-center gap-4">
-          <button
+          {/* <button
             type="button"
             onClick={() => setPlaying((p) => !p)}
             aria-label={playing ? "Pause autoplay" : "Start autoplay"}
@@ -241,12 +247,12 @@ export function AutoCarousel({
                      cursor-pointer"
           >
             {playing ? (
-              <Pause className="size-4" />
+              <Pause className="size-4 text-zinc-200 " />
             ) : (
               <Play className="size-4" />
             )}
-            {/* {playing ? "Pause" : "Play"} */}
-          </button>
+            {playing ? "Pause" : "Play"}
+          </button> */}
 
           {/* Dots for slides */}
           <div
@@ -271,13 +277,28 @@ export function AutoCarousel({
               />
             ))}
           </div>
+
+          {/* <button
+            className="text-sm tracking-tighter text-zinc-600 dark:text-zinc-100 hover:bg-accent"
+            onClick={() => setPaused((p) => !p)}
+          >
+            Autoplay: {paused ? "OFF" : "ON"}
+          </button> */}
         </div>
       )}
     </div>
   );
 }
 
-function SkillCard({ skill }: { skill: SkillCategory }) {
+function SkillCard({
+  skill,
+  paused,
+  setPaused,
+}: {
+  skill: SkillCategory;
+  paused: boolean;
+  setPaused: React.Dispatch<React.SetStateAction<boolean>>;
+}) {
   const count = skill.subItems.length;
 
   return (
@@ -298,9 +319,9 @@ function SkillCard({ skill }: { skill: SkillCategory }) {
           </span>
           {skill.category}
         </h3>
-        <span className="text-sm tracking-tighter text-zinc-600 dark:text-zinc-100 cursor-default">
+        {/* <span className="text-sm tracking-tighter text-zinc-600 dark:text-zinc-100 cursor-default">
           {count} {count === 1 ? "item" : "items"}
-        </span>
+        </span> */}
       </div>
 
       <ul

@@ -151,6 +151,65 @@ body::before {
   transition: border-color 0.18s;
 }
 
+/* Border for Vimeo */
+
+.vimeo-marquee {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  white-space: nowrap;
+}
+
+.vimeo-word {
+  writing-mode: sideways-lr;
+  text-orientation: sideways;
+  line-height: 1;
+  font-family: "PT Sans", sans-serif;
+}
+
+.anim-up {
+  animation: vimeo-scroll-up 12s linear infinite;
+}
+
+.anim-down {
+  animation: vimeo-scroll-down 12s linear infinite;
+}
+
+@keyframes vimeo-scroll-up {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes vimeo-scroll-down {
+  from {
+    transform: translateY(-50%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .vimeo-marquee {
+    animation: none;
+  }
+}
+
+.video-stage {
+  display: flex;
+  width: min(100%, 1100px);
+  height: min(78svh, 700px);
+  min-height: 420px;
+  align-items: stretch;
+  gap: clamp(0.5rem, 2vw, 1.5rem);
+}
+
 /* CUSTOM */
 /* CUSTOM */
 /* CUSTOM */
