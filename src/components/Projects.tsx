@@ -331,16 +331,21 @@ import Image from "next/image";
 import {
   ChevronDown,
   Folder,
-  ImageIcon,
+  FolderOpen,
+  Loader2,
   Menu,
+  ImageIcon,
   VideoIcon,
+  GlobeIcon,
   X,
+  LucideRotate3D,
 } from "lucide-react";
 import { FiExternalLink } from "react-icons/fi";
 import { FaGithub, FaVimeoV } from "react-icons/fa";
-import { SiArtstation } from "react-icons/si";
+import { SiArtstation, SiSketchfab } from "react-icons/si";
 import { cn } from "@/lib/utils";
 import {
+  BrowserItem,
   categories as defaultCategories,
   type BrowserCategory,
 } from "@/lib/data";
@@ -375,6 +380,65 @@ function Marquee({
   );
 }
 
+function renderMedia(selected: BrowserItem): import("react").ReactNode {
+  const [loaded, setLoaded] = useState(false);
+
+  if (!loaded) {
+    <div className="absolute inset-0 flex items-center justify-center bg-zinc-900">
+      <Loader2 className="size-6 animate-spin text-white/60" />
+    </div>;
+  }
+
+  if (selected.image) {
+    return (
+      <Image
+        src={selected.image || "images/placeholder.svg"}
+        alt={selected.title}
+        fill
+        priority
+        sizes="(max-width: 768px) 100vw, 80vw"
+        className="object-cover"
+        onLoad={() => setLoaded(true)}
+      />
+    );
+  } else if (selected.video) {
+    return (
+      <iframe
+        // allow="autoplay; fullscreen; encrypted-media; web-share"
+        src={`${selected.video}?autoplay=1&loop=1&title=0&byline=0&portrait=0`}
+        className="absolute inset-0 h-full w-full"
+        // className="media-cover-frame"
+        title={selected.title}
+        style={{ border: 0 }}
+        referrerPolicy="strict-origin-when-cross-origin"
+        onLoad={() => setLoaded(true)}
+      />
+    );
+  } else if (selected.model) {
+    return (
+      //  TODO: Check--I'm pretty sure this isn't used
+      // <div className="sketchfab-embed-wrapper">
+      <iframe
+        // frameBorder="0"
+        // mozAllowFullScreen="true"
+        // webkitallowfullscreen="true"
+        // xr-spatial-tracking
+        // execution-while-out-of-viewport
+        // execution-while-not-rendered
+        // web-share
+        // allowFullScreen
+        src={selected.model}
+        className="absolute inset-0 h-full w-full"
+        title={selected.title}
+        allow="autoplay; fullscreen; xr-spatial-tracking"
+        onLoad={() => setLoaded(true)}
+      />
+    );
+  } else return <h3>No content!</h3>;
+
+  // throw new Error("Function not implemented.");
+}
+
 export function Projects({
   categories = defaultCategories,
   className,
@@ -397,6 +461,7 @@ export function Projects({
     live: FiExternalLink,
     vimeo: FaVimeoV,
     artstation: SiArtstation,
+    sketchfab: SiSketchfab,
   } as const;
 
   const toggleCategory = (id: string) =>
@@ -444,11 +509,12 @@ export function Projects({
             <button
               type="button"
               onClick={() => setMobileOpen((v) => !v)}
-              className="inline-flex items-center 
+              className={`inline-flex items-center 
                          px-2.5 py-1.5 gap-1.5 
                          rounded-md text-xs font-medium
                          border border-border hover:bg-accent hover:text-zinc-100
-                         transition-all duration-200"
+                         transition-all duration-200
+                         ${mobileOpen ? "w-18 px-2.5" : "w-20 px-2.5"}`}
               aria-expanded={mobileOpen}
               aria-controls="file-browser-sidebar"
             >
@@ -477,7 +543,8 @@ export function Projects({
                    -inset-x-1 top-14 bottom-0 z-20 border-b 
                    bg-zinc-100/90
                    dark:bg-zinc-800/90
-                   opacity-100 backdrop-blur-xl`
+                   opacity-100 backdrop-blur-xl
+                   overflow-x-hidden`
                 : `pointer-events-none absolute inset-x-0 top-14 bottom-0 z-20 -translate-y-3 
                    opacity-0 
                    md:pointer-events-auto md:relative md:inset-auto md:z-auto md:translate-y-0 md:border-b-0 md:opacity-100`,
@@ -516,10 +583,20 @@ export function Projects({
                         )}
                         aria-hidden="true"
                       />
-                      <Folder
-                        className="size-4 shrink-0 text-muted-foreground"
-                        aria-hidden="true"
-                      />
+                      <div className="transition-all duration-300">
+                        {!isOpen ? (
+                          <Folder
+                            className="size-4 shrink-0 text-orange-500"
+                            aria-hidden="true"
+                          />
+                        ) : (
+                          <FolderOpen
+                            className="size-4 shrink-0"
+                            aria-hidden="true"
+                          />
+                        )}
+                      </div>
+
                       <span className="truncate">{category.label}</span>
                       {/* <span className="ml-auto text-xs tabular-nums text-muted-foreground">
                         {category.items.length}
@@ -530,7 +607,12 @@ export function Projects({
                       <ul className="mt-0.5 space-y-0.5 pl-4">
                         {category.items.map((item) => {
                           const active = item.id === selected?.id;
-                          const Icon = item.image ? ImageIcon : VideoIcon;
+                          // Make into if-then statement
+                          const Icon = item.image
+                            ? ImageIcon
+                            : item.video
+                              ? VideoIcon
+                              : LucideRotate3D;
 
                           return (
                             <li key={item.id}>
@@ -576,44 +658,12 @@ export function Projects({
           >
             {selected ? (
               <>
-                <div className="relative w-full shrink-0 bg-purple-800/30 h-100 overflow-hidden">
-                  {/* TODO: Feed into a helper function instead */}
-                  {selected.image ? (
-                    <Image
-                      src={selected.image || "images/placeholder.svg"}
-                      alt={selected.title}
-                      fill
-                      priority
-                      sizes="(max-width: 768px) 100vw, 80vw"
-                      className="object-cover"
-                    />
-                  ) : selected.model ? (
-                    //  TODO: Check--I'm pretty sure this isn't used
-                    // <div className="sketchfab-embed-wrapper">
-                    <iframe
-                      // frameBorder="0"
-                      // mozAllowFullScreen="true"
-                      // webkitallowfullscreen="true"
-                      // xr-spatial-tracking
-                      // execution-while-out-of-viewport
-                      // execution-while-not-rendered
-                      // web-share
-                      // allowFullScreen
-                      src={selected.model}
-                      className="absolute inset-0 h-full w-full"
-                      title={selected.title}
-                      allow="autoplay; fullscreen; xr-spatial-tracking"
-                    />
-                  ) : (
-                    <iframe
-                      src={`${selected.video}?autoplay=1&loop=1&title=0&byline=0&portrait=0`}
-                      className="absolute inset-0 h-full w-full"
-                      // allow="autoplay; fullscreen; encrypted-media; web-share"
-                      title={selected.title}
-                      style={{ border: 0 }}
-                      referrerPolicy="strict-origin-when-cross-origin"
-                    />
-                  )}
+                <div
+                  className="relative w-full h-100
+                              shrink-0 overflow-hidden 
+                              bg-purple-800/30"
+                >
+                  {renderMedia(selected)}
                 </div>
 
                 {/* LINKS */}

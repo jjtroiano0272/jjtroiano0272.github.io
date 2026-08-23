@@ -54,9 +54,8 @@ export default function Hero() {
             />
 
             <div className="reveal d3 flex flex-wrap gap-4">
-              {/* TODO: Add download link */}
               <a
-                href="/files/resume-14jun25.pdf"
+                href="/files/resume_jtroiano.pdf"
                 download
                 className="shimmer inline-flex items-center gap-2 
                            font-medium px-7 py-3.5 rounded-full 

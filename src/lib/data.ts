@@ -11,6 +11,7 @@ export type BrowserItem = {
     live?: string;
     vimeo?: string;
     artstation?: string;
+    sketchfab?: string;
   };
   meta: { label: string; value: string }[];
 };
@@ -230,7 +231,7 @@ export const categories: BrowserCategory[] = [
           { label: "Size", value: "98.4 MB" },
         ],
       },
-      // NOTE: THIS IS JUS TO TE4ST FOR ADDING SKETCHFAB MODEL EMBED
+      // NOTE: THIS IS JUST TO TEST FOR ADDING SKETCHFAB MODEL EMBED
       {
         id: "test-sketchfab-model",
         title: "Sketchfab Test",
@@ -241,6 +242,8 @@ export const categories: BrowserCategory[] = [
           vimeo: "https://vimeo.com/1193356657",
           // TODO: Add to AS and build that up
           artstation: "",
+          sketchfab:
+            "https://sketchfab.com/models/c64fd82d431c4200bc89b40e37707285",
         },
         meta: [
           { label: "Format", value: "TIFF" },
