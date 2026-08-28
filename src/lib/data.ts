@@ -240,11 +240,32 @@ export const categories: BrowserCategory[] = [
           "https://sketchfab.com/models/14043b88e1584edbaec2361c11d8e10c/embed",
 
         links: {
-          vimeo: "https://vimeo.com/1193356657",
+          // vimeo: "https://vimeo.com/1193356657",
           // TODO: Add to AS and build that up
           artstation: "",
           sketchfab:
             "https://sketchfab.com/models/14043b88e1584edbaec2361c11d8e10c",
+        },
+        meta: [
+          { label: "Format", value: "TIFF" },
+          { label: "Resolution", value: "6720 × 4480" },
+          { label: "Size", value: "98.4 MB" },
+        ],
+      },
+      // Sketchfab Test 2
+      {
+        id: "test-sketchfab-model-2",
+        title: "Sketchfab Test 2",
+        description: "Sketchfab",
+        model:
+          "https://sketchfab.com/models/8a6ed5faf9164503abfbab5ed354816a/embed",
+
+        links: {
+          // vimeo: "https://vimeo.com/1193356657",
+          // TODO: Add to AS and build that up
+          artstation: "",
+          sketchfab:
+            "https://sketchfab.com/models/8a6ed5faf9164503abfbab5ed354816a",
         },
         meta: [
           { label: "Format", value: "TIFF" },
