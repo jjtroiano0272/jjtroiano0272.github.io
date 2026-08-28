@@ -62,8 +62,8 @@ function SkillsCarousel() {
         </div>
 
         {/* Skills */}
-        <AutoCarousel />
         {/* <SkillsMarqueeMagicUI /> */}
+        <AutoCarousel />
 
         {/* Marquee of Certifications */}
         <div className="relative flex w-full flex-col items-center justify-center overflow-hidden">

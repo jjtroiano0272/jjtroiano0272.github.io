@@ -237,13 +237,14 @@ export const categories: BrowserCategory[] = [
         title: "Sketchfab Test",
         description: "Sketchfab",
         model:
-          "https://sketchfab.com/models/c64fd82d431c4200bc89b40e37707285/embed",
+          "https://sketchfab.com/models/14043b88e1584edbaec2361c11d8e10c/embed",
+
         links: {
           vimeo: "https://vimeo.com/1193356657",
           // TODO: Add to AS and build that up
           artstation: "",
           sketchfab:
-            "https://sketchfab.com/models/c64fd82d431c4200bc89b40e37707285",
+            "https://sketchfab.com/models/14043b88e1584edbaec2361c11d8e10c",
         },
         meta: [
           { label: "Format", value: "TIFF" },

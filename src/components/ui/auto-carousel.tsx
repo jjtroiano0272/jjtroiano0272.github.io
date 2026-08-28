@@ -2,6 +2,8 @@
 
 import type React from "react";
 import { useCallback, useEffect, useRef, useState } from "react";
+import { IoMdCode } from "react-icons/io";
+
 import {
   Atom,
   Boxes,
@@ -28,7 +30,21 @@ import {
   Wrench,
   Zap,
 } from "lucide-react";
+import { DiReact } from "react-icons/di";
+
 import { cn } from "@/lib/utils";
+import {
+  SiGraphql,
+  SiHtml5,
+  SiNextdotjs,
+  SiPostgresql,
+  SiRedis,
+  SiRedux,
+  SiTailwindcss,
+  SiTypescript,
+} from "react-icons/si";
+import { FaCss3, FaNode } from "react-icons/fa";
+import { TbBrandCpp, TbBrandVite } from "react-icons/tb";
 
 export type SkillSubItem = {
   label: string;
@@ -50,14 +66,14 @@ const DEFAULT_SKILLS: SkillCategory[] = [
     category: "Frontend",
     icon: <Palette />,
     subItems: [
-      { label: "React", icon: <Atom /> },
-      { label: "Next.js", icon: <Hexagon /> },
-      { label: "TypeScript", icon: <Braces /> },
-      { label: "Tailwind", icon: <Wind /> },
-      { label: "HTML", icon: <FileCode /> },
-      { label: "CSS", icon: <Palette /> },
-      { label: "Vite", icon: <Zap /> },
-      { label: "Redux", icon: <Layers /> },
+      { label: "React", icon: <DiReact /> },
+      { label: "Next.js", icon: <SiNextdotjs /> },
+      { label: "TypeScript", icon: <SiTypescript /> },
+      { label: "Tailwind", icon: <SiTailwindcss /> },
+      { label: "HTML", icon: <SiHtml5 /> },
+      { label: "CSS", icon: <FaCss3 /> },
+      { label: "Vite", icon: <TbBrandVite /> },
+      { label: "Redux", icon: <SiRedux /> },
     ],
   },
   {
@@ -65,11 +81,11 @@ const DEFAULT_SKILLS: SkillCategory[] = [
     category: "Backend",
     icon: <Server />,
     subItems: [
-      { label: "Node.js", icon: <Hexagon /> },
-      { label: "Postgres", icon: <Database /> },
-      { label: "GraphQL", icon: <Globe /> },
-      { label: "REST", icon: <Globe /> },
-      { label: "Redis", icon: <Database /> },
+      { label: "Node.js", icon: <FaNode /> },
+      { label: "Postgres", icon: <SiPostgresql /> },
+      { label: "GraphQL", icon: <SiGraphql /> },
+      { label: "REST", icon: <IoMdCode /> },
+      { label: "Redis", icon: <SiRedis /> },
       { label: "Prisma", icon: <Layers /> },
       { label: "Express", icon: <Server /> },
       { label: "tRPC", icon: <Braces /> },
@@ -99,6 +115,23 @@ const DEFAULT_SKILLS: SkillCategory[] = [
       { label: "Secrets", icon: <Shield /> },
       { label: "Edge", icon: <Globe /> },
       { label: "Scripts", icon: <Code2 /> },
+    ],
+  },
+  {
+    id: 4,
+    category: "Programming Languages",
+    icon: <IoMdCode />,
+    subItems: [
+      // { label: "Docker", icon: <Container /> },
+      { label: "C#", icon: <TbBrandCpp /> },
+      { label: "C++", icon: <i className="devicon-csharp-plain colored"></i> },
+      // {label: "PHP", icon: },
+      // {label: "Java", icon: },
+      // {label: "M Power Query", icon: },
+      // {label: "Javascript", icon: },
+      // {label: "Typescript", icon: },
+      // {label: "R", icon: },
+      // {label: "Python", icon: },
     ],
   },
 ];
@@ -342,7 +375,11 @@ function SkillCard({
             >
               {/* Icon of Skill */}
               <span className="[&>svg]:size-8 text-zinc-900 dark:text-zinc-100">
-                {item.icon}
+                {item.icon?.toString().includes("<i className>") ? (
+                  <i className="devicon-csharp-plain colored"></i>
+                ) : (
+                  item.icon
+                )}
               </span>
               <span className="line-clamp-1 w-full text-[11px] font-medium leading-tight">
                 {item.label}
