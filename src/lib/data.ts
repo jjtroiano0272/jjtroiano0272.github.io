@@ -252,20 +252,41 @@ export const categories: BrowserCategory[] = [
           { label: "Size", value: "98.4 MB" },
         ],
       },
-      // Sketchfab Test 2
+      // Simple architecture
+      // {
+      //   id: "nurbli",
+      //   title: "Nurbli",
+      //   description: "Sketchfab",
+      //   model:
+      //     "https://sketchfab.com/models/8a6ed5faf9164503abfbab5ed354816a/embed",
+
+      //   links: {
+      //     // vimeo: "https://vimeo.com/1193356657",
+      //     // TODO: Add to AS and build that up
+      //     artstation: "",
+      //     sketchfab:
+      //       "https://sketchfab.com/models/8a6ed5faf9164503abfbab5ed354816a",
+      //   },
+      //   meta: [
+      //     { label: "Format", value: "TIFF" },
+      //     { label: "Resolution", value: "6720 × 4480" },
+      //     { label: "Size", value: "98.4 MB" },
+      //   ],
+      // },
       {
-        id: "test-sketchfab-model-2",
-        title: "Sketchfab Test 2",
-        description: "Sketchfab",
+        id: "nurbli",
+        title: "Nurbli",
+        description:
+          "A practice in hard-surface modeling and texturing in Blender.",
         model:
-          "https://sketchfab.com/models/8a6ed5faf9164503abfbab5ed354816a/embed",
+          "https://sketchfab.com/models/9b800aa9e1694bf8a6b13d66a12c9c68/embed",
 
         links: {
           // vimeo: "https://vimeo.com/1193356657",
           // TODO: Add to AS and build that up
           artstation: "",
           sketchfab:
-            "https://sketchfab.com/models/8a6ed5faf9164503abfbab5ed354816a",
+            "https://sketchfab.com/models/9b800aa9e1694bf8a6b13d66a12c9c68",
         },
         meta: [
           { label: "Format", value: "TIFF" },
