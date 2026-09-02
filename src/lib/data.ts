@@ -294,6 +294,27 @@ export const categories: BrowserCategory[] = [
           { label: "Size", value: "98.4 MB" },
         ],
       },
+      {
+        id: "graphic-realism-vent",
+        title: "Graphic Realism Vent",
+        description:
+          "A practice in hard-surface modeling and texturing in Blender.",
+        model:
+          "https://sketchfab.com/models/6971e91bfd514e2bacad2f39954464a3/embed",
+
+        links: {
+          // vimeo: "https://vimeo.com/1193356657",
+          // TODO: Add to AS and build that up
+          artstation: "",
+          sketchfab:
+            "https://sketchfab.com/3d-models/singleoutput-6971e91bfd514e2bacad2f39954464a3",
+        },
+        meta: [
+          { label: "Format", value: "TIFF" },
+          { label: "Resolution", value: "6720 × 4480" },
+          { label: "Size", value: "98.4 MB" },
+        ],
+      },
     ],
   },
   {
